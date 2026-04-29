@@ -131,7 +131,6 @@ func (o *GetETFsWorld200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetETFsWorld200Response := _GetETFsWorld200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetETFsWorld200Response)
 
 	if err != nil {

@@ -103,7 +103,6 @@ func (o *CryptocurrencyExchangesResponseItem) UnmarshalJSON(data []byte) (err er
 	varCryptocurrencyExchangesResponseItem := _CryptocurrencyExchangesResponseItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varCryptocurrencyExchangesResponseItem)
 
 	if err != nil {

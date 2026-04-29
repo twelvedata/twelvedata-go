@@ -305,7 +305,6 @@ func (o *GetTimeSeriesPivotPointsHL200ResponseMeta) UnmarshalJSON(data []byte) (
 	varGetTimeSeriesPivotPointsHL200ResponseMeta := _GetTimeSeriesPivotPointsHL200ResponseMeta{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesPivotPointsHL200ResponseMeta)
 
 	if err != nil {

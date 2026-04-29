@@ -305,7 +305,6 @@ func (o *GetTimeSeriesKama200ResponseMeta) UnmarshalJSON(data []byte) (err error
 	varGetTimeSeriesKama200ResponseMeta := _GetTimeSeriesKama200ResponseMeta{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesKama200ResponseMeta)
 
 	if err != nil {

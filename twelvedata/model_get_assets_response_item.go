@@ -20,6 +20,8 @@ type GetAssetsResponseItem struct {
 	Code string `json:"code"`
 	// Description of the asset
 	Description *string `json:"description,omitempty"`
+	// Icon of the asset
+	Icon *string `json:"icon,omitempty"`
 	// Market identifier code, e.g. DIGITAL_CURRENCY, PHYSICAL_CURRENCY, etc.
 	MicCode string `json:"mic_code"`
 	// Currency symbol
@@ -103,6 +105,38 @@ func (o *GetAssetsResponseItem) SetDescription(v string) {
 	o.Description = &v
 }
 
+// GetIcon returns the Icon field value if set, zero value otherwise.
+func (o *GetAssetsResponseItem) GetIcon() string {
+	if o == nil || IsNil(o.Icon) {
+		var ret string
+		return ret
+	}
+	return *o.Icon
+}
+
+// GetIconOk returns a tuple with the Icon field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetAssetsResponseItem) GetIconOk() (*string, bool) {
+	if o == nil || IsNil(o.Icon) {
+		return nil, false
+	}
+	return o.Icon, true
+}
+
+// HasIcon returns a boolean if a field has been set.
+func (o *GetAssetsResponseItem) HasIcon() bool {
+	if o != nil && !IsNil(o.Icon) {
+		return true
+	}
+
+	return false
+}
+
+// SetIcon gets a reference to the given string and assigns it to the Icon field.
+func (o *GetAssetsResponseItem) SetIcon(v string) {
+	o.Icon = &v
+}
+
 // GetMicCode returns the MicCode field value
 func (o *GetAssetsResponseItem) GetMicCode() string {
 	if o == nil {
@@ -173,6 +207,9 @@ func (o GetAssetsResponseItem) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.Description) {
 		toSerialize["description"] = o.Description
 	}
+	if !IsNil(o.Icon) {
+		toSerialize["icon"] = o.Icon
+	}
 	toSerialize["mic_code"] = o.MicCode
 	if !IsNil(o.Symbol) {
 		toSerialize["symbol"] = o.Symbol
@@ -206,7 +243,6 @@ func (o *GetAssetsResponseItem) UnmarshalJSON(data []byte) (err error) {
 	varGetAssetsResponseItem := _GetAssetsResponseItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetAssetsResponseItem)
 
 	if err != nil {

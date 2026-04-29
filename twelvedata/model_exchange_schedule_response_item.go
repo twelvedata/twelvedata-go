@@ -248,7 +248,6 @@ func (o *ExchangeScheduleResponseItem) UnmarshalJSON(data []byte) (err error) {
 	varExchangeScheduleResponseItem := _ExchangeScheduleResponseItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varExchangeScheduleResponseItem)
 
 	if err != nil {

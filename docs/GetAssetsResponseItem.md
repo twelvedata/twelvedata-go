@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | **string** | Currency code | 
 **Description** | Pointer to **string** | Description of the asset | [optional] 
+**Icon** | Pointer to **string** | Icon of the asset | [optional] 
 **MicCode** | **string** | Market identifier code, e.g. DIGITAL_CURRENCY, PHYSICAL_CURRENCY, etc. | 
 **Symbol** | Pointer to **string** | Currency symbol | [optional] 
 
@@ -72,6 +73,31 @@ SetDescription sets Description field to given value.
 `func (o *GetAssetsResponseItem) HasDescription() bool`
 
 HasDescription returns a boolean if a field has been set.
+
+### GetIcon
+
+`func (o *GetAssetsResponseItem) GetIcon() string`
+
+GetIcon returns the Icon field if non-nil, zero value otherwise.
+
+### GetIconOk
+
+`func (o *GetAssetsResponseItem) GetIconOk() (*string, bool)`
+
+GetIconOk returns a tuple with the Icon field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIcon
+
+`func (o *GetAssetsResponseItem) SetIcon(v string)`
+
+SetIcon sets Icon field to given value.
+
+### HasIcon
+
+`func (o *GetAssetsResponseItem) HasIcon() bool`
+
+HasIcon returns a boolean if a field has been set.
 
 ### GetMicCode
 

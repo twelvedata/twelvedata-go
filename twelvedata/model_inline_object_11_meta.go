@@ -305,7 +305,6 @@ func (o *InlineObject11Meta) UnmarshalJSON(data []byte) (err error) {
 	varInlineObject11Meta := _InlineObject11Meta{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varInlineObject11Meta)
 
 	if err != nil {

@@ -131,7 +131,6 @@ func (o *GetInsiderTransactions200Response) UnmarshalJSON(data []byte) (err erro
 	varGetInsiderTransactions200Response := _GetInsiderTransactions200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetInsiderTransactions200Response)
 
 	if err != nil {

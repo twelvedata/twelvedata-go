@@ -161,7 +161,6 @@ func (o *BondsResponseItemAccess) UnmarshalJSON(data []byte) (err error) {
 	varBondsResponseItemAccess := _BondsResponseItemAccess{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varBondsResponseItemAccess)
 
 	if err != nil {

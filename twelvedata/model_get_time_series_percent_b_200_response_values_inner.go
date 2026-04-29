@@ -132,7 +132,6 @@ func (o *GetTimeSeriesPercentB200ResponseValuesInner) UnmarshalJSON(data []byte)
 	varGetTimeSeriesPercentB200ResponseValuesInner := _GetTimeSeriesPercentB200ResponseValuesInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesPercentB200ResponseValuesInner)
 
 	if err != nil {

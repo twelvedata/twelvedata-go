@@ -132,7 +132,6 @@ func (o *GetETFsList200ResponseResult) UnmarshalJSON(data []byte) (err error) {
 	varGetETFsList200ResponseResult := _GetETFsList200ResponseResult{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetETFsList200ResponseResult)
 
 	if err != nil {

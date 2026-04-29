@@ -161,7 +161,6 @@ func (o *SymbolSearchResponseItemAccess) UnmarshalJSON(data []byte) (err error) 
 	varSymbolSearchResponseItemAccess := _SymbolSearchResponseItemAccess{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varSymbolSearchResponseItemAccess)
 
 	if err != nil {

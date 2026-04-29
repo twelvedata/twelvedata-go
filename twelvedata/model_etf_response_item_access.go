@@ -161,7 +161,6 @@ func (o *EtfResponseItemAccess) UnmarshalJSON(data []byte) (err error) {
 	varEtfResponseItemAccess := _EtfResponseItemAccess{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varEtfResponseItemAccess)
 
 	if err != nil {

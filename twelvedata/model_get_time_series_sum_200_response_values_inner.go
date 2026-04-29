@@ -132,7 +132,6 @@ func (o *GetTimeSeriesSum200ResponseValuesInner) UnmarshalJSON(data []byte) (err
 	varGetTimeSeriesSum200ResponseValuesInner := _GetTimeSeriesSum200ResponseValuesInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesSum200ResponseValuesInner)
 
 	if err != nil {

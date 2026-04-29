@@ -16,6 +16,8 @@ var _ MappedNullable = &GetForexPairs200Response{}
 
 // GetForexPairs200Response struct for GetForexPairs200Response
 type GetForexPairs200Response struct {
+	// Count
+	Count int64 `json:"count"`
 	// List of forex pairs
 	Data []ForexResponseItem `json:"data"`
 	// Response status
@@ -28,8 +30,9 @@ type _GetForexPairs200Response GetForexPairs200Response
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewGetForexPairs200Response(data []ForexResponseItem, status string) *GetForexPairs200Response {
+func NewGetForexPairs200Response(count int64, data []ForexResponseItem, status string) *GetForexPairs200Response {
 	this := GetForexPairs200Response{}
+	this.Count = count
 	this.Data = data
 	this.Status = status
 	return &this
@@ -41,6 +44,30 @@ func NewGetForexPairs200Response(data []ForexResponseItem, status string) *GetFo
 func NewGetForexPairs200ResponseWithDefaults() *GetForexPairs200Response {
 	this := GetForexPairs200Response{}
 	return &this
+}
+
+// GetCount returns the Count field value
+func (o *GetForexPairs200Response) GetCount() int64 {
+	if o == nil {
+		var ret int64
+		return ret
+	}
+
+	return o.Count
+}
+
+// GetCountOk returns a tuple with the Count field value
+// and a boolean to check if the value has been set.
+func (o *GetForexPairs200Response) GetCountOk() (*int64, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.Count, true
+}
+
+// SetCount sets field value
+func (o *GetForexPairs200Response) SetCount(v int64) {
+	o.Count = v
 }
 
 // GetData returns the Data field value
@@ -101,6 +128,7 @@ func (o GetForexPairs200Response) MarshalJSON() ([]byte, error) {
 
 func (o GetForexPairs200Response) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	toSerialize["count"] = o.Count
 	toSerialize["data"] = o.Data
 	toSerialize["status"] = o.Status
 	return toSerialize, nil
@@ -111,6 +139,7 @@ func (o *GetForexPairs200Response) UnmarshalJSON(data []byte) (err error) {
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
+		"count",
 		"data",
 		"status",
 	}
@@ -132,7 +161,6 @@ func (o *GetForexPairs200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetForexPairs200Response := _GetForexPairs200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetForexPairs200Response)
 
 	if err != nil {

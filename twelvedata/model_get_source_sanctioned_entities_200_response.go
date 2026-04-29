@@ -161,7 +161,6 @@ func (o *GetSourceSanctionedEntities200Response) UnmarshalJSON(data []byte) (err
 	varGetSourceSanctionedEntities200Response := _GetSourceSanctionedEntities200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetSourceSanctionedEntities200Response)
 
 	if err != nil {

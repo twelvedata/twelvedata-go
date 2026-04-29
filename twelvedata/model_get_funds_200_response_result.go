@@ -132,7 +132,6 @@ func (o *GetFunds200ResponseResult) UnmarshalJSON(data []byte) (err error) {
 	varGetFunds200ResponseResult := _GetFunds200ResponseResult{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetFunds200ResponseResult)
 
 	if err != nil {

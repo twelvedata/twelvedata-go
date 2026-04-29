@@ -5,12 +5,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Data** | [**[]StockExchange**](StockExchange.md) |  | 
+**Status** | **string** | Response status | 
 
 ## Methods
 
 ### NewInlineObject7
 
-`func NewInlineObject7(data []StockExchange, ) *InlineObject7`
+`func NewInlineObject7(data []StockExchange, status string, ) *InlineObject7`
 
 NewInlineObject7 instantiates a new InlineObject7 object
 This constructor will assign default values to properties that have it defined,
@@ -43,6 +44,26 @@ and a boolean to check if the value has been set.
 `func (o *InlineObject7) SetData(v []StockExchange)`
 
 SetData sets Data field to given value.
+
+
+### GetStatus
+
+`func (o *InlineObject7) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineObject7) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineObject7) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
 
 
 

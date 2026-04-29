@@ -198,7 +198,6 @@ func (o *EdgarFilingFile) UnmarshalJSON(data []byte) (err error) {
 	varEdgarFilingFile := _EdgarFilingFile{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varEdgarFilingFile)
 
 	if err != nil {

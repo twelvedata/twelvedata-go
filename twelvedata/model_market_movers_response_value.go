@@ -409,7 +409,6 @@ func (o *MarketMoversResponseValue) UnmarshalJSON(data []byte) (err error) {
 	varMarketMoversResponseValue := _MarketMoversResponseValue{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varMarketMoversResponseValue)
 
 	if err != nil {

@@ -317,7 +317,6 @@ func (o *GetEpsTrend200ResponseEpsTrendInner) UnmarshalJSON(data []byte) (err er
 	varGetEpsTrend200ResponseEpsTrendInner := _GetEpsTrend200ResponseEpsTrendInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetEpsTrend200ResponseEpsTrendInner)
 
 	if err != nil {

@@ -190,7 +190,6 @@ func (o *GetTimeSeriesKeltner200ResponseValuesInner) UnmarshalJSON(data []byte) 
 	varGetTimeSeriesKeltner200ResponseValuesInner := _GetTimeSeriesKeltner200ResponseValuesInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesKeltner200ResponseValuesInner)
 
 	if err != nil {

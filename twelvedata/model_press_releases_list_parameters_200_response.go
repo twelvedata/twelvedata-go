@@ -132,7 +132,6 @@ func (o *PressReleasesListParameters200Response) UnmarshalJSON(data []byte) (err
 	varPressReleasesListParameters200Response := _PressReleasesListParameters200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varPressReleasesListParameters200Response)
 
 	if err != nil {

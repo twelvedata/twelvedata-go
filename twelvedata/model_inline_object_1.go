@@ -6,7 +6,9 @@
 package twelvedata
 
 import (
+	"bytes"
 	"encoding/json"
+	"fmt"
 )
 
 // checks if the InlineObject1 type satisfies the MappedNullable interface at compile time
@@ -14,15 +16,25 @@ var _ MappedNullable = &InlineObject1{}
 
 // InlineObject1 struct for InlineObject1
 type InlineObject1 struct {
-	Data []Index `json:"data,omitempty"`
+	// Count
+	Count int64 `json:"count"`
+	// List of indices
+	Data []Index `json:"data"`
+	// Response status
+	Status string `json:"status"`
 }
+
+type _InlineObject1 InlineObject1
 
 // NewInlineObject1 instantiates a new InlineObject1 object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewInlineObject1() *InlineObject1 {
+func NewInlineObject1(count int64, data []Index, status string) *InlineObject1 {
 	this := InlineObject1{}
+	this.Count = count
+	this.Data = data
+	this.Status = status
 	return &this
 }
 
@@ -34,36 +46,76 @@ func NewInlineObject1WithDefaults() *InlineObject1 {
 	return &this
 }
 
-// GetData returns the Data field value if set, zero value otherwise.
+// GetCount returns the Count field value
+func (o *InlineObject1) GetCount() int64 {
+	if o == nil {
+		var ret int64
+		return ret
+	}
+
+	return o.Count
+}
+
+// GetCountOk returns a tuple with the Count field value
+// and a boolean to check if the value has been set.
+func (o *InlineObject1) GetCountOk() (*int64, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.Count, true
+}
+
+// SetCount sets field value
+func (o *InlineObject1) SetCount(v int64) {
+	o.Count = v
+}
+
+// GetData returns the Data field value
 func (o *InlineObject1) GetData() []Index {
-	if o == nil || IsNil(o.Data) {
+	if o == nil {
 		var ret []Index
 		return ret
 	}
+
 	return o.Data
 }
 
-// GetDataOk returns a tuple with the Data field value if set, nil otherwise
+// GetDataOk returns a tuple with the Data field value
 // and a boolean to check if the value has been set.
 func (o *InlineObject1) GetDataOk() ([]Index, bool) {
-	if o == nil || IsNil(o.Data) {
+	if o == nil {
 		return nil, false
 	}
 	return o.Data, true
 }
 
-// HasData returns a boolean if a field has been set.
-func (o *InlineObject1) HasData() bool {
-	if o != nil && !IsNil(o.Data) {
-		return true
-	}
-
-	return false
-}
-
-// SetData gets a reference to the given []Index and assigns it to the Data field.
+// SetData sets field value
 func (o *InlineObject1) SetData(v []Index) {
 	o.Data = v
+}
+
+// GetStatus returns the Status field value
+func (o *InlineObject1) GetStatus() string {
+	if o == nil {
+		var ret string
+		return ret
+	}
+
+	return o.Status
+}
+
+// GetStatusOk returns a tuple with the Status field value
+// and a boolean to check if the value has been set.
+func (o *InlineObject1) GetStatusOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.Status, true
+}
+
+// SetStatus sets field value
+func (o *InlineObject1) SetStatus(v string) {
+	o.Status = v
 }
 
 func (o InlineObject1) MarshalJSON() ([]byte, error) {
@@ -76,10 +128,48 @@ func (o InlineObject1) MarshalJSON() ([]byte, error) {
 
 func (o InlineObject1) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Data) {
-		toSerialize["data"] = o.Data
-	}
+	toSerialize["count"] = o.Count
+	toSerialize["data"] = o.Data
+	toSerialize["status"] = o.Status
 	return toSerialize, nil
+}
+
+func (o *InlineObject1) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
+	// by unmarshalling the object into a generic map with string keys and checking
+	// that every required field exists as a key in the generic map.
+	requiredProperties := []string{
+		"count",
+		"data",
+		"status",
+	}
+
+	allProperties := make(map[string]interface{})
+
+	err = json.Unmarshal(data, &allProperties)
+
+	if err != nil {
+		return err
+	}
+
+	for _, requiredProperty := range requiredProperties {
+		if _, exists := allProperties[requiredProperty]; !exists {
+			return fmt.Errorf("no value given for required property %v", requiredProperty)
+		}
+	}
+
+	varInlineObject1 := _InlineObject1{}
+
+	decoder := json.NewDecoder(bytes.NewReader(data))
+	err = decoder.Decode(&varInlineObject1)
+
+	if err != nil {
+		return err
+	}
+
+	*o = InlineObject1(varInlineObject1)
+
+	return err
 }
 
 type NullableInlineObject1 struct {

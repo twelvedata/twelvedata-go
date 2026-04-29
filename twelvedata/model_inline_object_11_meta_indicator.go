@@ -132,7 +132,6 @@ func (o *InlineObject11MetaIndicator) UnmarshalJSON(data []byte) (err error) {
 	varInlineObject11MetaIndicator := _InlineObject11MetaIndicator{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varInlineObject11MetaIndicator)
 
 	if err != nil {

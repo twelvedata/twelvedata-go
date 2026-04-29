@@ -190,7 +190,6 @@ func (o *ForexResponseItem) UnmarshalJSON(data []byte) (err error) {
 	varForexResponseItem := _ForexResponseItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varForexResponseItem)
 
 	if err != nil {

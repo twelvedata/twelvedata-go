@@ -255,7 +255,6 @@ func (o *ExchangesResponseItem) UnmarshalJSON(data []byte) (err error) {
 	varExchangesResponseItem := _ExchangesResponseItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varExchangesResponseItem)
 
 	if err != nil {

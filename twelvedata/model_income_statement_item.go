@@ -708,7 +708,6 @@ func (o *IncomeStatementItem) UnmarshalJSON(data []byte) (err error) {
 	varIncomeStatementItem := _IncomeStatementItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varIncomeStatementItem)
 
 	if err != nil {

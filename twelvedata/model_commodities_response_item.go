@@ -190,7 +190,6 @@ func (o *CommoditiesResponseItem) UnmarshalJSON(data []byte) (err error) {
 	varCommoditiesResponseItem := _CommoditiesResponseItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varCommoditiesResponseItem)
 
 	if err != nil {

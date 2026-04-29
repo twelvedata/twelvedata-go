@@ -161,7 +161,6 @@ func (o *GetTimeSeriesMama200ResponseValuesInner) UnmarshalJSON(data []byte) (er
 	varGetTimeSeriesMama200ResponseValuesInner := _GetTimeSeriesMama200ResponseValuesInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesMama200ResponseValuesInner)
 
 	if err != nil {

@@ -102,7 +102,6 @@ func (o *GetExchangeSchedule200Response) UnmarshalJSON(data []byte) (err error) 
 	varGetExchangeSchedule200Response := _GetExchangeSchedule200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetExchangeSchedule200Response)
 
 	if err != nil {

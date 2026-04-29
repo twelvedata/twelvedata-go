@@ -190,7 +190,6 @@ func (o *ExchangeScheduleSession) UnmarshalJSON(data []byte) (err error) {
 	varExchangeScheduleSession := _ExchangeScheduleSession{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varExchangeScheduleSession)
 
 	if err != nil {

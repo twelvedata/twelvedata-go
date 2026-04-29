@@ -277,7 +277,6 @@ func (o *CountryResponseItem) UnmarshalJSON(data []byte) (err error) {
 	varCountryResponseItem := _CountryResponseItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varCountryResponseItem)
 
 	if err != nil {

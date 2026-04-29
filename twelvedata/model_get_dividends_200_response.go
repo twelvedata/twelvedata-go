@@ -131,7 +131,6 @@ func (o *GetDividends200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetDividends200Response := _GetDividends200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetDividends200Response)
 
 	if err != nil {

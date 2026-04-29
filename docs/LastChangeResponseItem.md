@@ -6,13 +6,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Symbol** | **string** | Ticker of the company | 
 **MicCode** | **string** | Market Identifier Code (MIC) under ISO 10383 standard | 
-**LastChange** | **time.Time** | The date and time of last changes, in &#x60;2006-01-02 15:04:05&#x60; format | 
+**LastChange** | **string** | The date and time of last changes, in &#x60;2006-01-02 15:04:05&#x60; format | 
 
 ## Methods
 
 ### NewLastChangeResponseItem
 
-`func NewLastChangeResponseItem(symbol string, micCode string, lastChange time.Time, ) *LastChangeResponseItem`
+`func NewLastChangeResponseItem(symbol string, micCode string, lastChange string, ) *LastChangeResponseItem`
 
 NewLastChangeResponseItem instantiates a new LastChangeResponseItem object
 This constructor will assign default values to properties that have it defined,
@@ -69,20 +69,20 @@ SetMicCode sets MicCode field to given value.
 
 ### GetLastChange
 
-`func (o *LastChangeResponseItem) GetLastChange() time.Time`
+`func (o *LastChangeResponseItem) GetLastChange() string`
 
 GetLastChange returns the LastChange field if non-nil, zero value otherwise.
 
 ### GetLastChangeOk
 
-`func (o *LastChangeResponseItem) GetLastChangeOk() (*time.Time, bool)`
+`func (o *LastChangeResponseItem) GetLastChangeOk() (*string, bool)`
 
 GetLastChangeOk returns a tuple with the LastChange field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLastChange
 
-`func (o *LastChangeResponseItem) SetLastChange(v time.Time)`
+`func (o *LastChangeResponseItem) SetLastChange(v string)`
 
 SetLastChange sets LastChange field to given value.
 

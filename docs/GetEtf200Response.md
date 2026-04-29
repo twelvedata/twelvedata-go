@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Count** | **int64** | Count | 
 **Data** | [**[]EtfResponseItem**](EtfResponseItem.md) | List of ETFs | 
 **Status** | **string** | Response status | 
 
@@ -11,7 +12,7 @@ Name | Type | Description | Notes
 
 ### NewGetEtf200Response
 
-`func NewGetEtf200Response(data []EtfResponseItem, status string, ) *GetEtf200Response`
+`func NewGetEtf200Response(count int64, data []EtfResponseItem, status string, ) *GetEtf200Response`
 
 NewGetEtf200Response instantiates a new GetEtf200Response object
 This constructor will assign default values to properties that have it defined,
@@ -25,6 +26,26 @@ will change when the set of required properties is changed
 NewGetEtf200ResponseWithDefaults instantiates a new GetEtf200Response object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetCount
+
+`func (o *GetEtf200Response) GetCount() int64`
+
+GetCount returns the Count field if non-nil, zero value otherwise.
+
+### GetCountOk
+
+`func (o *GetEtf200Response) GetCountOk() (*int64, bool)`
+
+GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCount
+
+`func (o *GetEtf200Response) SetCount(v int64)`
+
+SetCount sets Count field to given value.
+
 
 ### GetData
 

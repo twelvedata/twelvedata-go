@@ -22,6 +22,10 @@ type GetApiUsage200Response struct {
 	CurrentUsage int64 `json:"current_usage"`
 	// Your personal API limit (requests/minute) depending on the plan
 	PlanLimit int64 `json:"plan_limit"`
+	// Number of requests made in the current day. Returned only when the plan has a daily limit.
+	DailyUsage *int64 `json:"daily_usage,omitempty"`
+	// Your personal API limit (requests/day) depending on the plan. Returned only when the plan has a daily limit.
+	PlanDailyLimit *int64 `json:"plan_daily_limit,omitempty"`
 	// Plan category name
 	PlanCategory *string `json:"plan_category,omitempty"`
 }
@@ -120,6 +124,70 @@ func (o *GetApiUsage200Response) SetPlanLimit(v int64) {
 	o.PlanLimit = v
 }
 
+// GetDailyUsage returns the DailyUsage field value if set, zero value otherwise.
+func (o *GetApiUsage200Response) GetDailyUsage() int64 {
+	if o == nil || IsNil(o.DailyUsage) {
+		var ret int64
+		return ret
+	}
+	return *o.DailyUsage
+}
+
+// GetDailyUsageOk returns a tuple with the DailyUsage field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetApiUsage200Response) GetDailyUsageOk() (*int64, bool) {
+	if o == nil || IsNil(o.DailyUsage) {
+		return nil, false
+	}
+	return o.DailyUsage, true
+}
+
+// HasDailyUsage returns a boolean if a field has been set.
+func (o *GetApiUsage200Response) HasDailyUsage() bool {
+	if o != nil && !IsNil(o.DailyUsage) {
+		return true
+	}
+
+	return false
+}
+
+// SetDailyUsage gets a reference to the given int64 and assigns it to the DailyUsage field.
+func (o *GetApiUsage200Response) SetDailyUsage(v int64) {
+	o.DailyUsage = &v
+}
+
+// GetPlanDailyLimit returns the PlanDailyLimit field value if set, zero value otherwise.
+func (o *GetApiUsage200Response) GetPlanDailyLimit() int64 {
+	if o == nil || IsNil(o.PlanDailyLimit) {
+		var ret int64
+		return ret
+	}
+	return *o.PlanDailyLimit
+}
+
+// GetPlanDailyLimitOk returns a tuple with the PlanDailyLimit field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetApiUsage200Response) GetPlanDailyLimitOk() (*int64, bool) {
+	if o == nil || IsNil(o.PlanDailyLimit) {
+		return nil, false
+	}
+	return o.PlanDailyLimit, true
+}
+
+// HasPlanDailyLimit returns a boolean if a field has been set.
+func (o *GetApiUsage200Response) HasPlanDailyLimit() bool {
+	if o != nil && !IsNil(o.PlanDailyLimit) {
+		return true
+	}
+
+	return false
+}
+
+// SetPlanDailyLimit gets a reference to the given int64 and assigns it to the PlanDailyLimit field.
+func (o *GetApiUsage200Response) SetPlanDailyLimit(v int64) {
+	o.PlanDailyLimit = &v
+}
+
 // GetPlanCategory returns the PlanCategory field value if set, zero value otherwise.
 func (o *GetApiUsage200Response) GetPlanCategory() string {
 	if o == nil || IsNil(o.PlanCategory) {
@@ -165,6 +233,12 @@ func (o GetApiUsage200Response) ToMap() (map[string]interface{}, error) {
 	toSerialize["timestamp"] = o.Timestamp
 	toSerialize["current_usage"] = o.CurrentUsage
 	toSerialize["plan_limit"] = o.PlanLimit
+	if !IsNil(o.DailyUsage) {
+		toSerialize["daily_usage"] = o.DailyUsage
+	}
+	if !IsNil(o.PlanDailyLimit) {
+		toSerialize["plan_daily_limit"] = o.PlanDailyLimit
+	}
 	if !IsNil(o.PlanCategory) {
 		toSerialize["plan_category"] = o.PlanCategory
 	}
@@ -198,7 +272,6 @@ func (o *GetApiUsage200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetApiUsage200Response := _GetApiUsage200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetApiUsage200Response)
 
 	if err != nil {

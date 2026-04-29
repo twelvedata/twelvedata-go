@@ -433,7 +433,6 @@ func (o *CashFlowStruct) UnmarshalJSON(data []byte) (err error) {
 	varCashFlowStruct := _CashFlowStruct{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varCashFlowStruct)
 
 	if err != nil {

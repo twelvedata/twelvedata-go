@@ -161,7 +161,6 @@ func (o *ApiParameterTooLongErrorResponseBody) UnmarshalJSON(data []byte) (err e
 	varApiParameterTooLongErrorResponseBody := _ApiParameterTooLongErrorResponseBody{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varApiParameterTooLongErrorResponseBody)
 
 	if err != nil {

@@ -264,7 +264,6 @@ func (o *PressRelease) UnmarshalJSON(data []byte) (err error) {
 	varPressRelease := _PressRelease{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varPressRelease)
 
 	if err != nil {

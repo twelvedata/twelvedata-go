@@ -132,7 +132,6 @@ func (o *GetEarningsCalendar200Response) UnmarshalJSON(data []byte) (err error) 
 	varGetEarningsCalendar200Response := _GetEarningsCalendar200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetEarningsCalendar200Response)
 
 	if err != nil {

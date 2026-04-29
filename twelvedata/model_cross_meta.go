@@ -277,7 +277,6 @@ func (o *CrossMeta) UnmarshalJSON(data []byte) (err error) {
 	varCrossMeta := _CrossMeta{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varCrossMeta)
 
 	if err != nil {

@@ -132,7 +132,6 @@ func (o *GetTimeSeriesLinearRegSlope200ResponseValuesInner) UnmarshalJSON(data [
 	varGetTimeSeriesLinearRegSlope200ResponseValuesInner := _GetTimeSeriesLinearRegSlope200ResponseValuesInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesLinearRegSlope200ResponseValuesInner)
 
 	if err != nil {

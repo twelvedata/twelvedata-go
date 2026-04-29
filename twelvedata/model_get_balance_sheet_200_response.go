@@ -131,7 +131,6 @@ func (o *GetBalanceSheet200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetBalanceSheet200Response := _GetBalanceSheet200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetBalanceSheet200Response)
 
 	if err != nil {

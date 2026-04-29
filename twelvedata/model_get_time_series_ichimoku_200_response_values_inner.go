@@ -272,7 +272,6 @@ func (o *GetTimeSeriesIchimoku200ResponseValuesInner) UnmarshalJSON(data []byte)
 	varGetTimeSeriesIchimoku200ResponseValuesInner := _GetTimeSeriesIchimoku200ResponseValuesInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesIchimoku200ResponseValuesInner)
 
 	if err != nil {

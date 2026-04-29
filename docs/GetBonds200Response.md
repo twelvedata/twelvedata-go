@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Result** | Pointer to [**GetBonds200ResponseResult**](GetBonds200ResponseResult.md) |  | [optional] 
+**Result** | [**GetBonds200ResponseResult**](GetBonds200ResponseResult.md) |  | 
 **Status** | **string** | Response status | 
 
 ## Methods
 
 ### NewGetBonds200Response
 
-`func NewGetBonds200Response(status string, ) *GetBonds200Response`
+`func NewGetBonds200Response(result GetBonds200ResponseResult, status string, ) *GetBonds200Response`
 
 NewGetBonds200Response instantiates a new GetBonds200Response object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetResult sets Result field to given value.
 
-### HasResult
-
-`func (o *GetBonds200Response) HasResult() bool`
-
-HasResult returns a boolean if a field has been set.
 
 ### GetStatus
 

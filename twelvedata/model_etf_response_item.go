@@ -400,7 +400,6 @@ func (o *EtfResponseItem) UnmarshalJSON(data []byte) (err error) {
 	varEtfResponseItem := _EtfResponseItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varEtfResponseItem)
 
 	if err != nil {

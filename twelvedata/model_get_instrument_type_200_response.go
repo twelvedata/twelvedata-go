@@ -132,7 +132,6 @@ func (o *GetInstrumentType200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetInstrumentType200Response := _GetInstrumentType200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetInstrumentType200Response)
 
 	if err != nil {

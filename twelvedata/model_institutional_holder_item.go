@@ -251,7 +251,6 @@ func (o *InstitutionalHolderItem) UnmarshalJSON(data []byte) (err error) {
 	varInstitutionalHolderItem := _InstitutionalHolderItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varInstitutionalHolderItem)
 
 	if err != nil {

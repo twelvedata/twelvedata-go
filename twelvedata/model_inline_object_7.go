@@ -17,6 +17,8 @@ var _ MappedNullable = &InlineObject7{}
 // InlineObject7 struct for InlineObject7
 type InlineObject7 struct {
 	Data []StockExchange `json:"data"`
+	// Response status
+	Status string `json:"status"`
 }
 
 type _InlineObject7 InlineObject7
@@ -25,9 +27,10 @@ type _InlineObject7 InlineObject7
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewInlineObject7(data []StockExchange) *InlineObject7 {
+func NewInlineObject7(data []StockExchange, status string) *InlineObject7 {
 	this := InlineObject7{}
 	this.Data = data
+	this.Status = status
 	return &this
 }
 
@@ -63,6 +66,30 @@ func (o *InlineObject7) SetData(v []StockExchange) {
 	o.Data = v
 }
 
+// GetStatus returns the Status field value
+func (o *InlineObject7) GetStatus() string {
+	if o == nil {
+		var ret string
+		return ret
+	}
+
+	return o.Status
+}
+
+// GetStatusOk returns a tuple with the Status field value
+// and a boolean to check if the value has been set.
+func (o *InlineObject7) GetStatusOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.Status, true
+}
+
+// SetStatus sets field value
+func (o *InlineObject7) SetStatus(v string) {
+	o.Status = v
+}
+
 func (o InlineObject7) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -74,6 +101,7 @@ func (o InlineObject7) MarshalJSON() ([]byte, error) {
 func (o InlineObject7) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	toSerialize["data"] = o.Data
+	toSerialize["status"] = o.Status
 	return toSerialize, nil
 }
 
@@ -83,6 +111,7 @@ func (o *InlineObject7) UnmarshalJSON(data []byte) (err error) {
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
 		"data",
+		"status",
 	}
 
 	allProperties := make(map[string]interface{})
@@ -102,7 +131,6 @@ func (o *InlineObject7) UnmarshalJSON(data []byte) (err error) {
 	varInlineObject7 := _InlineObject7{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varInlineObject7)
 
 	if err != nil {

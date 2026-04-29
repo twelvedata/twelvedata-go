@@ -251,7 +251,6 @@ func (o *FundHolderItem) UnmarshalJSON(data []byte) (err error) {
 	varFundHolderItem := _FundHolderItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varFundHolderItem)
 
 	if err != nil {

@@ -132,7 +132,6 @@ func (o *MarketMoversResponseBody) UnmarshalJSON(data []byte) (err error) {
 	varMarketMoversResponseBody := _MarketMoversResponseBody{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varMarketMoversResponseBody)
 
 	if err != nil {

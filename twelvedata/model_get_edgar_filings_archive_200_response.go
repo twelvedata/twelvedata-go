@@ -131,7 +131,6 @@ func (o *GetEdgarFilingsArchive200Response) UnmarshalJSON(data []byte) (err erro
 	varGetEdgarFilingsArchive200Response := _GetEdgarFilingsArchive200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetEdgarFilingsArchive200Response)
 
 	if err != nil {

@@ -139,7 +139,6 @@ func (o *GetIncomeStatement200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetIncomeStatement200Response := _GetIncomeStatement200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetIncomeStatement200Response)
 
 	if err != nil {

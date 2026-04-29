@@ -132,7 +132,6 @@ func (o *GetLastChanges200ResponsePagination) UnmarshalJSON(data []byte) (err er
 	varGetLastChanges200ResponsePagination := _GetLastChanges200ResponsePagination{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetLastChanges200ResponsePagination)
 
 	if err != nil {

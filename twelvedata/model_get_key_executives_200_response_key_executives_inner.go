@@ -243,7 +243,6 @@ func (o *GetKeyExecutives200ResponseKeyExecutivesInner) UnmarshalJSON(data []byt
 	varGetKeyExecutives200ResponseKeyExecutivesInner := _GetKeyExecutives200ResponseKeyExecutivesInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetKeyExecutives200ResponseKeyExecutivesInner)
 
 	if err != nil {

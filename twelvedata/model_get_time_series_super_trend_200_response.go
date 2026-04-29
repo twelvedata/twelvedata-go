@@ -160,7 +160,6 @@ func (o *GetTimeSeriesSuperTrend200Response) UnmarshalJSON(data []byte) (err err
 	varGetTimeSeriesSuperTrend200Response := _GetTimeSeriesSuperTrend200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesSuperTrend200Response)
 
 	if err != nil {

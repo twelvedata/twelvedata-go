@@ -248,7 +248,6 @@ func (o *GetStatistics200ResponseMeta) UnmarshalJSON(data []byte) (err error) {
 	varGetStatistics200ResponseMeta := _GetStatistics200ResponseMeta{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetStatistics200ResponseMeta)
 
 	if err != nil {

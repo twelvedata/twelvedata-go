@@ -159,7 +159,6 @@ func (o *GetTaxInfo200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetTaxInfo200Response := _GetTaxInfo200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTaxInfo200Response)
 
 	if err != nil {

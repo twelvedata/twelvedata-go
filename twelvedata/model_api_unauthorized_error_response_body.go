@@ -161,7 +161,6 @@ func (o *ApiUnauthorizedErrorResponseBody) UnmarshalJSON(data []byte) (err error
 	varApiUnauthorizedErrorResponseBody := _ApiUnauthorizedErrorResponseBody{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varApiUnauthorizedErrorResponseBody)
 
 	if err != nil {

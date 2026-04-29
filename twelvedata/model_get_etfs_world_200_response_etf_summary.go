@@ -576,7 +576,6 @@ func (o *GetETFsWorld200ResponseEtfSummary) UnmarshalJSON(data []byte) (err erro
 	varGetETFsWorld200ResponseEtfSummary := _GetETFsWorld200ResponseEtfSummary{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetETFsWorld200ResponseEtfSummary)
 
 	if err != nil {

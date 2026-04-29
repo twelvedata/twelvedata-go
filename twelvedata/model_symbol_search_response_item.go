@@ -342,7 +342,6 @@ func (o *SymbolSearchResponseItem) UnmarshalJSON(data []byte) (err error) {
 	varSymbolSearchResponseItem := _SymbolSearchResponseItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varSymbolSearchResponseItem)
 
 	if err != nil {

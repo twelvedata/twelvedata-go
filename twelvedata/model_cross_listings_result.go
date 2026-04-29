@@ -132,7 +132,6 @@ func (o *CrossListingsResult) UnmarshalJSON(data []byte) (err error) {
 	varCrossListingsResult := _CrossListingsResult{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varCrossListingsResult)
 
 	if err != nil {

@@ -139,7 +139,6 @@ func (o *BalanceSheetConsolidatedItem) UnmarshalJSON(data []byte) (err error) {
 	varBalanceSheetConsolidatedItem := _BalanceSheetConsolidatedItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varBalanceSheetConsolidatedItem)
 
 	if err != nil {

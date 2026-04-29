@@ -9,7 +9,6 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"time"
 )
 
 // checks if the LastChangeResponseItem type satisfies the MappedNullable interface at compile time
@@ -22,7 +21,7 @@ type LastChangeResponseItem struct {
 	// Market Identifier Code (MIC) under ISO 10383 standard
 	MicCode string `json:"mic_code"`
 	// The date and time of last changes, in `2006-01-02 15:04:05` format
-	LastChange time.Time `json:"last_change"`
+	LastChange string `json:"last_change"`
 }
 
 type _LastChangeResponseItem LastChangeResponseItem
@@ -31,7 +30,7 @@ type _LastChangeResponseItem LastChangeResponseItem
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewLastChangeResponseItem(symbol string, micCode string, lastChange time.Time) *LastChangeResponseItem {
+func NewLastChangeResponseItem(symbol string, micCode string, lastChange string) *LastChangeResponseItem {
 	this := LastChangeResponseItem{}
 	this.Symbol = symbol
 	this.MicCode = micCode
@@ -96,9 +95,9 @@ func (o *LastChangeResponseItem) SetMicCode(v string) {
 }
 
 // GetLastChange returns the LastChange field value
-func (o *LastChangeResponseItem) GetLastChange() time.Time {
+func (o *LastChangeResponseItem) GetLastChange() string {
 	if o == nil {
-		var ret time.Time
+		var ret string
 		return ret
 	}
 
@@ -107,7 +106,7 @@ func (o *LastChangeResponseItem) GetLastChange() time.Time {
 
 // GetLastChangeOk returns a tuple with the LastChange field value
 // and a boolean to check if the value has been set.
-func (o *LastChangeResponseItem) GetLastChangeOk() (*time.Time, bool) {
+func (o *LastChangeResponseItem) GetLastChangeOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -115,7 +114,7 @@ func (o *LastChangeResponseItem) GetLastChangeOk() (*time.Time, bool) {
 }
 
 // SetLastChange sets field value
-func (o *LastChangeResponseItem) SetLastChange(v time.Time) {
+func (o *LastChangeResponseItem) SetLastChange(v string) {
 	o.LastChange = v
 }
 
@@ -162,7 +161,6 @@ func (o *LastChangeResponseItem) UnmarshalJSON(data []byte) (err error) {
 	varLastChangeResponseItem := _LastChangeResponseItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varLastChangeResponseItem)
 
 	if err != nil {

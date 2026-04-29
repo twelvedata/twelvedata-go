@@ -305,7 +305,6 @@ func (o *GetTimeSeriesSuperTrendHeikinAshiCandles200ResponseMeta) UnmarshalJSON(
 	varGetTimeSeriesSuperTrendHeikinAshiCandles200ResponseMeta := _GetTimeSeriesSuperTrendHeikinAshiCandles200ResponseMeta{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesSuperTrendHeikinAshiCandles200ResponseMeta)
 
 	if err != nil {

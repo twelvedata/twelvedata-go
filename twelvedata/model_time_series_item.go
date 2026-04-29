@@ -256,7 +256,6 @@ func (o *TimeSeriesItem) UnmarshalJSON(data []byte) (err error) {
 	varTimeSeriesItem := _TimeSeriesItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varTimeSeriesItem)
 
 	if err != nil {

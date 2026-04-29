@@ -392,7 +392,6 @@ func (o *CashFlowData) UnmarshalJSON(data []byte) (err error) {
 	varCashFlowData := _CashFlowData{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varCashFlowData)
 
 	if err != nil {

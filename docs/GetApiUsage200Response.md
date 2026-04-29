@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **Timestamp** | **string** | Current timestamp in UTC timezone | 
 **CurrentUsage** | **int64** | Number of requests made in last minute | 
 **PlanLimit** | **int64** | Your personal API limit (requests/minute) depending on the plan | 
+**DailyUsage** | Pointer to **int64** | Number of requests made in the current day. Returned only when the plan has a daily limit. | [optional] 
+**PlanDailyLimit** | Pointer to **int64** | Your personal API limit (requests/day) depending on the plan. Returned only when the plan has a daily limit. | [optional] 
 **PlanCategory** | Pointer to **string** | Plan category name | [optional] 
 
 ## Methods
@@ -87,6 +89,56 @@ and a boolean to check if the value has been set.
 
 SetPlanLimit sets PlanLimit field to given value.
 
+
+### GetDailyUsage
+
+`func (o *GetApiUsage200Response) GetDailyUsage() int64`
+
+GetDailyUsage returns the DailyUsage field if non-nil, zero value otherwise.
+
+### GetDailyUsageOk
+
+`func (o *GetApiUsage200Response) GetDailyUsageOk() (*int64, bool)`
+
+GetDailyUsageOk returns a tuple with the DailyUsage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDailyUsage
+
+`func (o *GetApiUsage200Response) SetDailyUsage(v int64)`
+
+SetDailyUsage sets DailyUsage field to given value.
+
+### HasDailyUsage
+
+`func (o *GetApiUsage200Response) HasDailyUsage() bool`
+
+HasDailyUsage returns a boolean if a field has been set.
+
+### GetPlanDailyLimit
+
+`func (o *GetApiUsage200Response) GetPlanDailyLimit() int64`
+
+GetPlanDailyLimit returns the PlanDailyLimit field if non-nil, zero value otherwise.
+
+### GetPlanDailyLimitOk
+
+`func (o *GetApiUsage200Response) GetPlanDailyLimitOk() (*int64, bool)`
+
+GetPlanDailyLimitOk returns a tuple with the PlanDailyLimit field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPlanDailyLimit
+
+`func (o *GetApiUsage200Response) SetPlanDailyLimit(v int64)`
+
+SetPlanDailyLimit sets PlanDailyLimit field to given value.
+
+### HasPlanDailyLimit
+
+`func (o *GetApiUsage200Response) HasPlanDailyLimit() bool`
+
+HasPlanDailyLimit returns a boolean if a field has been set.
 
 ### GetPlanCategory
 

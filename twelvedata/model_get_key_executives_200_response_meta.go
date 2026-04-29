@@ -248,7 +248,6 @@ func (o *GetKeyExecutives200ResponseMeta) UnmarshalJSON(data []byte) (err error)
 	varGetKeyExecutives200ResponseMeta := _GetKeyExecutives200ResponseMeta{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetKeyExecutives200ResponseMeta)
 
 	if err != nil {

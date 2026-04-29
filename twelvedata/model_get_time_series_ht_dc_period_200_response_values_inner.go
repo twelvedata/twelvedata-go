@@ -132,7 +132,6 @@ func (o *GetTimeSeriesHtDcPeriod200ResponseValuesInner) UnmarshalJSON(data []byt
 	varGetTimeSeriesHtDcPeriod200ResponseValuesInner := _GetTimeSeriesHtDcPeriod200ResponseValuesInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesHtDcPeriod200ResponseValuesInner)
 
 	if err != nil {

@@ -219,7 +219,6 @@ func (o *GetTimeSeriesHeikinashiCandles200ResponseValuesInner) UnmarshalJSON(dat
 	varGetTimeSeriesHeikinashiCandles200ResponseValuesInner := _GetTimeSeriesHeikinashiCandles200ResponseValuesInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesHeikinashiCandles200ResponseValuesInner)
 
 	if err != nil {

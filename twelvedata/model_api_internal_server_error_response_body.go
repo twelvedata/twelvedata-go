@@ -161,7 +161,6 @@ func (o *ApiInternalServerErrorResponseBody) UnmarshalJSON(data []byte) (err err
 	varApiInternalServerErrorResponseBody := _ApiInternalServerErrorResponseBody{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varApiInternalServerErrorResponseBody)
 
 	if err != nil {

@@ -243,7 +243,6 @@ func (o *DividendsCalendarItem) UnmarshalJSON(data []byte) (err error) {
 	varDividendsCalendarItem := _DividendsCalendarItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varDividendsCalendarItem)
 
 	if err != nil {

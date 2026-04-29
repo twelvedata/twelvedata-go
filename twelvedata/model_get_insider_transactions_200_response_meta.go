@@ -248,7 +248,6 @@ func (o *GetInsiderTransactions200ResponseMeta) UnmarshalJSON(data []byte) (err 
 	varGetInsiderTransactions200ResponseMeta := _GetInsiderTransactions200ResponseMeta{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetInsiderTransactions200ResponseMeta)
 
 	if err != nil {

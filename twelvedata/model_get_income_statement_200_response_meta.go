@@ -277,7 +277,6 @@ func (o *GetIncomeStatement200ResponseMeta) UnmarshalJSON(data []byte) (err erro
 	varGetIncomeStatement200ResponseMeta := _GetIncomeStatement200ResponseMeta{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetIncomeStatement200ResponseMeta)
 
 	if err != nil {

@@ -131,7 +131,6 @@ func (o *GetDirectHolders200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetDirectHolders200Response := _GetDirectHolders200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetDirectHolders200Response)
 
 	if err != nil {

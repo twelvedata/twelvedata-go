@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Count** | **int64** | Count | 
 **Data** | [**[]ForexResponseItem**](ForexResponseItem.md) | List of forex pairs | 
 **Status** | **string** | Response status | 
 
@@ -11,7 +12,7 @@ Name | Type | Description | Notes
 
 ### NewGetForexPairs200Response
 
-`func NewGetForexPairs200Response(data []ForexResponseItem, status string, ) *GetForexPairs200Response`
+`func NewGetForexPairs200Response(count int64, data []ForexResponseItem, status string, ) *GetForexPairs200Response`
 
 NewGetForexPairs200Response instantiates a new GetForexPairs200Response object
 This constructor will assign default values to properties that have it defined,
@@ -25,6 +26,26 @@ will change when the set of required properties is changed
 NewGetForexPairs200ResponseWithDefaults instantiates a new GetForexPairs200Response object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetCount
+
+`func (o *GetForexPairs200Response) GetCount() int64`
+
+GetCount returns the Count field if non-nil, zero value otherwise.
+
+### GetCountOk
+
+`func (o *GetForexPairs200Response) GetCountOk() (*int64, bool)`
+
+GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCount
+
+`func (o *GetForexPairs200Response) SetCount(v int64)`
+
+SetCount sets Count field to given value.
+
 
 ### GetData
 

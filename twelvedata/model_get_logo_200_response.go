@@ -213,7 +213,6 @@ func (o *GetLogo200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetLogo200Response := _GetLogo200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetLogo200Response)
 
 	if err != nil {

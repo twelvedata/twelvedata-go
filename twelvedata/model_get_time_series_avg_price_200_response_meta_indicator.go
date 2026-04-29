@@ -103,7 +103,6 @@ func (o *GetTimeSeriesAvgPrice200ResponseMetaIndicator) UnmarshalJSON(data []byt
 	varGetTimeSeriesAvgPrice200ResponseMetaIndicator := _GetTimeSeriesAvgPrice200ResponseMetaIndicator{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesAvgPrice200ResponseMetaIndicator)
 
 	if err != nil {

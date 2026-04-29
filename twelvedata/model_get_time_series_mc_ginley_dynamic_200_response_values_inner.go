@@ -132,7 +132,6 @@ func (o *GetTimeSeriesMcGinleyDynamic200ResponseValuesInner) UnmarshalJSON(data 
 	varGetTimeSeriesMcGinleyDynamic200ResponseValuesInner := _GetTimeSeriesMcGinleyDynamic200ResponseValuesInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesMcGinleyDynamic200ResponseValuesInner)
 
 	if err != nil {

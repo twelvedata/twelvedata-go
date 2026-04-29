@@ -132,7 +132,6 @@ func (o *GetIntervals200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetIntervals200Response := _GetIntervals200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetIntervals200Response)
 
 	if err != nil {

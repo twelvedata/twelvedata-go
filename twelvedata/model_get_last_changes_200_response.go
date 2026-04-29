@@ -131,7 +131,6 @@ func (o *GetLastChanges200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetLastChanges200Response := _GetLastChanges200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetLastChanges200Response)
 
 	if err != nil {

@@ -429,7 +429,6 @@ func (o *StocksResponseItem) UnmarshalJSON(data []byte) (err error) {
 	varStocksResponseItem := _StocksResponseItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varStocksResponseItem)
 
 	if err != nil {

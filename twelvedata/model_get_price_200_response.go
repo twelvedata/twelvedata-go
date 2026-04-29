@@ -103,7 +103,6 @@ func (o *GetPrice200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetPrice200Response := _GetPrice200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetPrice200Response)
 
 	if err != nil {

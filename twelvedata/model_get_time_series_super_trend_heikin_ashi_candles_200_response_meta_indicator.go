@@ -161,7 +161,6 @@ func (o *GetTimeSeriesSuperTrendHeikinAshiCandles200ResponseMetaIndicator) Unmar
 	varGetTimeSeriesSuperTrendHeikinAshiCandles200ResponseMetaIndicator := _GetTimeSeriesSuperTrendHeikinAshiCandles200ResponseMetaIndicator{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesSuperTrendHeikinAshiCandles200ResponseMetaIndicator)
 
 	if err != nil {

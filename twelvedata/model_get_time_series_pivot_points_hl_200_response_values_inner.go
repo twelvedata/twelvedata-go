@@ -161,7 +161,6 @@ func (o *GetTimeSeriesPivotPointsHL200ResponseValuesInner) UnmarshalJSON(data []
 	varGetTimeSeriesPivotPointsHL200ResponseValuesInner := _GetTimeSeriesPivotPointsHL200ResponseValuesInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesPivotPointsHL200ResponseValuesInner)
 
 	if err != nil {

@@ -280,7 +280,6 @@ func (o *GetEpsRevisions200ResponseEpsRevisionInner) UnmarshalJSON(data []byte) 
 	varGetEpsRevisions200ResponseEpsRevisionInner := _GetEpsRevisions200ResponseEpsRevisionInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetEpsRevisions200ResponseEpsRevisionInner)
 
 	if err != nil {

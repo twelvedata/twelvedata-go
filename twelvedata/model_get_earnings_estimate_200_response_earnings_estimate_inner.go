@@ -317,7 +317,6 @@ func (o *GetEarningsEstimate200ResponseEarningsEstimateInner) UnmarshalJSON(data
 	varGetEarningsEstimate200ResponseEarningsEstimateInner := _GetEarningsEstimate200ResponseEarningsEstimateInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetEarningsEstimate200ResponseEarningsEstimateInner)
 
 	if err != nil {

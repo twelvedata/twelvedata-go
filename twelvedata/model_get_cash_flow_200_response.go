@@ -131,7 +131,6 @@ func (o *GetCashFlow200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetCashFlow200Response := _GetCashFlow200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetCashFlow200Response)
 
 	if err != nil {

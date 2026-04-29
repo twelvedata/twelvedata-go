@@ -248,7 +248,6 @@ func (o *ETFsListResponseItem) UnmarshalJSON(data []byte) (err error) {
 	varETFsListResponseItem := _ETFsListResponseItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varETFsListResponseItem)
 
 	if err != nil {

@@ -367,7 +367,6 @@ func (o *GetIpoCalendar200ResponseValueInner) UnmarshalJSON(data []byte) (err er
 	varGetIpoCalendar200ResponseValueInner := _GetIpoCalendar200ResponseValueInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetIpoCalendar200ResponseValueInner)
 
 	if err != nil {

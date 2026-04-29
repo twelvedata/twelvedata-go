@@ -330,7 +330,6 @@ func (o *SplitsCalendarResponseItem) UnmarshalJSON(data []byte) (err error) {
 	varSplitsCalendarResponseItem := _SplitsCalendarResponseItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varSplitsCalendarResponseItem)
 
 	if err != nil {

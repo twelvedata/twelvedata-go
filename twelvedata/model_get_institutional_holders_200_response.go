@@ -131,7 +131,6 @@ func (o *GetInstitutionalHolders200Response) UnmarshalJSON(data []byte) (err err
 	varGetInstitutionalHolders200Response := _GetInstitutionalHolders200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetInstitutionalHolders200Response)
 
 	if err != nil {

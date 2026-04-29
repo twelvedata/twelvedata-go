@@ -160,7 +160,6 @@ func (o *GetTimeSeriesAdxr200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetTimeSeriesAdxr200Response := _GetTimeSeriesAdxr200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesAdxr200Response)
 
 	if err != nil {

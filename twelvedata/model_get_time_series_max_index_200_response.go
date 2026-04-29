@@ -160,7 +160,6 @@ func (o *GetTimeSeriesMaxIndex200Response) UnmarshalJSON(data []byte) (err error
 	varGetTimeSeriesMaxIndex200Response := _GetTimeSeriesMaxIndex200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesMaxIndex200Response)
 
 	if err != nil {

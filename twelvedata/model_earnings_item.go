@@ -288,7 +288,6 @@ func (o *EarningsItem) UnmarshalJSON(data []byte) (err error) {
 	varEarningsItem := _EarningsItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varEarningsItem)
 
 	if err != nil {

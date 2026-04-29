@@ -161,7 +161,6 @@ func (o *ApiTooManyRequestsErrorResponseBody) UnmarshalJSON(data []byte) (err er
 	varApiTooManyRequestsErrorResponseBody := _ApiTooManyRequestsErrorResponseBody{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varApiTooManyRequestsErrorResponseBody)
 
 	if err != nil {

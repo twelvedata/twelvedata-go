@@ -79,6 +79,37 @@ For the complete list of API error codes and their meanings, see the [Twelve Dat
 
 See [api_reference.md](api_reference.md) for the complete list of API endpoints and models.
 
+## Integration tests
+
+This repo ships a live-API integration suite at [`twelvedata/endpoints_test.go`](twelvedata/endpoints_test.go). It hits every supported endpoint once against the real Twelve Data API and is used to catch regressions before publishing a new client version. **Running the suite spends API quota.**
+
+### Setup
+
+```bash
+export TWELVEDATA_API_KEY=<your-key>
+```
+
+### Run
+
+```bash
+go test -tags=integration -v -timeout=10m ./twelvedata/...
+```
+
+The build tag (`-tags=integration`) keeps the suite out of `go test ./...`. On success the output ends with `PASS`; a non-zero exit means at least one endpoint failed.
+
+### Editor setup
+
+The `//go:build integration` tag also hides `endpoints_test.go` from default Go tooling, so editors using `gopls` (VS Code, GoLand, Neovim, etc.) report "no packages found" and disable autocomplete in this file out of the box. To get full IntelliSense, add the `integration` build tag to your editor's Go config — for example, in VS Code's `settings.json`:
+
+```json
+{
+    "go.buildTags": "integration",
+    "gopls": {
+        "build.buildFlags": ["-tags=integration"]
+    }
+}
+```
+
 ## Documentation
 Delve deeper with our [official documentation](https://twelvedata.com/docs).
 

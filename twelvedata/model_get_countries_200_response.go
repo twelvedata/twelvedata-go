@@ -103,7 +103,6 @@ func (o *GetCountries200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetCountries200Response := _GetCountries200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetCountries200Response)
 
 	if err != nil {

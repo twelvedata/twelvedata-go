@@ -131,7 +131,6 @@ func (o *GetMutualFundsWorldComposition200Response) UnmarshalJSON(data []byte) (
 	varGetMutualFundsWorldComposition200Response := _GetMutualFundsWorldComposition200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetMutualFundsWorldComposition200Response)
 
 	if err != nil {

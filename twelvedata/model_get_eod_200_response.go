@@ -264,7 +264,6 @@ func (o *GetEod200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetEod200Response := _GetEod200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetEod200Response)
 
 	if err != nil {

@@ -219,7 +219,6 @@ func (o *TimeSeriesCrossItem) UnmarshalJSON(data []byte) (err error) {
 	varTimeSeriesCrossItem := _TimeSeriesCrossItem{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varTimeSeriesCrossItem)
 
 	if err != nil {

@@ -5,13 +5,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Count** | **int64** | Total number of matching instruments | 
-**List** | Pointer to [**[]BondResponseItem**](BondResponseItem.md) |  | [optional] 
+**List** | [**[]BondResponseItem**](BondResponseItem.md) | List of bonds | 
 
 ## Methods
 
 ### NewGetBonds200ResponseResult
 
-`func NewGetBonds200ResponseResult(count int64, ) *GetBonds200ResponseResult`
+`func NewGetBonds200ResponseResult(count int64, list []BondResponseItem, ) *GetBonds200ResponseResult`
 
 NewGetBonds200ResponseResult instantiates a new GetBonds200ResponseResult object
 This constructor will assign default values to properties that have it defined,
@@ -65,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetList sets List field to given value.
 
-### HasList
-
-`func (o *GetBonds200ResponseResult) HasList() bool`
-
-HasList returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

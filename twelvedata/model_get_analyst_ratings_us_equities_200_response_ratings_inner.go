@@ -428,7 +428,6 @@ func (o *GetAnalystRatingsUsEquities200ResponseRatingsInner) UnmarshalJSON(data 
 	varGetAnalystRatingsUsEquities200ResponseRatingsInner := _GetAnalystRatingsUsEquities200ResponseRatingsInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetAnalystRatingsUsEquities200ResponseRatingsInner)
 
 	if err != nil {

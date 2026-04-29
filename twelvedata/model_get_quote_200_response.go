@@ -923,7 +923,6 @@ func (o *GetQuote200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetQuote200Response := _GetQuote200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetQuote200Response)
 
 	if err != nil {

@@ -131,7 +131,6 @@ func (o *GetMarketCap200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetMarketCap200Response := _GetMarketCap200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetMarketCap200Response)
 
 	if err != nil {

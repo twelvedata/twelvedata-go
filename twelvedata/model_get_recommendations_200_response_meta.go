@@ -277,7 +277,6 @@ func (o *GetRecommendations200ResponseMeta) UnmarshalJSON(data []byte) (err erro
 	varGetRecommendations200ResponseMeta := _GetRecommendations200ResponseMeta{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetRecommendations200ResponseMeta)
 
 	if err != nil {

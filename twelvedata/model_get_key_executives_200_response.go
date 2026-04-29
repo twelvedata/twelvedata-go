@@ -139,7 +139,6 @@ func (o *GetKeyExecutives200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetKeyExecutives200Response := _GetKeyExecutives200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetKeyExecutives200Response)
 
 	if err != nil {

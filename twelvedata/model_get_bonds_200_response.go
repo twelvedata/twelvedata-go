@@ -16,7 +16,7 @@ var _ MappedNullable = &GetBonds200Response{}
 
 // GetBonds200Response struct for GetBonds200Response
 type GetBonds200Response struct {
-	Result *GetBonds200ResponseResult `json:"result,omitempty"`
+	Result GetBonds200ResponseResult `json:"result"`
 	// Response status
 	Status string `json:"status"`
 }
@@ -27,8 +27,9 @@ type _GetBonds200Response GetBonds200Response
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewGetBonds200Response(status string) *GetBonds200Response {
+func NewGetBonds200Response(result GetBonds200ResponseResult, status string) *GetBonds200Response {
 	this := GetBonds200Response{}
+	this.Result = result
 	this.Status = status
 	return &this
 }
@@ -41,36 +42,28 @@ func NewGetBonds200ResponseWithDefaults() *GetBonds200Response {
 	return &this
 }
 
-// GetResult returns the Result field value if set, zero value otherwise.
+// GetResult returns the Result field value
 func (o *GetBonds200Response) GetResult() GetBonds200ResponseResult {
-	if o == nil || IsNil(o.Result) {
+	if o == nil {
 		var ret GetBonds200ResponseResult
 		return ret
 	}
-	return *o.Result
+
+	return o.Result
 }
 
-// GetResultOk returns a tuple with the Result field value if set, nil otherwise
+// GetResultOk returns a tuple with the Result field value
 // and a boolean to check if the value has been set.
 func (o *GetBonds200Response) GetResultOk() (*GetBonds200ResponseResult, bool) {
-	if o == nil || IsNil(o.Result) {
+	if o == nil {
 		return nil, false
 	}
-	return o.Result, true
+	return &o.Result, true
 }
 
-// HasResult returns a boolean if a field has been set.
-func (o *GetBonds200Response) HasResult() bool {
-	if o != nil && !IsNil(o.Result) {
-		return true
-	}
-
-	return false
-}
-
-// SetResult gets a reference to the given GetBonds200ResponseResult and assigns it to the Result field.
+// SetResult sets field value
 func (o *GetBonds200Response) SetResult(v GetBonds200ResponseResult) {
-	o.Result = &v
+	o.Result = v
 }
 
 // GetStatus returns the Status field value
@@ -107,9 +100,7 @@ func (o GetBonds200Response) MarshalJSON() ([]byte, error) {
 
 func (o GetBonds200Response) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Result) {
-		toSerialize["result"] = o.Result
-	}
+	toSerialize["result"] = o.Result
 	toSerialize["status"] = o.Status
 	return toSerialize, nil
 }
@@ -119,6 +110,7 @@ func (o *GetBonds200Response) UnmarshalJSON(data []byte) (err error) {
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
+		"result",
 		"status",
 	}
 
@@ -139,7 +131,6 @@ func (o *GetBonds200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetBonds200Response := _GetBonds200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetBonds200Response)
 
 	if err != nil {

@@ -288,7 +288,6 @@ func (o *GetPriceTarget200ResponsePriceTarget) UnmarshalJSON(data []byte) (err e
 	varGetPriceTarget200ResponsePriceTarget := _GetPriceTarget200ResponsePriceTarget{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetPriceTarget200ResponsePriceTarget)
 
 	if err != nil {

@@ -132,7 +132,6 @@ func (o *InlineObject15ValuesInner) UnmarshalJSON(data []byte) (err error) {
 	varInlineObject15ValuesInner := _InlineObject15ValuesInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varInlineObject15ValuesInner)
 
 	if err != nil {

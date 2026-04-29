@@ -161,7 +161,6 @@ func (o *GetTimeSeriesAdd200ResponseMetaIndicator) UnmarshalJSON(data []byte) (e
 	varGetTimeSeriesAdd200ResponseMetaIndicator := _GetTimeSeriesAdd200ResponseMetaIndicator{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesAdd200ResponseMetaIndicator)
 
 	if err != nil {

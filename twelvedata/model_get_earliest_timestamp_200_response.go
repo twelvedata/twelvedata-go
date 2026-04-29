@@ -132,7 +132,6 @@ func (o *GetEarliestTimestamp200Response) UnmarshalJSON(data []byte) (err error)
 	varGetEarliestTimestamp200Response := _GetEarliestTimestamp200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetEarliestTimestamp200Response)
 
 	if err != nil {

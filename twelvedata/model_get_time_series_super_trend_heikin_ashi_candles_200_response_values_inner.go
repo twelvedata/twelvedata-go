@@ -248,7 +248,6 @@ func (o *GetTimeSeriesSuperTrendHeikinAshiCandles200ResponseValuesInner) Unmarsh
 	varGetTimeSeriesSuperTrendHeikinAshiCandles200ResponseValuesInner := _GetTimeSeriesSuperTrendHeikinAshiCandles200ResponseValuesInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesSuperTrendHeikinAshiCandles200ResponseValuesInner)
 
 	if err != nil {

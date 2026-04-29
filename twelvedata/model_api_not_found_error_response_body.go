@@ -161,7 +161,6 @@ func (o *ApiNotFoundErrorResponseBody) UnmarshalJSON(data []byte) (err error) {
 	varApiNotFoundErrorResponseBody := _ApiNotFoundErrorResponseBody{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varApiNotFoundErrorResponseBody)
 
 	if err != nil {

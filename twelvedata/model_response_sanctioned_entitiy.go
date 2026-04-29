@@ -218,7 +218,6 @@ func (o *ResponseSanctionedEntitiy) UnmarshalJSON(data []byte) (err error) {
 	varResponseSanctionedEntitiy := _ResponseSanctionedEntitiy{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varResponseSanctionedEntitiy)
 
 	if err != nil {

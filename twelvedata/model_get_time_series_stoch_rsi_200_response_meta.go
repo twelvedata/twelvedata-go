@@ -305,7 +305,6 @@ func (o *GetTimeSeriesStochRsi200ResponseMeta) UnmarshalJSON(data []byte) (err e
 	varGetTimeSeriesStochRsi200ResponseMeta := _GetTimeSeriesStochRsi200ResponseMeta{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesStochRsi200ResponseMeta)
 
 	if err != nil {

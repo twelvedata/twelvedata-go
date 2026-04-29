@@ -160,7 +160,6 @@ func (o *GetRevenueEstimate200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetRevenueEstimate200Response := _GetRevenueEstimate200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetRevenueEstimate200Response)
 
 	if err != nil {

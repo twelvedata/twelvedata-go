@@ -132,7 +132,6 @@ func (o *GetTimeSeriesHlc3200ResponseValuesInner) UnmarshalJSON(data []byte) (er
 	varGetTimeSeriesHlc3200ResponseValuesInner := _GetTimeSeriesHlc3200ResponseValuesInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesHlc3200ResponseValuesInner)
 
 	if err != nil {

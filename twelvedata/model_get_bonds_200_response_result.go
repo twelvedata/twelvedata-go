@@ -17,8 +17,9 @@ var _ MappedNullable = &GetBonds200ResponseResult{}
 // GetBonds200ResponseResult struct for GetBonds200ResponseResult
 type GetBonds200ResponseResult struct {
 	// Total number of matching instruments
-	Count int64              `json:"count"`
-	List  []BondResponseItem `json:"list,omitempty"`
+	Count int64 `json:"count"`
+	// List of bonds
+	List []BondResponseItem `json:"list"`
 }
 
 type _GetBonds200ResponseResult GetBonds200ResponseResult
@@ -27,9 +28,10 @@ type _GetBonds200ResponseResult GetBonds200ResponseResult
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewGetBonds200ResponseResult(count int64) *GetBonds200ResponseResult {
+func NewGetBonds200ResponseResult(count int64, list []BondResponseItem) *GetBonds200ResponseResult {
 	this := GetBonds200ResponseResult{}
 	this.Count = count
+	this.List = list
 	return &this
 }
 
@@ -65,34 +67,26 @@ func (o *GetBonds200ResponseResult) SetCount(v int64) {
 	o.Count = v
 }
 
-// GetList returns the List field value if set, zero value otherwise.
+// GetList returns the List field value
 func (o *GetBonds200ResponseResult) GetList() []BondResponseItem {
-	if o == nil || IsNil(o.List) {
+	if o == nil {
 		var ret []BondResponseItem
 		return ret
 	}
+
 	return o.List
 }
 
-// GetListOk returns a tuple with the List field value if set, nil otherwise
+// GetListOk returns a tuple with the List field value
 // and a boolean to check if the value has been set.
 func (o *GetBonds200ResponseResult) GetListOk() ([]BondResponseItem, bool) {
-	if o == nil || IsNil(o.List) {
+	if o == nil {
 		return nil, false
 	}
 	return o.List, true
 }
 
-// HasList returns a boolean if a field has been set.
-func (o *GetBonds200ResponseResult) HasList() bool {
-	if o != nil && !IsNil(o.List) {
-		return true
-	}
-
-	return false
-}
-
-// SetList gets a reference to the given []BondResponseItem and assigns it to the List field.
+// SetList sets field value
 func (o *GetBonds200ResponseResult) SetList(v []BondResponseItem) {
 	o.List = v
 }
@@ -108,9 +102,7 @@ func (o GetBonds200ResponseResult) MarshalJSON() ([]byte, error) {
 func (o GetBonds200ResponseResult) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
 	toSerialize["count"] = o.Count
-	if !IsNil(o.List) {
-		toSerialize["list"] = o.List
-	}
+	toSerialize["list"] = o.List
 	return toSerialize, nil
 }
 
@@ -120,6 +112,7 @@ func (o *GetBonds200ResponseResult) UnmarshalJSON(data []byte) (err error) {
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
 		"count",
+		"list",
 	}
 
 	allProperties := make(map[string]interface{})
@@ -139,7 +132,6 @@ func (o *GetBonds200ResponseResult) UnmarshalJSON(data []byte) (err error) {
 	varGetBonds200ResponseResult := _GetBonds200ResponseResult{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetBonds200ResponseResult)
 
 	if err != nil {

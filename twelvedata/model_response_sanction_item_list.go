@@ -140,7 +140,6 @@ func (o *ResponseSanctionItemList) UnmarshalJSON(data []byte) (err error) {
 	varResponseSanctionItemList := _ResponseSanctionItemList{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varResponseSanctionItemList)
 
 	if err != nil {

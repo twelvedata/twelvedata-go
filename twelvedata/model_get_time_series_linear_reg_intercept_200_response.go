@@ -160,7 +160,6 @@ func (o *GetTimeSeriesLinearRegIntercept200Response) UnmarshalJSON(data []byte) 
 	varGetTimeSeriesLinearRegIntercept200Response := _GetTimeSeriesLinearRegIntercept200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTimeSeriesLinearRegIntercept200Response)
 
 	if err != nil {

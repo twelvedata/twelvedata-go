@@ -168,7 +168,6 @@ func (o *GetAnalystRatingsLight200Response) UnmarshalJSON(data []byte) (err erro
 	varGetAnalystRatingsLight200Response := _GetAnalystRatingsLight200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetAnalystRatingsLight200Response)
 
 	if err != nil {

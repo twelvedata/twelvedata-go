@@ -198,7 +198,6 @@ func (o *GetCurrencyConversion200Response) UnmarshalJSON(data []byte) (err error
 	varGetCurrencyConversion200Response := _GetCurrencyConversion200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetCurrencyConversion200Response)
 
 	if err != nil {

@@ -327,7 +327,6 @@ func (o *GetTechnicalIndicators200ResponseDataValue) UnmarshalJSON(data []byte) 
 	varGetTechnicalIndicators200ResponseDataValue := _GetTechnicalIndicators200ResponseDataValue{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetTechnicalIndicators200ResponseDataValue)
 
 	if err != nil {

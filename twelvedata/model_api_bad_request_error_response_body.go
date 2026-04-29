@@ -161,7 +161,6 @@ func (o *ApiBadRequestErrorResponseBody) UnmarshalJSON(data []byte) (err error) 
 	varApiBadRequestErrorResponseBody := _ApiBadRequestErrorResponseBody{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varApiBadRequestErrorResponseBody)
 
 	if err != nil {

@@ -708,7 +708,6 @@ func (o *GetProfile200Response) UnmarshalJSON(data []byte) (err error) {
 	varGetProfile200Response := _GetProfile200Response{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetProfile200Response)
 
 	if err != nil {

@@ -219,7 +219,6 @@ func (o *GetSplits200ResponseSplitsInner) UnmarshalJSON(data []byte) (err error)
 	varGetSplits200ResponseSplitsInner := _GetSplits200ResponseSplitsInner{}
 
 	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
 	err = decoder.Decode(&varGetSplits200ResponseSplitsInner)
 
 	if err != nil {
