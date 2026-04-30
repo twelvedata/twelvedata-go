@@ -77,3 +77,68 @@ cfg.HTTPClient = &http.Client{
     Transport: twelvedata.WrapTransport(myCustomTransport), // pass nil to wrap http.DefaultTransport
 }
 ```
+
+## WebSocket errors
+
+The `ws` sub-package surfaces failures as typed errors that all satisfy `ws.TwelvedataWebSocketError`. They form a separate hierarchy from the REST API errors above — catch them via `errors.As` against the marker interface (any failure) or against the concrete pointer types (a specific failure mode).
+
+| Error type | Raised when | Notes |
+|---|---|---|
+| `*ws.AuthError` | API key missing or rejected during the upgrade | Fatal — auto-reconnect is suppressed. Surfaced via the return of `Connect` and on `Errors()`. |
+| `*ws.ConnectionError` | Socket-level failure: failed upgrade (non-auth), send error, unexpected non-auth response | `Cause` carries the underlying error. Triggers a reconnect attempt. |
+| `*ws.TimeoutError` | No pong received within the configured `PingTimeout` | Connection is treated as dead; triggers a reconnect attempt. |
+| `*ws.ReconnectError` | Auto-reconnect exhausted `MaxAttempts` | Fatal — the client stops; subsequent `Connect` calls return this error immediately. |
+
+```go
+package main
+
+import (
+    "context"
+    "errors"
+    "log"
+
+    "github.com/twelvedata/twelvedata-go/twelvedata/ws"
+)
+
+func main() {
+    client, err := ws.NewClient(ws.Options{APIKey: "YOUR_API_KEY_HERE"})
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    // Connect-time failures: an *AuthError here is fatal — auto-reconnect
+    // will not engage, so handle it before starting the runtime listeners.
+    if err := client.Connect(context.Background()); err != nil {
+        var authErr *ws.AuthError
+        if errors.As(err, &authErr) {
+            log.Fatalf("invalid API key: %s", authErr.Message)
+        }
+        log.Fatal(err)
+    }
+    defer client.Disconnect()
+
+    // Runtime errors arrive on Errors() after Connect succeeded.
+    go func() {
+        for err := range client.Errors() {
+            var reconnectErr *ws.ReconnectError
+            if errors.As(err, &reconnectErr) {
+                log.Fatalf("gave up after %d reconnect attempts: %v", reconnectErr.Attempts, reconnectErr.Cause)
+            }
+
+            var wsErr ws.TwelvedataWebSocketError
+            if errors.As(err, &wsErr) {
+                log.Printf("websocket error: %v", wsErr)
+                continue
+            }
+
+            log.Printf("unexpected error: %v", err)
+        }
+    }()
+
+    if err := client.Subscribe("AAPL"); err != nil {
+        log.Fatal(err)
+    }
+
+    select {}
+}
+```

@@ -68,6 +68,97 @@ go run main.go
 ```
 
 👀 Check the full example and other examples [here](https://github.com/twelvedata/twelvedata-go/tree/master/examples).
+## WebSocket
+
+Twelve Data also exposes a WebSocket API for real-time price streaming. This package ships a wrapper client around it that handles authentication, application-level heartbeat, WebSocket-protocol ping/pong, exponential-backoff auto-reconnect with subscription replay, and typed errors. See the [Twelve Data WebSocket documentation](https://twelvedata.com/docs/#websocket) for protocol details.
+
+For the full list of WebSocket error types and recommended handling, see [WebSocket errors](error_handling.md#websocket-errors).
+
+### Usage
+
+```go
+package main
+
+import (
+    "context"
+    "errors"
+    "log"
+
+    "github.com/twelvedata/twelvedata-go/twelvedata/ws"
+)
+
+func main() {
+    client, err := ws.NewClient(ws.Options{}) // APIKey defaults to $TWELVEDATA_API_KEY
+    if err != nil {
+        log.Fatal(err)
+    }
+    defer client.Disconnect()
+
+    go func() {
+        for p := range client.Prices() {
+            log.Printf("%s @ %v", p.Symbol, p.Price)
+        }
+    }()
+    go func() {
+        for s := range client.SubscribeStatuses() {
+            log.Printf("subscribe-status: %s, success=%d, fails=%d", s.Status, len(s.Success), len(s.Fails))
+        }
+    }()
+    go func() {
+        for r := range client.Reconnecting() {
+            log.Printf("reconnecting: attempt=%d, in=%s", r.Attempt, r.Delay)
+        }
+    }()
+    go func() {
+        for err := range client.Errors() {
+            var authErr *ws.AuthError
+            if errors.As(err, &authErr) {
+                log.Fatalf("auth: %v", authErr)
+            }
+            log.Printf("ws error: %v", err)
+        }
+    }()
+
+    if err := client.Connect(context.Background()); err != nil {
+        var authErr *ws.AuthError
+        if errors.As(err, &authErr) {
+            log.Fatalf("auth: %v", authErr)
+        }
+        log.Fatal(err)
+    }
+
+    if err := client.Subscribe("AAPL,EUR/USD"); err != nil {
+        log.Fatal(err)
+    }
+
+    select {} // run forever
+}
+```
+
+> Event channels are buffered (`ws.DefaultEventBuffer` = 256 per channel). Consume promptly — when a channel is full, new events are dropped and the per-channel counter exposed by `client.Stats()` is incremented.
+
+### WebSocket client configuration
+
+`ws.Options` exposes every knob; zero-valued fields fall back to the package-level `ws.Default*` constants.
+
+```go
+client, err := ws.NewClient(ws.Options{
+    APIKey:            "YOUR_API_KEY_HERE",                  // or $TWELVEDATA_API_KEY
+    URL:               ws.DefaultURL,                        // wss://ws.twelvedata.com/v1/quotes/price
+    HeartbeatInterval: ws.DefaultHeartbeatInterval,          // 10s; <= 0 disables app-level heartbeat
+    PingInterval:      ws.DefaultPingInterval,               // 30s; <= 0 disables protocol ping/pong
+    PingTimeout:       ws.DefaultPingTimeout,                // 10s pong-arrival deadline
+    EventBuffer:       ws.DefaultEventBuffer,                // 256 per channel
+    Reconnect: ws.ReconnectOptions{
+        // Disabled: true,                                   // uncomment to disable auto-reconnect
+        InitialDelay:  ws.DefaultReconnectInitialDelay,      // 1s
+        MaxDelay:      ws.DefaultReconnectMaxDelay,          // 30s cap
+        MaxAttempts:   ws.DefaultReconnectMaxAttempts,       // 10; -1 to retry forever
+        BackoffFactor: ws.DefaultReconnectBackoffFactor,     // 2.0
+    },
+})
+```
+
 
 ## Error Handling
 

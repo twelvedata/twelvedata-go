@@ -27,7 +27,7 @@ type ReconnectOptions struct {
 	Disabled      bool
 	InitialDelay  time.Duration
 	MaxDelay      time.Duration
-	MaxAttempts   int     // 0 falls back to Default; -1 means retry forever
+	MaxAttempts   int // 0 falls back to Default; -1 means retry forever
 	BackoffFactor float64
 }
 

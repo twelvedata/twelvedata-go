@@ -20,8 +20,8 @@ type AuthError struct {
 	Message string
 }
 
-func (e *AuthError) Error() string             { return "twelvedata websocket auth: " + e.Message }
-func (*AuthError) twelvedataWebSocketError()   {}
+func (e *AuthError) Error() string           { return "twelvedata websocket auth: " + e.Message }
+func (*AuthError) twelvedataWebSocketError() {}
 
 // ConnectionError covers socket-level failures: failed upgrade (non-auth),
 // failed send, unexpected non-auth server response. Cause holds the underlying
@@ -37,8 +37,8 @@ func (e *ConnectionError) Error() string {
 	}
 	return "twelvedata websocket: " + e.Message
 }
-func (e *ConnectionError) Unwrap() error             { return e.Cause }
-func (*ConnectionError) twelvedataWebSocketError()   {}
+func (e *ConnectionError) Unwrap() error           { return e.Cause }
+func (*ConnectionError) twelvedataWebSocketError() {}
 
 // TimeoutError is returned when no pong arrived within the configured
 // timeout; the connection is treated as dead and a reconnect is triggered.
@@ -64,5 +64,5 @@ func (e *ReconnectError) Error() string {
 	}
 	return fmt.Sprintf("twelvedata websocket: reconnect failed after %d attempts", e.Attempts)
 }
-func (e *ReconnectError) Unwrap() error             { return e.Cause }
-func (*ReconnectError) twelvedataWebSocketError()   {}
+func (e *ReconnectError) Unwrap() error           { return e.Cause }
+func (*ReconnectError) twelvedataWebSocketError() {}
