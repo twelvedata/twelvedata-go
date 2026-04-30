@@ -15,7 +15,7 @@ Twelve Data official library. This package supports all main features of the ser
 🔑 **API key** is required. If you don't have it yet, get it by [signing up here](https://twelvedata.com/pricing).
 
 ## Requirements
-Go 1.21 or later.
+Go 1.23 or later.
 
 ## Installation
 

@@ -4,7 +4,7 @@ This folder contains usage examples for Go.
 
 ## Prerequisites
 
-Go 1.21 or later. Use [gvm](https://github.com/moovweb/gvm) for Go version management.
+Go 1.23 or later. Use [gvm](https://github.com/moovweb/gvm) for Go version management.
 
 ## Setup
 
