@@ -163,10 +163,6 @@ func (a *FundamentalsAPIService) GetBalanceSheetExecute(r FundamentalsAPIGetBala
 	}
 	if r.period != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "period", r.period, "form", "")
-	} else {
-		var defaultValue PeriodEnum = "annual"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "period", defaultValue, "form", "")
-		r.period = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -176,10 +172,6 @@ func (a *FundamentalsAPIService) GetBalanceSheetExecute(r FundamentalsAPIGetBala
 	}
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 6
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -471,10 +463,6 @@ func (a *FundamentalsAPIService) GetBalanceSheetConsolidatedExecute(r Fundamenta
 	}
 	if r.period != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "period", r.period, "form", "")
-	} else {
-		var defaultValue PeriodEnum = "annual"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "period", defaultValue, "form", "")
-		r.period = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -484,10 +472,6 @@ func (a *FundamentalsAPIService) GetBalanceSheetConsolidatedExecute(r Fundamenta
 	}
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 6
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -779,10 +763,6 @@ func (a *FundamentalsAPIService) GetCashFlowExecute(r FundamentalsAPIGetCashFlow
 	}
 	if r.period != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "period", r.period, "form", "")
-	} else {
-		var defaultValue PeriodEnum = "annual"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "period", defaultValue, "form", "")
-		r.period = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -792,10 +772,6 @@ func (a *FundamentalsAPIService) GetCashFlowExecute(r FundamentalsAPIGetCashFlow
 	}
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 6
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1087,10 +1063,6 @@ func (a *FundamentalsAPIService) GetCashFlowConsolidatedExecute(r FundamentalsAP
 	}
 	if r.period != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "period", r.period, "form", "")
-	} else {
-		var defaultValue PeriodEnum = "annual"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "period", defaultValue, "form", "")
-		r.period = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -1100,10 +1072,6 @@ func (a *FundamentalsAPIService) GetCashFlowConsolidatedExecute(r FundamentalsAP
 	}
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 6
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1395,10 +1363,6 @@ func (a *FundamentalsAPIService) GetDividendsExecute(r FundamentalsAPIGetDividen
 	}
 	if r.range_ != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "range", r.range_, "form", "")
-	} else {
-		var defaultValue RangeEnum = "last"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "range", defaultValue, "form", "")
-		r.range_ = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -1408,10 +1372,6 @@ func (a *FundamentalsAPIService) GetDividendsExecute(r FundamentalsAPIGetDividen
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue bool = true
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1709,17 +1669,9 @@ func (a *FundamentalsAPIService) GetDividendsCalendarExecute(r FundamentalsAPIGe
 	}
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 100
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.page != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
-	} else {
-		var defaultValue int64 = 1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "page", defaultValue, "form", "")
-		r.page = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2045,24 +1997,12 @@ func (a *FundamentalsAPIService) GetEarningsExecute(r FundamentalsAPIGetEarnings
 	}
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 10
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -2072,10 +2012,6 @@ func (a *FundamentalsAPIService) GetEarningsExecute(r FundamentalsAPIGetEarnings
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = 2
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2334,17 +2270,9 @@ func (a *FundamentalsAPIService) GetEarningsCalendarExecute(r FundamentalsAPIGet
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -2354,10 +2282,6 @@ func (a *FundamentalsAPIService) GetEarningsCalendarExecute(r FundamentalsAPIGet
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = 2
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2649,10 +2573,6 @@ func (a *FundamentalsAPIService) GetIncomeStatementExecute(r FundamentalsAPIGetI
 	}
 	if r.period != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "period", r.period, "form", "")
-	} else {
-		var defaultValue PeriodEnum = "annual"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "period", defaultValue, "form", "")
-		r.period = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -2662,10 +2582,6 @@ func (a *FundamentalsAPIService) GetIncomeStatementExecute(r FundamentalsAPIGetI
 	}
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 6
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2957,10 +2873,6 @@ func (a *FundamentalsAPIService) GetIncomeStatementConsolidatedExecute(r Fundame
 	}
 	if r.period != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "period", r.period, "form", "")
-	} else {
-		var defaultValue PeriodEnum = "annual"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "period", defaultValue, "form", "")
-		r.period = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -2970,10 +2882,6 @@ func (a *FundamentalsAPIService) GetIncomeStatementConsolidatedExecute(r Fundame
 	}
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 6
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3735,17 +3643,9 @@ func (a *FundamentalsAPIService) GetLastChangesExecute(r FundamentalsAPIGetLastC
 	}
 	if r.page != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
-	} else {
-		var defaultValue int64 = 1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "page", defaultValue, "form", "")
-		r.page = &defaultValue
 	}
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4274,17 +4174,9 @@ func (a *FundamentalsAPIService) GetMarketCapExecute(r FundamentalsAPIGetMarketC
 	}
 	if r.page != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
-	} else {
-		var defaultValue int64 = 1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "page", defaultValue, "form", "")
-		r.page = &defaultValue
 	}
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 10
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4829,10 +4721,6 @@ func (a *FundamentalsAPIService) GetSplitsExecute(r FundamentalsAPIGetSplitsRequ
 	}
 	if r.range_ != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "range", r.range_, "form", "")
-	} else {
-		var defaultValue RangeSplitsEnum = "last"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "range", defaultValue, "form", "")
-		r.range_ = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -5136,17 +5024,9 @@ func (a *FundamentalsAPIService) GetSplitsCalendarExecute(r FundamentalsAPIGetSp
 	}
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 100
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.page != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
-	} else {
-		var defaultValue string = "1"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "page", defaultValue, "form", "")
-		r.page = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -5707,10 +5587,6 @@ func (a *FundamentalsAPIService) PressReleasesListParametersExecute(r Fundamenta
 	}
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 2
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

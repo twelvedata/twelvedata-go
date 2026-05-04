@@ -234,10 +234,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAdExecute(r TechnicalIndicat
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -253,10 +249,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAdExecute(r TechnicalIndicat
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -269,59 +261,27 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAdExecute(r TechnicalIndicat
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -699,10 +659,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAdOscExecute(r TechnicalIndi
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -718,10 +674,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAdOscExecute(r TechnicalIndi
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -734,73 +686,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAdOscExecute(r TechnicalIndi
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.fastPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_period", r.fastPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 12
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_period", defaultValue, "form", "")
-		r.fastPeriod = &defaultValue
 	}
 	if r.slowPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_period", r.slowPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 26
-		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_period", defaultValue, "form", "")
-		r.slowPeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1178,10 +1090,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAddExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -1197,10 +1105,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAddExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -1213,73 +1117,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAddExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType1 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_1", r.seriesType1, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_1", defaultValue, "form", "")
-		r.seriesType1 = &defaultValue
 	}
 	if r.seriesType2 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_2", r.seriesType2, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_2", defaultValue, "form", "")
-		r.seriesType2 = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1650,10 +1514,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAdxExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -1669,10 +1529,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAdxExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -1685,66 +1541,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAdxExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 14
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2115,10 +1935,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAdxrExecute(r TechnicalIndic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -2134,10 +1950,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAdxrExecute(r TechnicalIndic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -2150,66 +1962,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAdxrExecute(r TechnicalIndic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 14
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2601,10 +2377,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesApoExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -2620,10 +2392,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesApoExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -2636,87 +2404,39 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesApoExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.fastPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_period", r.fastPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 12
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_period", defaultValue, "form", "")
-		r.fastPeriod = &defaultValue
 	}
 	if r.slowPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_period", r.slowPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 26
-		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_period", defaultValue, "form", "")
-		r.slowPeriod = &defaultValue
 	}
 	if r.maType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "ma_type", r.maType, "form", "")
-	} else {
-		var defaultValue MaTypeEnum = "SMA"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "ma_type", defaultValue, "form", "")
-		r.maType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3087,10 +2807,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAroonExecute(r TechnicalIndi
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -3106,10 +2822,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAroonExecute(r TechnicalIndi
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -3122,66 +2834,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAroonExecute(r TechnicalIndi
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 14
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3552,10 +3228,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAroonOscExecute(r TechnicalI
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -3571,10 +3243,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAroonOscExecute(r TechnicalI
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -3587,66 +3255,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAroonOscExecute(r TechnicalI
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 14
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4017,10 +3649,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAtrExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -4036,10 +3664,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAtrExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -4052,66 +3676,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAtrExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 14
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4489,10 +4077,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAvgExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -4508,10 +4092,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAvgExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -4524,73 +4104,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAvgExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4954,10 +4494,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAvgPriceExecute(r TechnicalI
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -4973,10 +4509,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAvgPriceExecute(r TechnicalI
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -4989,59 +4521,27 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesAvgPriceExecute(r TechnicalI
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -5433,10 +4933,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesBBandsExecute(r TechnicalInd
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -5452,10 +4948,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesBBandsExecute(r TechnicalInd
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -5468,87 +4960,39 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesBBandsExecute(r TechnicalInd
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 20
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.sd != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "sd", r.sd, "form", "")
-	} else {
-		var defaultValue float64 = 2
-		parameterAddToHeaderOrQuery(localVarQueryParams, "sd", defaultValue, "form", "")
-		r.sd = &defaultValue
 	}
 	if r.maType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "ma_type", r.maType, "form", "")
-	} else {
-		var defaultValue MaTypeEnum = "SMA"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "ma_type", defaultValue, "form", "")
-		r.maType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -5933,10 +5377,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesBetaExecute(r TechnicalIndic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -5952,10 +5392,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesBetaExecute(r TechnicalIndic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -5968,80 +5404,36 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesBetaExecute(r TechnicalIndic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType1 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_1", r.seriesType1, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_1", defaultValue, "form", "")
-		r.seriesType1 = &defaultValue
 	}
 	if r.seriesType2 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_2", r.seriesType2, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_2", defaultValue, "form", "")
-		r.seriesType2 = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -6405,10 +5797,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesBopExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -6424,10 +5812,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesBopExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -6440,59 +5824,27 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesBopExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -6863,10 +6215,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesCciExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -6882,10 +6230,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesCciExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -6898,66 +6242,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesCciExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 20
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -7328,10 +6636,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesCeilExecute(r TechnicalIndic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -7347,10 +6651,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesCeilExecute(r TechnicalIndic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -7363,66 +6663,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesCeilExecute(r TechnicalIndic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -7800,10 +7064,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesCmoExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -7819,10 +7079,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesCmoExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -7835,73 +7091,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesCmoExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -8293,10 +7509,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesCoppockExecute(r TechnicalIn
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -8312,10 +7524,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesCoppockExecute(r TechnicalIn
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -8328,87 +7536,39 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesCoppockExecute(r TechnicalIn
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.wmaPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "wma_period", r.wmaPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 10
-		parameterAddToHeaderOrQuery(localVarQueryParams, "wma_period", defaultValue, "form", "")
-		r.wmaPeriod = &defaultValue
 	}
 	if r.longRocPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "long_roc_period", r.longRocPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 14
-		parameterAddToHeaderOrQuery(localVarQueryParams, "long_roc_period", defaultValue, "form", "")
-		r.longRocPeriod = &defaultValue
 	}
 	if r.shortRocPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "short_roc_period", r.shortRocPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 11
-		parameterAddToHeaderOrQuery(localVarQueryParams, "short_roc_period", defaultValue, "form", "")
-		r.shortRocPeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -8793,10 +7953,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesCorrelExecute(r TechnicalInd
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -8812,10 +7968,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesCorrelExecute(r TechnicalInd
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -8828,80 +7980,36 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesCorrelExecute(r TechnicalInd
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType1 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_1", r.seriesType1, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_1", defaultValue, "form", "")
-		r.seriesType1 = &defaultValue
 	}
 	if r.seriesType2 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_2", r.seriesType2, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_2", defaultValue, "form", "")
-		r.seriesType2 = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -9293,10 +8401,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesCrsiExecute(r TechnicalIndic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -9312,10 +8416,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesCrsiExecute(r TechnicalIndic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -9328,87 +8428,39 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesCrsiExecute(r TechnicalIndic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.rsiPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "rsi_period", r.rsiPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 3
-		parameterAddToHeaderOrQuery(localVarQueryParams, "rsi_period", defaultValue, "form", "")
-		r.rsiPeriod = &defaultValue
 	}
 	if r.upDownLength != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "up_down_length", r.upDownLength, "form", "")
-	} else {
-		var defaultValue int64 = 2
-		parameterAddToHeaderOrQuery(localVarQueryParams, "up_down_length", defaultValue, "form", "")
-		r.upDownLength = &defaultValue
 	}
 	if r.percentRankPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "percent_rank_period", r.percentRankPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 100
-		parameterAddToHeaderOrQuery(localVarQueryParams, "percent_rank_period", defaultValue, "form", "")
-		r.percentRankPeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -9786,10 +8838,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesDemaExecute(r TechnicalIndic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -9805,10 +8853,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesDemaExecute(r TechnicalIndic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -9821,73 +8865,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesDemaExecute(r TechnicalIndic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -10265,10 +9269,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesDivExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -10284,10 +9284,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesDivExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -10300,73 +9296,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesDivExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType1 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_1", r.seriesType1, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_1", defaultValue, "form", "")
-		r.seriesType1 = &defaultValue
 	}
 	if r.seriesType2 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_2", r.seriesType2, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_2", defaultValue, "form", "")
-		r.seriesType2 = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -10751,10 +9707,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesDpoExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -10770,10 +9722,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesDpoExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -10786,80 +9734,36 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesDpoExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.centered != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "centered", r.centered, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "centered", defaultValue, "form", "")
-		r.centered = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -11230,10 +10134,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesDxExecute(r TechnicalIndicat
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -11249,10 +10149,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesDxExecute(r TechnicalIndicat
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -11265,66 +10161,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesDxExecute(r TechnicalIndicat
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 14
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -11702,10 +10562,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesEmaExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -11721,10 +10577,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesEmaExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -11737,73 +10589,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesEmaExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -12174,10 +10986,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesExpExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -12193,10 +11001,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesExpExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -12209,66 +11013,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesExpExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -12639,10 +11407,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesFloorExecute(r TechnicalIndi
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -12658,10 +11422,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesFloorExecute(r TechnicalIndi
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -12674,66 +11434,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesFloorExecute(r TechnicalIndi
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -13097,10 +11821,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHeikinashiCandlesExecute(r T
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -13116,10 +11836,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHeikinashiCandlesExecute(r T
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -13132,59 +11848,27 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHeikinashiCandlesExecute(r T
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -13548,10 +12232,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHlc3Execute(r TechnicalIndic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -13567,10 +12247,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHlc3Execute(r TechnicalIndic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -13583,59 +12259,27 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHlc3Execute(r TechnicalIndic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -14006,10 +12650,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHtDcPeriodExecute(r Technica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -14025,10 +12665,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHtDcPeriodExecute(r Technica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -14041,66 +12677,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHtDcPeriodExecute(r Technica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -14471,10 +13071,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHtDcPhaseExecute(r Technical
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -14490,10 +13086,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHtDcPhaseExecute(r Technical
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -14506,66 +13098,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHtDcPhaseExecute(r Technical
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -14936,10 +13492,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHtPhasorExecute(r TechnicalI
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -14955,10 +13507,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHtPhasorExecute(r TechnicalI
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -14971,66 +13519,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHtPhasorExecute(r TechnicalI
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -15401,10 +13913,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHtSineExecute(r TechnicalInd
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -15420,10 +13928,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHtSineExecute(r TechnicalInd
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -15436,66 +13940,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHtSineExecute(r TechnicalInd
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -15866,10 +14334,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHtTrendModeExecute(r Technic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -15885,10 +14349,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHtTrendModeExecute(r Technic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -15901,66 +14361,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHtTrendModeExecute(r Technic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -16331,10 +14755,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHtTrendlineExecute(r Technic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -16350,10 +14770,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHtTrendlineExecute(r Technic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -16366,66 +14782,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesHtTrendlineExecute(r Technic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -16824,10 +15204,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesIchimokuExecute(r TechnicalI
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -16843,10 +15219,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesIchimokuExecute(r TechnicalI
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -16859,94 +15231,42 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesIchimokuExecute(r TechnicalI
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.conversionLinePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "conversion_line_period", r.conversionLinePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "conversion_line_period", defaultValue, "form", "")
-		r.conversionLinePeriod = &defaultValue
 	}
 	if r.baseLinePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "base_line_period", r.baseLinePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 26
-		parameterAddToHeaderOrQuery(localVarQueryParams, "base_line_period", defaultValue, "form", "")
-		r.baseLinePeriod = &defaultValue
 	}
 	if r.leadingSpanBPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "leading_span_b_period", r.leadingSpanBPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 52
-		parameterAddToHeaderOrQuery(localVarQueryParams, "leading_span_b_period", defaultValue, "form", "")
-		r.leadingSpanBPeriod = &defaultValue
 	}
 	if r.laggingSpanPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "lagging_span_period", r.laggingSpanPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 26
-		parameterAddToHeaderOrQuery(localVarQueryParams, "lagging_span_period", defaultValue, "form", "")
-		r.laggingSpanPeriod = &defaultValue
 	}
 	if r.includeAheadSpanPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ahead_span_period", r.includeAheadSpanPeriod, "form", "")
-	} else {
-		var defaultValue bool = true
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ahead_span_period", defaultValue, "form", "")
-		r.includeAheadSpanPeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -17324,10 +15644,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesKamaExecute(r TechnicalIndic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -17343,10 +15659,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesKamaExecute(r TechnicalIndic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -17359,73 +15671,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesKamaExecute(r TechnicalIndic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -17824,10 +16096,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesKeltnerExecute(r TechnicalIn
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -17843,10 +16111,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesKeltnerExecute(r TechnicalIn
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -17859,94 +16123,42 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesKeltnerExecute(r TechnicalIn
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 20
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.atrTimePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "atr_time_period", r.atrTimePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 10
-		parameterAddToHeaderOrQuery(localVarQueryParams, "atr_time_period", defaultValue, "form", "")
-		r.atrTimePeriod = &defaultValue
 	}
 	if r.multiplier != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "multiplier", r.multiplier, "form", "")
-	} else {
-		var defaultValue int64 = 2
-		parameterAddToHeaderOrQuery(localVarQueryParams, "multiplier", defaultValue, "form", "")
-		r.multiplier = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.maType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "ma_type", r.maType, "form", "")
-	} else {
-		var defaultValue MaTypeEnum = "SMA"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "ma_type", defaultValue, "form", "")
-		r.maType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -18373,10 +16585,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesKstExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -18392,10 +16600,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesKstExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -18408,122 +16612,54 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesKstExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.rocPeriod1 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "roc_period_1", r.rocPeriod1, "form", "")
-	} else {
-		var defaultValue int64 = 10
-		parameterAddToHeaderOrQuery(localVarQueryParams, "roc_period_1", defaultValue, "form", "")
-		r.rocPeriod1 = &defaultValue
 	}
 	if r.rocPeriod2 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "roc_period_2", r.rocPeriod2, "form", "")
-	} else {
-		var defaultValue int64 = 15
-		parameterAddToHeaderOrQuery(localVarQueryParams, "roc_period_2", defaultValue, "form", "")
-		r.rocPeriod2 = &defaultValue
 	}
 	if r.rocPeriod3 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "roc_period_3", r.rocPeriod3, "form", "")
-	} else {
-		var defaultValue int64 = 20
-		parameterAddToHeaderOrQuery(localVarQueryParams, "roc_period_3", defaultValue, "form", "")
-		r.rocPeriod3 = &defaultValue
 	}
 	if r.rocPeriod4 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "roc_period_4", r.rocPeriod4, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "roc_period_4", defaultValue, "form", "")
-		r.rocPeriod4 = &defaultValue
 	}
 	if r.smaPeriod1 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "sma_period_1", r.smaPeriod1, "form", "")
-	} else {
-		var defaultValue int64 = 10
-		parameterAddToHeaderOrQuery(localVarQueryParams, "sma_period_1", defaultValue, "form", "")
-		r.smaPeriod1 = &defaultValue
 	}
 	if r.smaPeriod2 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "sma_period_2", r.smaPeriod2, "form", "")
-	} else {
-		var defaultValue int64 = 10
-		parameterAddToHeaderOrQuery(localVarQueryParams, "sma_period_2", defaultValue, "form", "")
-		r.smaPeriod2 = &defaultValue
 	}
 	if r.smaPeriod3 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "sma_period_3", r.smaPeriod3, "form", "")
-	} else {
-		var defaultValue int64 = 10
-		parameterAddToHeaderOrQuery(localVarQueryParams, "sma_period_3", defaultValue, "form", "")
-		r.smaPeriod3 = &defaultValue
 	}
 	if r.smaPeriod4 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "sma_period_4", r.smaPeriod4, "form", "")
-	} else {
-		var defaultValue int64 = 15
-		parameterAddToHeaderOrQuery(localVarQueryParams, "sma_period_4", defaultValue, "form", "")
-		r.smaPeriod4 = &defaultValue
 	}
 	if r.signalPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "signal_period", r.signalPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "signal_period", defaultValue, "form", "")
-		r.signalPeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -18901,10 +17037,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesLinearRegExecute(r Technical
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -18920,10 +17052,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesLinearRegExecute(r Technical
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -18936,73 +17064,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesLinearRegExecute(r Technical
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -19380,10 +17468,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesLinearRegAngleExecute(r Tech
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -19399,10 +17483,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesLinearRegAngleExecute(r Tech
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -19415,73 +17495,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesLinearRegAngleExecute(r Tech
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -19859,10 +17899,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesLinearRegInterceptExecute(r 
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -19878,10 +17914,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesLinearRegInterceptExecute(r 
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -19894,73 +17926,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesLinearRegInterceptExecute(r 
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -20338,10 +18330,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesLinearRegSlopeExecute(r Tech
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -20357,10 +18345,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesLinearRegSlopeExecute(r Tech
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -20373,73 +18357,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesLinearRegSlopeExecute(r Tech
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -20810,10 +18754,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesLnExecute(r TechnicalIndicat
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -20829,10 +18769,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesLnExecute(r TechnicalIndicat
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -20845,66 +18781,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesLnExecute(r TechnicalIndicat
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -21275,10 +19175,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesLog10Execute(r TechnicalIndi
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -21294,10 +19190,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesLog10Execute(r TechnicalIndi
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -21310,66 +19202,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesLog10Execute(r TechnicalIndi
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -21754,10 +19610,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMaExecute(r TechnicalIndicat
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -21773,10 +19625,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMaExecute(r TechnicalIndicat
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -21789,80 +19637,36 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMaExecute(r TechnicalIndicat
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.maType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "ma_type", r.maType, "form", "")
-	} else {
-		var defaultValue MaTypeEnum = "SMA"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "ma_type", defaultValue, "form", "")
-		r.maType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -22254,10 +20058,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMacdExecute(r TechnicalIndic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -22273,10 +20073,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMacdExecute(r TechnicalIndic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -22289,87 +20085,39 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMacdExecute(r TechnicalIndic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.fastPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_period", r.fastPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 12
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_period", defaultValue, "form", "")
-		r.fastPeriod = &defaultValue
 	}
 	if r.slowPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_period", r.slowPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 26
-		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_period", defaultValue, "form", "")
-		r.slowPeriod = &defaultValue
 	}
 	if r.signalPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "signal_period", r.signalPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "signal_period", defaultValue, "form", "")
-		r.signalPeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -22782,10 +20530,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMacdExtExecute(r TechnicalIn
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -22801,10 +20545,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMacdExtExecute(r TechnicalIn
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -22817,108 +20557,48 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMacdExtExecute(r TechnicalIn
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.fastPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_period", r.fastPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 12
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_period", defaultValue, "form", "")
-		r.fastPeriod = &defaultValue
 	}
 	if r.fastMaType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_ma_type", r.fastMaType, "form", "")
-	} else {
-		var defaultValue MaTypeEnum = "SMA"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_ma_type", defaultValue, "form", "")
-		r.fastMaType = &defaultValue
 	}
 	if r.slowPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_period", r.slowPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 26
-		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_period", defaultValue, "form", "")
-		r.slowPeriod = &defaultValue
 	}
 	if r.slowMaType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_ma_type", r.slowMaType, "form", "")
-	} else {
-		var defaultValue MaTypeEnum = "SMA"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_ma_type", defaultValue, "form", "")
-		r.slowMaType = &defaultValue
 	}
 	if r.signalPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "signal_period", r.signalPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "signal_period", defaultValue, "form", "")
-		r.signalPeriod = &defaultValue
 	}
 	if r.signalMaType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "signal_ma_type", r.signalMaType, "form", "")
-	} else {
-		var defaultValue MaTypeEnum = "SMA"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "signal_ma_type", defaultValue, "form", "")
-		r.signalMaType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -23317,10 +20997,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMacdSlopeExecute(r Technical
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -23336,10 +21012,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMacdSlopeExecute(r Technical
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -23352,94 +21024,42 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMacdSlopeExecute(r Technical
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.fastPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_period", r.fastPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 12
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_period", defaultValue, "form", "")
-		r.fastPeriod = &defaultValue
 	}
 	if r.slowPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_period", r.slowPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 26
-		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_period", defaultValue, "form", "")
-		r.slowPeriod = &defaultValue
 	}
 	if r.signalPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "signal_period", r.signalPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "signal_period", defaultValue, "form", "")
-		r.signalPeriod = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -23824,10 +21444,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMamaExecute(r TechnicalIndic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -23843,10 +21459,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMamaExecute(r TechnicalIndic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -23859,80 +21471,36 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMamaExecute(r TechnicalIndic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.fastLimit != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_limit", r.fastLimit, "form", "")
-	} else {
-		var defaultValue float64 = 0.5
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_limit", defaultValue, "form", "")
-		r.fastLimit = &defaultValue
 	}
 	if r.slowLimit != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_limit", r.slowLimit, "form", "")
-	} else {
-		var defaultValue float64 = 0.05
-		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_limit", defaultValue, "form", "")
-		r.slowLimit = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -24310,10 +21878,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMaxExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -24329,10 +21893,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMaxExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -24345,73 +21905,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMaxExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -24789,10 +22309,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMaxIndexExecute(r TechnicalI
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -24808,10 +22324,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMaxIndexExecute(r TechnicalI
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -24824,73 +22336,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMaxIndexExecute(r TechnicalI
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -25261,10 +22733,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMcGinleyDynamicExecute(r Tec
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -25280,10 +22748,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMcGinleyDynamicExecute(r Tec
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -25296,66 +22760,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMcGinleyDynamicExecute(r Tec
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 14
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -25719,10 +23147,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMedPriceExecute(r TechnicalI
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -25738,10 +23162,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMedPriceExecute(r TechnicalI
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -25754,59 +23174,27 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMedPriceExecute(r TechnicalI
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -26177,10 +23565,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMfiExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -26196,10 +23580,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMfiExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -26212,66 +23592,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMfiExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 14
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -26649,10 +23993,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMidPointExecute(r TechnicalI
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -26668,10 +24008,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMidPointExecute(r TechnicalI
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -26684,73 +24020,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMidPointExecute(r TechnicalI
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -27121,10 +24417,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMidPriceExecute(r TechnicalI
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -27140,10 +24432,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMidPriceExecute(r TechnicalI
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -27156,66 +24444,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMidPriceExecute(r TechnicalI
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -27593,10 +24845,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMinExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -27612,10 +24860,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMinExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -27628,73 +24872,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMinExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -28072,10 +25276,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMinIndexExecute(r TechnicalI
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -28091,10 +25291,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMinIndexExecute(r TechnicalI
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -28107,73 +25303,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMinIndexExecute(r TechnicalI
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -28551,10 +25707,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMinMaxExecute(r TechnicalInd
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -28570,10 +25722,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMinMaxExecute(r TechnicalInd
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -28586,73 +25734,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMinMaxExecute(r TechnicalInd
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -29030,10 +26138,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMinMaxIndexExecute(r Technic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -29049,10 +26153,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMinMaxIndexExecute(r Technic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -29065,73 +26165,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMinMaxIndexExecute(r Technic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -29502,10 +26562,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMinusDIExecute(r TechnicalIn
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -29521,10 +26577,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMinusDIExecute(r TechnicalIn
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -29537,66 +26589,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMinusDIExecute(r TechnicalIn
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -29967,10 +26983,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMinusDMExecute(r TechnicalIn
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -29986,10 +26998,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMinusDMExecute(r TechnicalIn
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -30002,66 +27010,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMinusDMExecute(r TechnicalIn
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -30439,10 +27411,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMomExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -30458,10 +27426,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMomExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -30474,73 +27438,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMomExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -30918,10 +27842,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMultExecute(r TechnicalIndic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -30937,10 +27857,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMultExecute(r TechnicalIndic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -30953,73 +27869,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesMultExecute(r TechnicalIndic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType1 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_1", r.seriesType1, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_1", defaultValue, "form", "")
-		r.seriesType1 = &defaultValue
 	}
 	if r.seriesType2 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_2", r.seriesType2, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_2", defaultValue, "form", "")
-		r.seriesType2 = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -31390,10 +28266,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesNatrExecute(r TechnicalIndic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -31409,10 +28281,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesNatrExecute(r TechnicalIndic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -31425,66 +28293,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesNatrExecute(r TechnicalIndic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 14
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -31855,10 +28687,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesObvExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -31874,10 +28702,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesObvExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -31890,66 +28714,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesObvExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -32341,10 +29129,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesPercentBExecute(r TechnicalI
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -32360,10 +29144,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesPercentBExecute(r TechnicalI
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -32376,87 +29156,39 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesPercentBExecute(r TechnicalI
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.sd != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "sd", r.sd, "form", "")
-	} else {
-		var defaultValue float64 = 2
-		parameterAddToHeaderOrQuery(localVarQueryParams, "sd", defaultValue, "form", "")
-		r.sd = &defaultValue
 	}
 	if r.maType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "ma_type", r.maType, "form", "")
-	} else {
-		var defaultValue MaTypeEnum = "SMA"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "ma_type", defaultValue, "form", "")
-		r.maType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -32827,10 +29559,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesPivotPointsHLExecute(r Techn
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -32846,10 +29574,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesPivotPointsHLExecute(r Techn
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -32862,66 +29586,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesPivotPointsHLExecute(r Techn
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 10
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -33292,10 +29980,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesPlusDIExecute(r TechnicalInd
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -33311,10 +29995,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesPlusDIExecute(r TechnicalInd
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -33327,66 +30007,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesPlusDIExecute(r TechnicalInd
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -33757,10 +30401,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesPlusDMExecute(r TechnicalInd
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -33776,10 +30416,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesPlusDMExecute(r TechnicalInd
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -33792,66 +30428,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesPlusDMExecute(r TechnicalInd
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -34243,10 +30843,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesPpoExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -34262,10 +30858,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesPpoExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -34278,87 +30870,39 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesPpoExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.fastPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_period", r.fastPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 12
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_period", defaultValue, "form", "")
-		r.fastPeriod = &defaultValue
 	}
 	if r.slowPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_period", r.slowPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 26
-		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_period", defaultValue, "form", "")
-		r.slowPeriod = &defaultValue
 	}
 	if r.maType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "ma_type", r.maType, "form", "")
-	} else {
-		var defaultValue MaTypeEnum = "SMA"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "ma_type", defaultValue, "form", "")
-		r.maType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -34736,10 +31280,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesRocExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -34755,10 +31295,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesRocExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -34771,73 +31307,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesRocExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -35215,10 +31711,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesRocpExecute(r TechnicalIndic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -35234,10 +31726,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesRocpExecute(r TechnicalIndic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -35250,73 +31738,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesRocpExecute(r TechnicalIndic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -35694,10 +32142,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesRocrExecute(r TechnicalIndic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -35713,10 +32157,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesRocrExecute(r TechnicalIndic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -35729,73 +32169,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesRocrExecute(r TechnicalIndic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -36173,10 +32573,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesRocr100Execute(r TechnicalIn
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -36192,10 +32588,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesRocr100Execute(r TechnicalIn
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -36208,73 +32600,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesRocr100Execute(r TechnicalIn
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -36652,10 +33004,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesRsiExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -36671,10 +33019,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesRsiExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -36687,73 +33031,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesRsiExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 14
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -37124,10 +33428,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesRvolExecute(r TechnicalIndic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -37143,10 +33443,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesRvolExecute(r TechnicalIndic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -37159,66 +33455,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesRvolExecute(r TechnicalIndic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 14
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -37596,10 +33856,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSarExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -37615,10 +33871,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSarExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -37631,73 +33883,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSarExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.acceleration != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "acceleration", r.acceleration, "form", "")
-	} else {
-		var defaultValue float64 = 0.02
-		parameterAddToHeaderOrQuery(localVarQueryParams, "acceleration", defaultValue, "form", "")
-		r.acceleration = &defaultValue
 	}
 	if r.maximum != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "maximum", r.maximum, "form", "")
-	} else {
-		var defaultValue float64 = 0.2
-		parameterAddToHeaderOrQuery(localVarQueryParams, "maximum", defaultValue, "form", "")
-		r.maximum = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -38117,10 +34329,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSarExtExecute(r TechnicalInd
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -38136,10 +34344,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSarExtExecute(r TechnicalInd
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -38152,115 +34356,51 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSarExtExecute(r TechnicalInd
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.startValue != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_value", r.startValue, "form", "")
-	} else {
-		var defaultValue float64 = 0
-		parameterAddToHeaderOrQuery(localVarQueryParams, "start_value", defaultValue, "form", "")
-		r.startValue = &defaultValue
 	}
 	if r.offsetOnReverse != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "offset_on_reverse", r.offsetOnReverse, "form", "")
-	} else {
-		var defaultValue float64 = 0
-		parameterAddToHeaderOrQuery(localVarQueryParams, "offset_on_reverse", defaultValue, "form", "")
-		r.offsetOnReverse = &defaultValue
 	}
 	if r.accelerationLimitLong != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "acceleration_limit_long", r.accelerationLimitLong, "form", "")
-	} else {
-		var defaultValue float64 = 0.02
-		parameterAddToHeaderOrQuery(localVarQueryParams, "acceleration_limit_long", defaultValue, "form", "")
-		r.accelerationLimitLong = &defaultValue
 	}
 	if r.accelerationLong != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "acceleration_long", r.accelerationLong, "form", "")
-	} else {
-		var defaultValue float64 = 0.02
-		parameterAddToHeaderOrQuery(localVarQueryParams, "acceleration_long", defaultValue, "form", "")
-		r.accelerationLong = &defaultValue
 	}
 	if r.accelerationMaxLong != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "acceleration_max_long", r.accelerationMaxLong, "form", "")
-	} else {
-		var defaultValue float64 = 0.2
-		parameterAddToHeaderOrQuery(localVarQueryParams, "acceleration_max_long", defaultValue, "form", "")
-		r.accelerationMaxLong = &defaultValue
 	}
 	if r.accelerationLimitShort != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "acceleration_limit_short", r.accelerationLimitShort, "form", "")
-	} else {
-		var defaultValue float64 = 0.02
-		parameterAddToHeaderOrQuery(localVarQueryParams, "acceleration_limit_short", defaultValue, "form", "")
-		r.accelerationLimitShort = &defaultValue
 	}
 	if r.accelerationShort != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "acceleration_short", r.accelerationShort, "form", "")
-	} else {
-		var defaultValue float64 = 0.02
-		parameterAddToHeaderOrQuery(localVarQueryParams, "acceleration_short", defaultValue, "form", "")
-		r.accelerationShort = &defaultValue
 	}
 	if r.accelerationMaxShort != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "acceleration_max_short", r.accelerationMaxShort, "form", "")
-	} else {
-		var defaultValue float64 = 0.2
-		parameterAddToHeaderOrQuery(localVarQueryParams, "acceleration_max_short", defaultValue, "form", "")
-		r.accelerationMaxShort = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -38638,10 +34778,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSmaExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -38657,10 +34793,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSmaExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -38673,73 +34805,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSmaExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -39110,10 +35202,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSqrtExecute(r TechnicalIndic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -39129,10 +35217,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSqrtExecute(r TechnicalIndic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -39145,66 +35229,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSqrtExecute(r TechnicalIndic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -39589,10 +35637,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesStdDevExecute(r TechnicalInd
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -39608,10 +35652,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesStdDevExecute(r TechnicalInd
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -39624,80 +35664,36 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesStdDevExecute(r TechnicalInd
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.sd != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "sd", r.sd, "form", "")
-	} else {
-		var defaultValue float64 = 2
-		parameterAddToHeaderOrQuery(localVarQueryParams, "sd", defaultValue, "form", "")
-		r.sd = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -40096,10 +36092,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesStochExecute(r TechnicalIndi
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -40115,10 +36107,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesStochExecute(r TechnicalIndi
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -40131,94 +36119,42 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesStochExecute(r TechnicalIndi
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.fastKPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_k_period", r.fastKPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 14
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_k_period", defaultValue, "form", "")
-		r.fastKPeriod = &defaultValue
 	}
 	if r.slowKPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_k_period", r.slowKPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_k_period", defaultValue, "form", "")
-		r.slowKPeriod = &defaultValue
 	}
 	if r.slowDPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_d_period", r.slowDPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 3
-		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_d_period", defaultValue, "form", "")
-		r.slowDPeriod = &defaultValue
 	}
 	if r.slowKmaType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_kma_type", r.slowKmaType, "form", "")
-	} else {
-		var defaultValue MaTypeEnum = "SMA"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_kma_type", defaultValue, "form", "")
-		r.slowKmaType = &defaultValue
 	}
 	if r.slowDmaType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_dma_type", r.slowDmaType, "form", "")
-	} else {
-		var defaultValue MaTypeEnum = "SMA"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_dma_type", defaultValue, "form", "")
-		r.slowDmaType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -40603,10 +36539,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesStochFExecute(r TechnicalInd
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -40622,10 +36554,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesStochFExecute(r TechnicalInd
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -40638,80 +36566,36 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesStochFExecute(r TechnicalInd
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.fastKPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_k_period", r.fastKPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 14
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_k_period", defaultValue, "form", "")
-		r.fastKPeriod = &defaultValue
 	}
 	if r.fastDPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_d_period", r.fastDPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 3
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_d_period", defaultValue, "form", "")
-		r.fastDPeriod = &defaultValue
 	}
 	if r.fastDmaType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_dma_type", r.fastDmaType, "form", "")
-	} else {
-		var defaultValue MaTypeEnum = "SMA"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "fast_dma_type", defaultValue, "form", "")
-		r.fastDmaType = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -41122,10 +37006,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesStochRsiExecute(r TechnicalI
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -41141,10 +37021,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesStochRsiExecute(r TechnicalI
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -41157,100 +37033,48 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesStochRsiExecute(r TechnicalI
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeStochrsiEnum = "close"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.rsiLength != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "rsi_length", r.rsiLength, "form", "")
-	} else {
-		var defaultValue int64 = 14
-		parameterAddToHeaderOrQuery(localVarQueryParams, "rsi_length", defaultValue, "form", "")
-		r.rsiLength = &defaultValue
 	}
 	if r.stochLength != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "stoch_length", r.stochLength, "form", "")
-	} else {
-		var defaultValue int64 = 14
-		parameterAddToHeaderOrQuery(localVarQueryParams, "stoch_length", defaultValue, "form", "")
-		r.stochLength = &defaultValue
 	}
 	if r.kPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "k_period", r.kPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 3
-		parameterAddToHeaderOrQuery(localVarQueryParams, "k_period", defaultValue, "form", "")
-		r.kPeriod = &defaultValue
 	}
 	if r.slowKmaType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_kma_type", r.slowKmaType, "form", "")
 	}
 	if r.dPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "d_period", r.dPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 3
-		parameterAddToHeaderOrQuery(localVarQueryParams, "d_period", defaultValue, "form", "")
-		r.dPeriod = &defaultValue
 	}
 	if r.slowDmaType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "slow_dma_type", r.slowDmaType, "form", "")
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -41628,10 +37452,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSubExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -41647,10 +37467,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSubExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -41663,73 +37479,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSubExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType1 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_1", r.seriesType1, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_1", defaultValue, "form", "")
-		r.seriesType1 = &defaultValue
 	}
 	if r.seriesType2 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_2", r.seriesType2, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type_2", defaultValue, "form", "")
-		r.seriesType2 = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -42107,10 +37883,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSumExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -42126,10 +37898,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSumExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -42142,73 +37910,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSumExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -42586,10 +38314,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSuperTrendExecute(r Technica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -42605,10 +38329,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSuperTrendExecute(r Technica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -42621,73 +38341,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSuperTrendExecute(r Technica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.period != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "period", r.period, "form", "")
-	} else {
-		var defaultValue int64 = 10
-		parameterAddToHeaderOrQuery(localVarQueryParams, "period", defaultValue, "form", "")
-		r.period = &defaultValue
 	}
 	if r.multiplier != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "multiplier", r.multiplier, "form", "")
-	} else {
-		var defaultValue int64 = 3
-		parameterAddToHeaderOrQuery(localVarQueryParams, "multiplier", defaultValue, "form", "")
-		r.multiplier = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -43065,10 +38745,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSuperTrendHeikinAshiCandlesE
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -43084,10 +38760,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSuperTrendHeikinAshiCandlesE
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -43100,73 +38772,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesSuperTrendHeikinAshiCandlesE
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.period != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "period", r.period, "form", "")
-	} else {
-		var defaultValue int64 = 10
-		parameterAddToHeaderOrQuery(localVarQueryParams, "period", defaultValue, "form", "")
-		r.period = &defaultValue
 	}
 	if r.multiplier != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "multiplier", r.multiplier, "form", "")
-	} else {
-		var defaultValue int64 = 3
-		parameterAddToHeaderOrQuery(localVarQueryParams, "multiplier", defaultValue, "form", "")
-		r.multiplier = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -43551,10 +39183,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesT3maExecute(r TechnicalIndic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -43570,10 +39198,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesT3maExecute(r TechnicalIndic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -43586,80 +39210,36 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesT3maExecute(r TechnicalIndic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.vFactor != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "v_factor", r.vFactor, "form", "")
-	} else {
-		var defaultValue float64 = 0.7
-		parameterAddToHeaderOrQuery(localVarQueryParams, "v_factor", defaultValue, "form", "")
-		r.vFactor = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -44023,10 +39603,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesTRangeExecute(r TechnicalInd
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -44042,10 +39618,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesTRangeExecute(r TechnicalInd
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -44058,59 +39630,27 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesTRangeExecute(r TechnicalInd
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -44488,10 +40028,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesTemaExecute(r TechnicalIndic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -44507,10 +40043,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesTemaExecute(r TechnicalIndic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -44523,73 +40055,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesTemaExecute(r TechnicalIndic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -44967,10 +40459,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesTrimaExecute(r TechnicalIndi
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -44986,10 +40474,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesTrimaExecute(r TechnicalIndi
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -45002,73 +40486,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesTrimaExecute(r TechnicalIndi
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -45446,10 +40890,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesTsfExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -45465,10 +40905,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesTsfExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -45481,73 +40917,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesTsfExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -45911,10 +41307,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesTypPriceExecute(r TechnicalI
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -45930,10 +41322,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesTypPriceExecute(r TechnicalI
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -45946,59 +41334,27 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesTypPriceExecute(r TechnicalI
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -46383,10 +41739,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesUltOscExecute(r TechnicalInd
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -46402,10 +41754,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesUltOscExecute(r TechnicalInd
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -46418,80 +41766,36 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesUltOscExecute(r TechnicalInd
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.timePeriod1 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period_1", r.timePeriod1, "form", "")
-	} else {
-		var defaultValue int64 = 7
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period_1", defaultValue, "form", "")
-		r.timePeriod1 = &defaultValue
 	}
 	if r.timePeriod2 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period_2", r.timePeriod2, "form", "")
-	} else {
-		var defaultValue int64 = 14
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period_2", defaultValue, "form", "")
-		r.timePeriod2 = &defaultValue
 	}
 	if r.timePeriod3 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period_3", r.timePeriod3, "form", "")
-	} else {
-		var defaultValue int64 = 28
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period_3", defaultValue, "form", "")
-		r.timePeriod3 = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -46869,10 +42173,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesVarExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -46888,10 +42188,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesVarExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -46904,73 +42200,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesVarExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -47348,10 +42604,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesVwapExecute(r TechnicalIndic
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -47367,10 +42619,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesVwapExecute(r TechnicalIndic
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -47383,73 +42631,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesVwapExecute(r TechnicalIndic
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.sdTimePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "sd_time_period", r.sdTimePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 0
-		parameterAddToHeaderOrQuery(localVarQueryParams, "sd_time_period", defaultValue, "form", "")
-		r.sdTimePeriod = &defaultValue
 	}
 	if r.sd != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "sd", r.sd, "form", "")
-	} else {
-		var defaultValue float64 = 0
-		parameterAddToHeaderOrQuery(localVarQueryParams, "sd", defaultValue, "form", "")
-		r.sd = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -47813,10 +43021,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesWclPriceExecute(r TechnicalI
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -47832,10 +43036,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesWclPriceExecute(r TechnicalI
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -47848,59 +43048,27 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesWclPriceExecute(r TechnicalI
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -48271,10 +43439,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesWillRExecute(r TechnicalIndi
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -48290,10 +43454,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesWillRExecute(r TechnicalIndi
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -48306,66 +43466,30 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesWillRExecute(r TechnicalIndi
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 14
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -48743,10 +43867,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesWmaExecute(r TechnicalIndica
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -48762,10 +43882,6 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesWmaExecute(r TechnicalIndica
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -48778,73 +43894,33 @@ func (a *TechnicalIndicatorAPIService) GetTimeSeriesWmaExecute(r TechnicalIndica
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.seriesType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", r.seriesType, "form", "")
-	} else {
-		var defaultValue SeriesTypeEnum = "open"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "series_type", defaultValue, "form", "")
-		r.seriesType = &defaultValue
 	}
 	if r.timePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", r.timePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "time_period", defaultValue, "form", "")
-		r.timePeriod = &defaultValue
 	}
 	if r.includeOhlc != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", r.includeOhlc, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_ohlc", defaultValue, "form", "")
-		r.includeOhlc = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

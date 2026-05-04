@@ -124,24 +124,12 @@ func (a *CurrenciesAPIService) GetCurrencyConversionExecute(r CurrenciesAPIGetCu
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = 5
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
@@ -387,24 +375,12 @@ func (a *CurrenciesAPIService) GetExchangeRateExecute(r CurrenciesAPIGetExchange
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = 5
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")

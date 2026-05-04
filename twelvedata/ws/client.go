@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 	"math"
+	"math/rand/v2"
 	"net"
 	"net/http"
 	"net/url"
@@ -521,12 +522,13 @@ func (c *Client) runReconnect() bool {
 			return false
 		}
 
-		c.emitReconnecting(ReconnectingEvent{Attempt: attempt, Delay: delay})
+		sleepDelay := jitteredDelay(delay)
+		c.emitReconnecting(ReconnectingEvent{Attempt: attempt, Delay: sleepDelay})
 
 		select {
 		case <-c.runCtx.Done():
 			return false
-		case <-time.After(delay):
+		case <-time.After(sleepDelay):
 		}
 
 		c.mu.Lock()
@@ -627,6 +629,16 @@ func (c *Client) writeJSON(conn *websocket.Conn, payload any) error {
 		return &ConnectionError{Message: "send failed", Cause: err}
 	}
 	return nil
+}
+
+// jitteredDelay returns d perturbed by ±20% uniform random jitter. Spreads
+// reconnect attempts across the fleet so a server-side blip doesn't trigger
+// synchronized retries.
+func jitteredDelay(d time.Duration) time.Duration {
+	if d <= 0 {
+		return d
+	}
+	return d + time.Duration((rand.Float64()*2-1)*0.2*float64(d))
 }
 
 func buildURL(rawURL, apiKey string) (string, error) {

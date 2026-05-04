@@ -368,17 +368,9 @@ func (a *EtfsAPIService) GetETFsListExecute(r EtfsAPIGetETFsListRequest) (*GetET
 	}
 	if r.page != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
-	} else {
-		var defaultValue int64 = 1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "page", defaultValue, "form", "")
-		r.page = &defaultValue
 	}
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 50
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -839,10 +831,6 @@ func (a *EtfsAPIService) GetETFsWorldExecute(r EtfsAPIGetETFsWorldRequest) (*Get
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = 5
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1093,10 +1081,6 @@ func (a *EtfsAPIService) GetETFsWorldCompositionExecute(r EtfsAPIGetETFsWorldCom
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = 5
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1347,10 +1331,6 @@ func (a *EtfsAPIService) GetETFsWorldPerformanceExecute(r EtfsAPIGetETFsWorldPer
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = 5
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1601,10 +1581,6 @@ func (a *EtfsAPIService) GetETFsWorldRiskExecute(r EtfsAPIGetETFsWorldRiskReques
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = 5
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1855,10 +1831,6 @@ func (a *EtfsAPIService) GetETFsWorldSummaryExecute(r EtfsAPIGetETFsWorldSummary
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = 5
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

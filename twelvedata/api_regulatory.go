@@ -439,17 +439,9 @@ func (a *RegulatoryAPIService) GetEdgarFilingsArchiveExecute(r RegulatoryAPIGetE
 	}
 	if r.page != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
-	} else {
-		var defaultValue int64 = 1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "page", defaultValue, "form", "")
-		r.page = &defaultValue
 	}
 	if r.pageSize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "page_size", r.pageSize, "form", "")
-	} else {
-		var defaultValue int64 = 10
-		parameterAddToHeaderOrQuery(localVarQueryParams, "page_size", defaultValue, "form", "")
-		r.pageSize = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

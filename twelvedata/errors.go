@@ -89,8 +89,7 @@ func (t *errorRoundTripper) RoundTrip(req *http.Request) (*http.Response, error)
 	buf, readErr := io.ReadAll(resp.Body)
 	resp.Body.Close()
 	if readErr != nil {
-		resp.Body = io.NopCloser(bytes.NewReader(nil))
-		return resp, nil
+		return nil, fmt.Errorf("twelvedata: read error response body (status %d): %w", resp.StatusCode, readErr)
 	}
 
 	var body errorResponseBody

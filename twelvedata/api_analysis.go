@@ -138,10 +138,6 @@ func (a *AnalysisAPIService) GetAnalystRatingsLightExecute(r AnalysisAPIGetAnaly
 	}
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.country != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "country", r.country, "form", "")
@@ -405,10 +401,6 @@ func (a *AnalysisAPIService) GetAnalystRatingsUsEquitiesExecute(r AnalysisAPIGet
 	}
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2169,10 +2161,6 @@ func (a *AnalysisAPIService) GetRevenueEstimateExecute(r AnalysisAPIGetRevenueEs
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = 5
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

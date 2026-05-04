@@ -299,24 +299,12 @@ func (a *AdvancedAPIService) GetApiUsageExecute(r AdvancedAPIGetApiUsageRequest)
 
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "UTC"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

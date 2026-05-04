@@ -129,38 +129,18 @@ func (a *ReferenceDataAPIService) GetBondsExecute(r ReferenceDataAPIGetBondsRequ
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.showPlan != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "show_plan", r.showPlan, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "show_plan", defaultValue, "form", "")
-		r.showPlan = &defaultValue
 	}
 	if r.page != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
-	} else {
-		var defaultValue int64 = 1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "page", defaultValue, "form", "")
-		r.page = &defaultValue
 	}
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 5000
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -388,17 +368,9 @@ func (a *ReferenceDataAPIService) GetCommoditiesExecute(r ReferenceDataAPIGetCom
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1067,17 +1039,9 @@ func (a *ReferenceDataAPIService) GetCryptocurrenciesExecute(r ReferenceDataAPIG
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1285,17 +1249,9 @@ func (a *ReferenceDataAPIService) GetCryptocurrencyExchangesExecute(r ReferenceD
 
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1567,10 +1523,6 @@ func (a *ReferenceDataAPIService) GetEarliestTimestampExecute(r ReferenceDataAPI
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1872,31 +1824,15 @@ func (a *ReferenceDataAPIService) GetEtfExecute(r ReferenceDataAPIGetEtfRequest)
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.showPlan != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "show_plan", r.showPlan, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "show_plan", defaultValue, "form", "")
-		r.showPlan = &defaultValue
 	}
 	if r.includeDelisted != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_delisted", r.includeDelisted, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_delisted", defaultValue, "form", "")
-		r.includeDelisted = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2381,24 +2317,12 @@ func (a *ReferenceDataAPIService) GetExchangesExecute(r ReferenceDataAPIGetExcha
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.showPlan != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "show_plan", r.showPlan, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "show_plan", defaultValue, "form", "")
-		r.showPlan = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2636,17 +2560,9 @@ func (a *ReferenceDataAPIService) GetForexPairsExecute(r ReferenceDataAPIGetFore
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2945,38 +2861,18 @@ func (a *ReferenceDataAPIService) GetFundsExecute(r ReferenceDataAPIGetFundsRequ
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.showPlan != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "show_plan", r.showPlan, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "show_plan", defaultValue, "form", "")
-		r.showPlan = &defaultValue
 	}
 	if r.page != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
-	} else {
-		var defaultValue int64 = 1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "page", defaultValue, "form", "")
-		r.page = &defaultValue
 	}
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 5000
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3888,31 +3784,15 @@ func (a *ReferenceDataAPIService) GetStocksExecute(r ReferenceDataAPIGetStocksRe
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.showPlan != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "show_plan", r.showPlan, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "show_plan", defaultValue, "form", "")
-		r.showPlan = &defaultValue
 	}
 	if r.includeDelisted != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_delisted", r.includeDelisted, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "include_delisted", defaultValue, "form", "")
-		r.includeDelisted = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4131,17 +4011,9 @@ func (a *ReferenceDataAPIService) GetSymbolSearchExecute(r ReferenceDataAPIGetSy
 	parameterAddToHeaderOrQuery(localVarQueryParams, "symbol", r.symbol, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.showPlan != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "show_plan", r.showPlan, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "show_plan", defaultValue, "form", "")
-		r.showPlan = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

@@ -169,17 +169,9 @@ func (a *MarketDataAPIService) GetEodExecute(r MarketDataAPIGetEodRequest) (*Get
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = 5
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -412,34 +404,18 @@ func (a *MarketDataAPIService) GetMarketMoversExecute(r MarketDataAPIGetMarketMo
 
 	if r.direction != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "direction", r.direction, "form", "")
-	} else {
-		var defaultValue DirectionEnum = "gainers"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "direction", defaultValue, "form", "")
-		r.direction = &defaultValue
 	}
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.country != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "country", r.country, "form", "")
-	} else {
-		var defaultValue string = "USA"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "country", defaultValue, "form", "")
-		r.country = &defaultValue
 	}
 	if r.priceGreaterThan != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "price_greater_than", r.priceGreaterThan, "form", "")
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue string = "5"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -741,31 +717,15 @@ func (a *MarketDataAPIService) GetPriceExecute(r MarketDataAPIGetPriceRequest) (
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = 5
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1102,62 +1062,30 @@ func (a *MarketDataAPIService) GetQuoteExecute(r MarketDataAPIGetQuoteRequest) (
 	}
 	if r.volumeTimePeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "volume_time_period", r.volumeTimePeriod, "form", "")
-	} else {
-		var defaultValue int64 = 9
-		parameterAddToHeaderOrQuery(localVarQueryParams, "volume_time_period", defaultValue, "form", "")
-		r.volumeTimePeriod = &defaultValue
 	}
 	if r.type_ != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "type", r.type_, "form", "")
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.eod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "eod", r.eod, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "eod", defaultValue, "form", "")
-		r.eod = &defaultValue
 	}
 	if r.rollingPeriod != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "rolling_period", r.rollingPeriod, "form", "")
-	} else {
-		var defaultValue int64 = 24
-		parameterAddToHeaderOrQuery(localVarQueryParams, "rolling_period", defaultValue, "form", "")
-		r.rollingPeriod = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = 5
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1514,10 +1442,6 @@ func (a *MarketDataAPIService) GetTimeSeriesExecute(r MarketDataAPIGetTimeSeries
 	parameterAddToHeaderOrQuery(localVarQueryParams, "interval", r.interval, "form", "")
 	if r.outputsize != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
-	} else {
-		var defaultValue int64 = 30
-		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", defaultValue, "form", "")
-		r.outputsize = &defaultValue
 	}
 	if r.exchange != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "exchange", r.exchange, "form", "")
@@ -1533,10 +1457,6 @@ func (a *MarketDataAPIService) GetTimeSeriesExecute(r MarketDataAPIGetTimeSeries
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
-	} else {
-		var defaultValue string = "Exchange"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", defaultValue, "form", "")
-		r.timezone = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -1549,52 +1469,24 @@ func (a *MarketDataAPIService) GetTimeSeriesExecute(r MarketDataAPIGetTimeSeries
 	}
 	if r.order != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "order", r.order, "form", "")
-	} else {
-		var defaultValue OrderEnum = "desc"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "order", defaultValue, "form", "")
-		r.order = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = -1
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.previousClose != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", r.previousClose, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "previous_close", defaultValue, "form", "")
-		r.previousClose = &defaultValue
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue AdjustEnum = "splits"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1947,24 +1839,12 @@ func (a *MarketDataAPIService) GetTimeSeriesCrossExecute(r MarketDataAPIGetTimeS
 	}
 	if r.format != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
-	} else {
-		var defaultValue FormatEnum = "JSON"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "format", defaultValue, "form", "")
-		r.format = &defaultValue
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
-	} else {
-		var defaultValue string = ";"
-		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", defaultValue, "form", "")
-		r.delimiter = &defaultValue
 	}
 	if r.prepost != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", r.prepost, "form", "")
-	} else {
-		var defaultValue bool = false
-		parameterAddToHeaderOrQuery(localVarQueryParams, "prepost", defaultValue, "form", "")
-		r.prepost = &defaultValue
 	}
 	if r.startDate != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "start_date", r.startDate, "form", "")
@@ -1974,17 +1854,9 @@ func (a *MarketDataAPIService) GetTimeSeriesCrossExecute(r MarketDataAPIGetTimeS
 	}
 	if r.adjust != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", r.adjust, "form", "")
-	} else {
-		var defaultValue bool = true
-		parameterAddToHeaderOrQuery(localVarQueryParams, "adjust", defaultValue, "form", "")
-		r.adjust = &defaultValue
 	}
 	if r.dp != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
-	} else {
-		var defaultValue int64 = 5
-		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", defaultValue, "form", "")
-		r.dp = &defaultValue
 	}
 	if r.timezone != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "timezone", r.timezone, "form", "")
