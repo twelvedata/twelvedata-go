@@ -31,7 +31,7 @@ func NewConfig(overrides ...string) (*Configuration, error) {
 	cfg := NewConfiguration()
 	cfg.DefaultHeader["Authorization"] = apiKeyPrefix + " " + apiKey
 	cfg.DefaultHeader["X-API-Version"] = "last"
-	cfg.HTTPClient = &http.Client{Transport: withSourceParam(WrapTransport(http.DefaultTransport))}
+	cfg.HTTPClient = &http.Client{Transport: WrapTransport(http.DefaultTransport)}
 
 	if baseURL := firstNonEmpty(pick(overrides, 1), os.Getenv(baseURLEnvVar)); baseURL != "" {
 		cfg.Servers = ServerConfigurations{ServerConfiguration{URL: baseURL}}
@@ -58,13 +58,6 @@ func (t *sourceParamRoundTripper) RoundTrip(req *http.Request) (*http.Response, 
 	q.Set(sourceParam, sourceValue)
 	newReq.URL.RawQuery = q.Encode()
 	return t.base.RoundTrip(newReq)
-}
-
-func withSourceParam(base http.RoundTripper) http.RoundTripper {
-	if base == nil {
-		base = http.DefaultTransport
-	}
-	return &sourceParamRoundTripper{base: base}
 }
 
 func firstNonEmpty(values ...string) string {

@@ -112,12 +112,13 @@ func (t *errorRoundTripper) RoundTrip(req *http.Request) (*http.Response, error)
 }
 
 // WrapTransport returns an http.RoundTripper that translates non-2xx Twelve
-// Data API responses with a recognizable error body into typed errors. Pass
-// nil to wrap http.DefaultTransport. Users with a custom *http.Client should
-// wrap their own transport so error handling stays installed.
+// Data API responses with a recognizable error body into typed errors and
+// attaches the `source=client-go` query parameter for traffic attribution.
+// Pass nil to wrap http.DefaultTransport. Users with a custom *http.Client
+// should wrap their own transport so both layers stay installed.
 func WrapTransport(base http.RoundTripper) http.RoundTripper {
 	if base == nil {
 		base = http.DefaultTransport
 	}
-	return &errorRoundTripper{base: base}
+	return &sourceParamRoundTripper{base: &errorRoundTripper{base: base}}
 }
