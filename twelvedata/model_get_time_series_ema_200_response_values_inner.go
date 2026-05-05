@@ -1,8 +1,7 @@
-/**
- * Twelve Data API client for Go
- *
- * NOTE: This code is auto generated, please do not edit it manually.
- */
+// Twelve Data API client for Go
+//
+// NOTE: This code is auto generated, please do not edit it manually.
+
 package twelvedata
 
 import (

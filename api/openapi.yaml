@@ -2,7 +2,7 @@ openapi: 3.1.0
 info:
   description: ""
   title: Twelve Data API
-  version: 1.0.4
+  version: 1.0.5
 servers:
 - url: https://api.twelvedata.com/
 security:
@@ -62635,20 +62635,20 @@ components:
         - symbol: symbol
           mic_code: mic_code
           name: name
-          weight: 4.078845849666752
+          weight: 7.260521264802104
           exchange: exchange
         - symbol: symbol
           mic_code: mic_code
           name: name
-          weight: 4.078845849666752
+          weight: 7.260521264802104
           exchange: exchange
         asset_allocation:
-          bonds: 4.678947989005849
-          convertables: 1.041444916118296
-          cash: 0.2025324113236393
-          preferred_stocks: 4.258773108174356
-          stocks: 6.628464275087742
-          others: 7.260521264802104
+          bonds: 1.041444916118296
+          convertables: 4.258773108174356
+          cash: 4.078845849666752
+          preferred_stocks: 6.628464275087742
+          stocks: 0.2025324113236393
+          others: 4.678947989005849
         major_market_sectors:
         - weight: 3.2588565619047607
           sector: sector
@@ -62657,15 +62657,15 @@ components:
         bond_breakdown:
           credit_quality:
           - grade: grade
-            weight: 7.933506881737151
+            weight: 9.702963800023566
           - grade: grade
-            weight: 7.933506881737151
+            weight: 9.702963800023566
           average_maturity:
             fund: 9.132027271330688
             category: 0.8774076871421566
           average_duration:
-            fund: 9.702963800023566
-            category: 0.5199002018724985
+            fund: 0.5199002018724985
+            category: 7.933506881737151
       properties:
         major_market_sectors:
           description: Breakdown of the fund’s portfolio by major industry sectors
@@ -62675,6 +62675,8 @@ components:
           type: array
           x-go-name: MajorMarketSectors
           x-order: 10
+        asset_allocation:
+          $ref: "#/components/schemas/GetMutualFundsWorld_200_response_mutual_fund_composition_asset_allocation"
         top_holdings:
           description: Top holdings of the fund with their respective weights in the
             overall portfolio composition
@@ -62683,10 +62685,8 @@ components:
           type: array
           x-go-name: TopHoldings
           x-order: 20
-        asset_allocation:
-          $ref: "#/components/schemas/GetMutualFundsWorld_200_response_mutual_fund_composition_asset_allocation"
         bond_breakdown:
-          $ref: "#/components/schemas/GetMutualFundsWorld_200_response_mutual_fund_composition_bond_breakdown"
+          $ref: "#/components/schemas/ResponseMutualFundWorldComposition_bond_breakdown"
       x-go-package: gitlab.atlasgroup.ai/twelvedata/api/model/repository
     ResponseMutualFundWorldPerformance:
       description: Detailed performance of a mutual fund
@@ -68724,16 +68724,16 @@ components:
         datetime: datetime
         unix_time: 0
       properties:
-        datetime:
-          description: "Earliest datetime, the format depends on interval"
-          type: string
-          x-go-name: Datetime
-          x-order: 50
         unix_time:
           description: Datetime converted to UNIX timestamp
           format: int64
           type: integer
           x-go-name: UnixTime
+          x-order: 50
+        datetime:
+          description: "Earliest datetime, the format depends on interval"
+          type: string
+          x-go-name: Datetime
           x-order: 50
       required:
       - datetime
@@ -78227,50 +78227,16 @@ components:
           type: number
           x-go-name: Weight
           x-order: 20
-    GetMutualFundsWorld_200_response_mutual_fund_composition_top_holdings_inner:
-      example:
-        symbol: symbol
-        mic_code: mic_code
-        name: name
-        weight: 4.078845849666752
-        exchange: exchange
-      properties:
-        symbol:
-          description: Symbol ticker of a holding instrument
-          type: string
-          x-go-name: Symbol
-          x-order: 10
-        name:
-          description: Name of a holding instrument
-          type: string
-          x-go-name: Name
-          x-order: 20
-        exchange:
-          description: Exchange where instrument is traded
-          type: string
-          x-go-name: Exchange
-          x-order: 30
-        mic_code:
-          description: Market Identifier Code (MIC) under ISO 10383 standard
-          type: string
-          x-go-name: MicCode
-          x-order: 40
-        weight:
-          description: Weight of a holding instrument in overall portfolio composition
-          format: double
-          type: number
-          x-go-name: Weight
-          x-order: 50
     GetMutualFundsWorld_200_response_mutual_fund_composition_asset_allocation:
       description: Asset allocation of the fund by different asset classes and their
         respective weights
       example:
-        bonds: 4.678947989005849
-        convertables: 1.041444916118296
-        cash: 0.2025324113236393
-        preferred_stocks: 4.258773108174356
-        stocks: 6.628464275087742
-        others: 7.260521264802104
+        bonds: 1.041444916118296
+        convertables: 4.258773108174356
+        cash: 4.078845849666752
+        preferred_stocks: 6.628464275087742
+        stocks: 0.2025324113236393
+        others: 4.678947989005849
       properties:
         cash:
           description: Percentage of overall portfolio composition in cash
@@ -78312,6 +78278,40 @@ components:
           x-order: 60
       x-go-name: AssetAllocation
       x-order: 20
+    GetMutualFundsWorld_200_response_mutual_fund_composition_top_holdings_inner:
+      example:
+        symbol: symbol
+        mic_code: mic_code
+        name: name
+        weight: 7.260521264802104
+        exchange: exchange
+      properties:
+        symbol:
+          description: Symbol ticker of a holding instrument
+          type: string
+          x-go-name: Symbol
+          x-order: 10
+        name:
+          description: Name of a holding instrument
+          type: string
+          x-go-name: Name
+          x-order: 20
+        exchange:
+          description: Exchange where instrument is traded
+          type: string
+          x-go-name: Exchange
+          x-order: 30
+        mic_code:
+          description: Market Identifier Code (MIC) under ISO 10383 standard
+          type: string
+          x-go-name: MicCode
+          x-order: 40
+        weight:
+          description: Weight of a holding instrument in overall portfolio composition
+          format: double
+          type: number
+          x-go-name: Weight
+          x-order: 50
     GetMutualFundsWorld_200_response_mutual_fund_composition_bond_breakdown_average_maturity:
       description: Average maturity of bond holdings for the fund and its category
       example:
@@ -78332,11 +78332,27 @@ components:
           x-order: 20
       x-go-name: AverageMaturity
       x-order: 10
+    GetMutualFundsWorld_200_response_mutual_fund_composition_bond_breakdown_credit_quality_inner:
+      example:
+        grade: grade
+        weight: 9.702963800023566
+      properties:
+        grade:
+          description: Rating of bond holding of a fund from AAA to below B
+          type: string
+          x-go-name: Grade
+          x-order: 10
+        weight:
+          description: Weight of bond holding in fund portfolio
+          format: double
+          type: number
+          x-go-name: Weight
+          x-order: 20
     GetMutualFundsWorld_200_response_mutual_fund_composition_bond_breakdown_average_duration:
       description: Average duration of bond holdings for the fund and its category
       example:
-        fund: 9.702963800023566
-        category: 0.5199002018724985
+        fund: 0.5199002018724985
+        category: 7.933506881737151
       properties:
         fund:
           description: Average duration of bond holding of a fund
@@ -78352,42 +78368,24 @@ components:
           x-order: 20
       x-go-name: AverageDuration
       x-order: 20
-    GetMutualFundsWorld_200_response_mutual_fund_composition_bond_breakdown_credit_quality_inner:
-      example:
-        grade: grade
-        weight: 7.933506881737151
-      properties:
-        grade:
-          description: Rating of bond holding of a fund from AAA to below B
-          type: string
-          x-go-name: Grade
-          x-order: 10
-        weight:
-          description: Weight of bond holding in fund portfolio
-          format: double
-          type: number
-          x-go-name: Weight
-          x-order: 20
     GetMutualFundsWorld_200_response_mutual_fund_composition_bond_breakdown:
       description: "Breakdown of the fund’s bond holdings by maturity, duration, and\
         \ credit quality"
       example:
         credit_quality:
         - grade: grade
-          weight: 7.933506881737151
+          weight: 9.702963800023566
         - grade: grade
-          weight: 7.933506881737151
+          weight: 9.702963800023566
         average_maturity:
           fund: 9.132027271330688
           category: 0.8774076871421566
         average_duration:
-          fund: 9.702963800023566
-          category: 0.5199002018724985
+          fund: 0.5199002018724985
+          category: 7.933506881737151
       properties:
         average_maturity:
           $ref: "#/components/schemas/GetMutualFundsWorld_200_response_mutual_fund_composition_bond_breakdown_average_maturity"
-        average_duration:
-          $ref: "#/components/schemas/GetMutualFundsWorld_200_response_mutual_fund_composition_bond_breakdown_average_duration"
         credit_quality:
           description: Breakdown of the fund’s bond holdings by credit rating and
             their respective portfolio weights
@@ -78396,6 +78394,8 @@ components:
           type: array
           x-go-name: CreditQuality
           x-order: 20
+        average_duration:
+          $ref: "#/components/schemas/GetMutualFundsWorld_200_response_mutual_fund_composition_bond_breakdown_average_duration"
       x-go-name: BondBreakdown
       x-order: 30
     GetMutualFundsWorld_200_response_mutual_fund_composition:
@@ -78405,20 +78405,20 @@ components:
         - symbol: symbol
           mic_code: mic_code
           name: name
-          weight: 4.078845849666752
+          weight: 7.260521264802104
           exchange: exchange
         - symbol: symbol
           mic_code: mic_code
           name: name
-          weight: 4.078845849666752
+          weight: 7.260521264802104
           exchange: exchange
         asset_allocation:
-          bonds: 4.678947989005849
-          convertables: 1.041444916118296
-          cash: 0.2025324113236393
-          preferred_stocks: 4.258773108174356
-          stocks: 6.628464275087742
-          others: 7.260521264802104
+          bonds: 1.041444916118296
+          convertables: 4.258773108174356
+          cash: 4.078845849666752
+          preferred_stocks: 6.628464275087742
+          stocks: 0.2025324113236393
+          others: 4.678947989005849
         major_market_sectors:
         - weight: 3.2588565619047607
           sector: sector
@@ -78427,15 +78427,15 @@ components:
         bond_breakdown:
           credit_quality:
           - grade: grade
-            weight: 7.933506881737151
+            weight: 9.702963800023566
           - grade: grade
-            weight: 7.933506881737151
+            weight: 9.702963800023566
           average_maturity:
             fund: 9.132027271330688
             category: 0.8774076871421566
           average_duration:
-            fund: 9.702963800023566
-            category: 0.5199002018724985
+            fund: 0.5199002018724985
+            category: 7.933506881737151
       properties:
         major_market_sectors:
           description: Breakdown of the fund’s portfolio by major industry sectors
@@ -78445,6 +78445,8 @@ components:
           type: array
           x-go-name: MajorMarketSectors
           x-order: 10
+        asset_allocation:
+          $ref: "#/components/schemas/GetMutualFundsWorld_200_response_mutual_fund_composition_asset_allocation"
         top_holdings:
           description: Top holdings of the fund with their respective weights in the
             overall portfolio composition
@@ -78453,8 +78455,6 @@ components:
           type: array
           x-go-name: TopHoldings
           x-order: 20
-        asset_allocation:
-          $ref: "#/components/schemas/GetMutualFundsWorld_200_response_mutual_fund_composition_asset_allocation"
         bond_breakdown:
           $ref: "#/components/schemas/GetMutualFundsWorld_200_response_mutual_fund_composition_bond_breakdown"
       x-go-name: Composition
@@ -78709,20 +78709,20 @@ components:
           - symbol: symbol
             mic_code: mic_code
             name: name
-            weight: 4.078845849666752
+            weight: 7.260521264802104
             exchange: exchange
           - symbol: symbol
             mic_code: mic_code
             name: name
-            weight: 4.078845849666752
+            weight: 7.260521264802104
             exchange: exchange
           asset_allocation:
-            bonds: 4.678947989005849
-            convertables: 1.041444916118296
-            cash: 0.2025324113236393
-            preferred_stocks: 4.258773108174356
-            stocks: 6.628464275087742
-            others: 7.260521264802104
+            bonds: 1.041444916118296
+            convertables: 4.258773108174356
+            cash: 4.078845849666752
+            preferred_stocks: 6.628464275087742
+            stocks: 0.2025324113236393
+            others: 4.678947989005849
           major_market_sectors:
           - weight: 3.2588565619047607
             sector: sector
@@ -78731,15 +78731,15 @@ components:
           bond_breakdown:
             credit_quality:
             - grade: grade
-              weight: 7.933506881737151
+              weight: 9.702963800023566
             - grade: grade
-              weight: 7.933506881737151
+              weight: 9.702963800023566
             average_maturity:
               fund: 9.132027271330688
               category: 0.8774076871421566
             average_duration:
-              fund: 9.702963800023566
-              category: 0.5199002018724985
+              fund: 0.5199002018724985
+              category: 7.933506881737151
         ratings:
           performance_rating: 3
           risk_rating: 7
@@ -78892,20 +78892,20 @@ components:
             - symbol: symbol
               mic_code: mic_code
               name: name
-              weight: 4.078845849666752
+              weight: 7.260521264802104
               exchange: exchange
             - symbol: symbol
               mic_code: mic_code
               name: name
-              weight: 4.078845849666752
+              weight: 7.260521264802104
               exchange: exchange
             asset_allocation:
-              bonds: 4.678947989005849
-              convertables: 1.041444916118296
-              cash: 0.2025324113236393
-              preferred_stocks: 4.258773108174356
-              stocks: 6.628464275087742
-              others: 7.260521264802104
+              bonds: 1.041444916118296
+              convertables: 4.258773108174356
+              cash: 4.078845849666752
+              preferred_stocks: 6.628464275087742
+              stocks: 0.2025324113236393
+              others: 4.678947989005849
             major_market_sectors:
             - weight: 3.2588565619047607
               sector: sector
@@ -78914,15 +78914,15 @@ components:
             bond_breakdown:
               credit_quality:
               - grade: grade
-                weight: 7.933506881737151
+                weight: 9.702963800023566
               - grade: grade
-                weight: 7.933506881737151
+                weight: 9.702963800023566
               average_maturity:
                 fund: 9.132027271330688
                 category: 0.8774076871421566
               average_duration:
-                fund: 9.702963800023566
-                category: 0.5199002018724985
+                fund: 0.5199002018724985
+                category: 7.933506881737151
           ratings:
             performance_rating: 3
             risk_rating: 7
@@ -79017,20 +79017,20 @@ components:
           - symbol: symbol
             mic_code: mic_code
             name: name
-            weight: 4.078845849666752
+            weight: 7.260521264802104
             exchange: exchange
           - symbol: symbol
             mic_code: mic_code
             name: name
-            weight: 4.078845849666752
+            weight: 7.260521264802104
             exchange: exchange
           asset_allocation:
-            bonds: 4.678947989005849
-            convertables: 1.041444916118296
-            cash: 0.2025324113236393
-            preferred_stocks: 4.258773108174356
-            stocks: 6.628464275087742
-            others: 7.260521264802104
+            bonds: 1.041444916118296
+            convertables: 4.258773108174356
+            cash: 4.078845849666752
+            preferred_stocks: 6.628464275087742
+            stocks: 0.2025324113236393
+            others: 4.678947989005849
           major_market_sectors:
           - weight: 3.2588565619047607
             sector: sector
@@ -79039,15 +79039,15 @@ components:
           bond_breakdown:
             credit_quality:
             - grade: grade
-              weight: 7.933506881737151
+              weight: 9.702963800023566
             - grade: grade
-              weight: 7.933506881737151
+              weight: 9.702963800023566
             average_maturity:
               fund: 9.132027271330688
               category: 0.8774076871421566
             average_duration:
-              fund: 9.702963800023566
-              category: 0.5199002018724985
+              fund: 0.5199002018724985
+              category: 7.933506881737151
       properties:
         composition:
           $ref: "#/components/schemas/ResponseMutualFundWorldComposition"
@@ -79061,20 +79061,20 @@ components:
             - symbol: symbol
               mic_code: mic_code
               name: name
-              weight: 4.078845849666752
+              weight: 7.260521264802104
               exchange: exchange
             - symbol: symbol
               mic_code: mic_code
               name: name
-              weight: 4.078845849666752
+              weight: 7.260521264802104
               exchange: exchange
             asset_allocation:
-              bonds: 4.678947989005849
-              convertables: 1.041444916118296
-              cash: 0.2025324113236393
-              preferred_stocks: 4.258773108174356
-              stocks: 6.628464275087742
-              others: 7.260521264802104
+              bonds: 1.041444916118296
+              convertables: 4.258773108174356
+              cash: 4.078845849666752
+              preferred_stocks: 6.628464275087742
+              stocks: 0.2025324113236393
+              others: 4.678947989005849
             major_market_sectors:
             - weight: 3.2588565619047607
               sector: sector
@@ -79083,15 +79083,15 @@ components:
             bond_breakdown:
               credit_quality:
               - grade: grade
-                weight: 7.933506881737151
+                weight: 9.702963800023566
               - grade: grade
-                weight: 7.933506881737151
+                weight: 9.702963800023566
               average_maturity:
                 fund: 9.132027271330688
                 category: 0.8774076871421566
               average_duration:
-                fund: 9.702963800023566
-                category: 0.5199002018724985
+                fund: 0.5199002018724985
+                category: 7.933506881737151
         status: status
       properties:
         mutual_fund:
@@ -89416,6 +89416,36 @@ components:
           x-order: 10
       x-go-name: SpecialIncomeCharges
       x-order: 170
+    ResponseMutualFundWorldComposition_bond_breakdown:
+      description: "Breakdown of the fund’s bond holdings by maturity, duration, and\
+        \ credit quality"
+      example:
+        credit_quality:
+        - grade: grade
+          weight: 9.702963800023566
+        - grade: grade
+          weight: 9.702963800023566
+        average_maturity:
+          fund: 9.132027271330688
+          category: 0.8774076871421566
+        average_duration:
+          fund: 0.5199002018724985
+          category: 7.933506881737151
+      properties:
+        average_maturity:
+          $ref: "#/components/schemas/GetMutualFundsWorld_200_response_mutual_fund_composition_bond_breakdown_average_maturity"
+        credit_quality:
+          description: Breakdown of the fund’s bond holdings by credit rating and
+            their respective portfolio weights
+          items:
+            $ref: "#/components/schemas/GetMutualFundsWorld_200_response_mutual_fund_composition_bond_breakdown_credit_quality_inner"
+          type: array
+          x-go-name: CreditQuality
+          x-order: 20
+        average_duration:
+          $ref: "#/components/schemas/GetMutualFundsWorld_200_response_mutual_fund_composition_bond_breakdown_average_duration"
+      x-go-name: BondBreakdown
+      x-order: 30
     inline_object:
       properties:
         data:

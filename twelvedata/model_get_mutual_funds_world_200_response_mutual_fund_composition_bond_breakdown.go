@@ -1,8 +1,7 @@
-/**
- * Twelve Data API client for Go
- *
- * NOTE: This code is auto generated, please do not edit it manually.
- */
+// Twelve Data API client for Go
+//
+// NOTE: This code is auto generated, please do not edit it manually.
+
 package twelvedata
 
 import (
@@ -15,9 +14,9 @@ var _ MappedNullable = &GetMutualFundsWorld200ResponseMutualFundCompositionBondB
 // GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown Breakdown of the fund’s bond holdings by maturity, duration, and credit quality
 type GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown struct {
 	AverageMaturity *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageMaturity `json:"average_maturity,omitempty"`
-	AverageDuration *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration `json:"average_duration,omitempty"`
 	// Breakdown of the fund’s bond holdings by credit rating and their respective portfolio weights
-	CreditQuality []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner `json:"credit_quality,omitempty"`
+	CreditQuality   []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner `json:"credit_quality,omitempty"`
+	AverageDuration *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration     `json:"average_duration,omitempty"`
 }
 
 // NewGetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown instantiates a new GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown object
@@ -69,38 +68,6 @@ func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) SetAv
 	o.AverageMaturity = &v
 }
 
-// GetAverageDuration returns the AverageDuration field value if set, zero value otherwise.
-func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetAverageDuration() GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration {
-	if o == nil || IsNil(o.AverageDuration) {
-		var ret GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration
-		return ret
-	}
-	return *o.AverageDuration
-}
-
-// GetAverageDurationOk returns a tuple with the AverageDuration field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetAverageDurationOk() (*GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration, bool) {
-	if o == nil || IsNil(o.AverageDuration) {
-		return nil, false
-	}
-	return o.AverageDuration, true
-}
-
-// HasAverageDuration returns a boolean if a field has been set.
-func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) HasAverageDuration() bool {
-	if o != nil && !IsNil(o.AverageDuration) {
-		return true
-	}
-
-	return false
-}
-
-// SetAverageDuration gets a reference to the given GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration and assigns it to the AverageDuration field.
-func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) SetAverageDuration(v GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration) {
-	o.AverageDuration = &v
-}
-
 // GetCreditQuality returns the CreditQuality field value if set, zero value otherwise.
 func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetCreditQuality() []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner {
 	if o == nil || IsNil(o.CreditQuality) {
@@ -133,6 +100,38 @@ func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) SetCr
 	o.CreditQuality = v
 }
 
+// GetAverageDuration returns the AverageDuration field value if set, zero value otherwise.
+func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetAverageDuration() GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration {
+	if o == nil || IsNil(o.AverageDuration) {
+		var ret GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration
+		return ret
+	}
+	return *o.AverageDuration
+}
+
+// GetAverageDurationOk returns a tuple with the AverageDuration field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetAverageDurationOk() (*GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration, bool) {
+	if o == nil || IsNil(o.AverageDuration) {
+		return nil, false
+	}
+	return o.AverageDuration, true
+}
+
+// HasAverageDuration returns a boolean if a field has been set.
+func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) HasAverageDuration() bool {
+	if o != nil && !IsNil(o.AverageDuration) {
+		return true
+	}
+
+	return false
+}
+
+// SetAverageDuration gets a reference to the given GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration and assigns it to the AverageDuration field.
+func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) SetAverageDuration(v GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration) {
+	o.AverageDuration = &v
+}
+
 func (o GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -146,11 +145,11 @@ func (o GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) ToMap(
 	if !IsNil(o.AverageMaturity) {
 		toSerialize["average_maturity"] = o.AverageMaturity
 	}
-	if !IsNil(o.AverageDuration) {
-		toSerialize["average_duration"] = o.AverageDuration
-	}
 	if !IsNil(o.CreditQuality) {
 		toSerialize["credit_quality"] = o.CreditQuality
+	}
+	if !IsNil(o.AverageDuration) {
+		toSerialize["average_duration"] = o.AverageDuration
 	}
 	return toSerialize, nil
 }

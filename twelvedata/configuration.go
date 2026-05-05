@@ -1,8 +1,7 @@
-/**
- * Twelve Data API client for Go
- *
- * NOTE: This code is auto generated, please do not edit it manually.
- */
+// Twelve Data API client for Go
+//
+// NOTE: This code is auto generated, please do not edit it manually.
+
 package twelvedata
 
 import (
@@ -84,7 +83,7 @@ type Configuration struct {
 func NewConfiguration() *Configuration {
 	cfg := &Configuration{
 		DefaultHeader: make(map[string]string),
-		UserAgent:     "OpenAPI-Generator/1.0.4/go",
+		UserAgent:     "OpenAPI-Generator/1.0.5/go",
 		Debug:         false,
 		Servers: ServerConfigurations{
 			{
