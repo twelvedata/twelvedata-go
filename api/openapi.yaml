@@ -2,7 +2,7 @@ openapi: 3.1.0
 info:
   description: ""
   title: Twelve Data API
-  version: 1.0.2
+  version: 1.0.3
 servers:
 - url: https://api.twelvedata.com/
 security:
@@ -62635,20 +62635,20 @@ components:
         - symbol: symbol
           mic_code: mic_code
           name: name
-          weight: 4.078845849666752
+          weight: 7.260521264802104
           exchange: exchange
         - symbol: symbol
           mic_code: mic_code
           name: name
-          weight: 4.078845849666752
+          weight: 7.260521264802104
           exchange: exchange
         asset_allocation:
-          bonds: 4.678947989005849
-          convertables: 1.041444916118296
-          cash: 0.2025324113236393
-          preferred_stocks: 4.258773108174356
-          stocks: 6.628464275087742
-          others: 7.260521264802104
+          bonds: 1.041444916118296
+          convertables: 4.258773108174356
+          cash: 4.078845849666752
+          preferred_stocks: 6.628464275087742
+          stocks: 0.2025324113236393
+          others: 4.678947989005849
         major_market_sectors:
         - weight: 3.2588565619047607
           sector: sector
@@ -78227,50 +78227,16 @@ components:
           type: number
           x-go-name: Weight
           x-order: 20
-    GetMutualFundsWorld_200_response_mutual_fund_composition_top_holdings_inner:
-      example:
-        symbol: symbol
-        mic_code: mic_code
-        name: name
-        weight: 4.078845849666752
-        exchange: exchange
-      properties:
-        symbol:
-          description: Symbol ticker of a holding instrument
-          type: string
-          x-go-name: Symbol
-          x-order: 10
-        name:
-          description: Name of a holding instrument
-          type: string
-          x-go-name: Name
-          x-order: 20
-        exchange:
-          description: Exchange where instrument is traded
-          type: string
-          x-go-name: Exchange
-          x-order: 30
-        mic_code:
-          description: Market Identifier Code (MIC) under ISO 10383 standard
-          type: string
-          x-go-name: MicCode
-          x-order: 40
-        weight:
-          description: Weight of a holding instrument in overall portfolio composition
-          format: double
-          type: number
-          x-go-name: Weight
-          x-order: 50
     GetMutualFundsWorld_200_response_mutual_fund_composition_asset_allocation:
       description: Asset allocation of the fund by different asset classes and their
         respective weights
       example:
-        bonds: 4.678947989005849
-        convertables: 1.041444916118296
-        cash: 0.2025324113236393
-        preferred_stocks: 4.258773108174356
-        stocks: 6.628464275087742
-        others: 7.260521264802104
+        bonds: 1.041444916118296
+        convertables: 4.258773108174356
+        cash: 4.078845849666752
+        preferred_stocks: 6.628464275087742
+        stocks: 0.2025324113236393
+        others: 4.678947989005849
       properties:
         cash:
           description: Percentage of overall portfolio composition in cash
@@ -78312,6 +78278,40 @@ components:
           x-order: 60
       x-go-name: AssetAllocation
       x-order: 20
+    GetMutualFundsWorld_200_response_mutual_fund_composition_top_holdings_inner:
+      example:
+        symbol: symbol
+        mic_code: mic_code
+        name: name
+        weight: 7.260521264802104
+        exchange: exchange
+      properties:
+        symbol:
+          description: Symbol ticker of a holding instrument
+          type: string
+          x-go-name: Symbol
+          x-order: 10
+        name:
+          description: Name of a holding instrument
+          type: string
+          x-go-name: Name
+          x-order: 20
+        exchange:
+          description: Exchange where instrument is traded
+          type: string
+          x-go-name: Exchange
+          x-order: 30
+        mic_code:
+          description: Market Identifier Code (MIC) under ISO 10383 standard
+          type: string
+          x-go-name: MicCode
+          x-order: 40
+        weight:
+          description: Weight of a holding instrument in overall portfolio composition
+          format: double
+          type: number
+          x-go-name: Weight
+          x-order: 50
     GetMutualFundsWorld_200_response_mutual_fund_composition_bond_breakdown_average_maturity:
       description: Average maturity of bond holdings for the fund and its category
       example:
@@ -78405,20 +78405,20 @@ components:
         - symbol: symbol
           mic_code: mic_code
           name: name
-          weight: 4.078845849666752
+          weight: 7.260521264802104
           exchange: exchange
         - symbol: symbol
           mic_code: mic_code
           name: name
-          weight: 4.078845849666752
+          weight: 7.260521264802104
           exchange: exchange
         asset_allocation:
-          bonds: 4.678947989005849
-          convertables: 1.041444916118296
-          cash: 0.2025324113236393
-          preferred_stocks: 4.258773108174356
-          stocks: 6.628464275087742
-          others: 7.260521264802104
+          bonds: 1.041444916118296
+          convertables: 4.258773108174356
+          cash: 4.078845849666752
+          preferred_stocks: 6.628464275087742
+          stocks: 0.2025324113236393
+          others: 4.678947989005849
         major_market_sectors:
         - weight: 3.2588565619047607
           sector: sector
@@ -78445,6 +78445,8 @@ components:
           type: array
           x-go-name: MajorMarketSectors
           x-order: 10
+        asset_allocation:
+          $ref: "#/components/schemas/GetMutualFundsWorld_200_response_mutual_fund_composition_asset_allocation"
         top_holdings:
           description: Top holdings of the fund with their respective weights in the
             overall portfolio composition
@@ -78453,8 +78455,6 @@ components:
           type: array
           x-go-name: TopHoldings
           x-order: 20
-        asset_allocation:
-          $ref: "#/components/schemas/GetMutualFundsWorld_200_response_mutual_fund_composition_asset_allocation"
         bond_breakdown:
           $ref: "#/components/schemas/GetMutualFundsWorld_200_response_mutual_fund_composition_bond_breakdown"
       x-go-name: Composition
@@ -78709,20 +78709,20 @@ components:
           - symbol: symbol
             mic_code: mic_code
             name: name
-            weight: 4.078845849666752
+            weight: 7.260521264802104
             exchange: exchange
           - symbol: symbol
             mic_code: mic_code
             name: name
-            weight: 4.078845849666752
+            weight: 7.260521264802104
             exchange: exchange
           asset_allocation:
-            bonds: 4.678947989005849
-            convertables: 1.041444916118296
-            cash: 0.2025324113236393
-            preferred_stocks: 4.258773108174356
-            stocks: 6.628464275087742
-            others: 7.260521264802104
+            bonds: 1.041444916118296
+            convertables: 4.258773108174356
+            cash: 4.078845849666752
+            preferred_stocks: 6.628464275087742
+            stocks: 0.2025324113236393
+            others: 4.678947989005849
           major_market_sectors:
           - weight: 3.2588565619047607
             sector: sector
@@ -78892,20 +78892,20 @@ components:
             - symbol: symbol
               mic_code: mic_code
               name: name
-              weight: 4.078845849666752
+              weight: 7.260521264802104
               exchange: exchange
             - symbol: symbol
               mic_code: mic_code
               name: name
-              weight: 4.078845849666752
+              weight: 7.260521264802104
               exchange: exchange
             asset_allocation:
-              bonds: 4.678947989005849
-              convertables: 1.041444916118296
-              cash: 0.2025324113236393
-              preferred_stocks: 4.258773108174356
-              stocks: 6.628464275087742
-              others: 7.260521264802104
+              bonds: 1.041444916118296
+              convertables: 4.258773108174356
+              cash: 4.078845849666752
+              preferred_stocks: 6.628464275087742
+              stocks: 0.2025324113236393
+              others: 4.678947989005849
             major_market_sectors:
             - weight: 3.2588565619047607
               sector: sector
@@ -79017,20 +79017,20 @@ components:
           - symbol: symbol
             mic_code: mic_code
             name: name
-            weight: 4.078845849666752
+            weight: 7.260521264802104
             exchange: exchange
           - symbol: symbol
             mic_code: mic_code
             name: name
-            weight: 4.078845849666752
+            weight: 7.260521264802104
             exchange: exchange
           asset_allocation:
-            bonds: 4.678947989005849
-            convertables: 1.041444916118296
-            cash: 0.2025324113236393
-            preferred_stocks: 4.258773108174356
-            stocks: 6.628464275087742
-            others: 7.260521264802104
+            bonds: 1.041444916118296
+            convertables: 4.258773108174356
+            cash: 4.078845849666752
+            preferred_stocks: 6.628464275087742
+            stocks: 0.2025324113236393
+            others: 4.678947989005849
           major_market_sectors:
           - weight: 3.2588565619047607
             sector: sector
@@ -79061,20 +79061,20 @@ components:
             - symbol: symbol
               mic_code: mic_code
               name: name
-              weight: 4.078845849666752
+              weight: 7.260521264802104
               exchange: exchange
             - symbol: symbol
               mic_code: mic_code
               name: name
-              weight: 4.078845849666752
+              weight: 7.260521264802104
               exchange: exchange
             asset_allocation:
-              bonds: 4.678947989005849
-              convertables: 1.041444916118296
-              cash: 0.2025324113236393
-              preferred_stocks: 4.258773108174356
-              stocks: 6.628464275087742
-              others: 7.260521264802104
+              bonds: 1.041444916118296
+              convertables: 4.258773108174356
+              cash: 4.078845849666752
+              preferred_stocks: 6.628464275087742
+              stocks: 0.2025324113236393
+              others: 4.678947989005849
             major_market_sectors:
             - weight: 3.2588565619047607
               sector: sector
