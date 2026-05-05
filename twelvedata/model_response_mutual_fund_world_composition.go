@@ -16,10 +16,10 @@ var _ MappedNullable = &ResponseMutualFundWorldComposition{}
 type ResponseMutualFundWorldComposition struct {
 	// Breakdown of the fund’s portfolio by major industry sectors and their respective weights
 	MajorMarketSectors []GetMutualFundsWorld200ResponseMutualFundCompositionMajorMarketSectorsInner `json:"major_market_sectors,omitempty"`
-	AssetAllocation    *GetMutualFundsWorld200ResponseMutualFundCompositionAssetAllocation          `json:"asset_allocation,omitempty"`
 	// Top holdings of the fund with their respective weights in the overall portfolio composition
-	TopHoldings   []GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner `json:"top_holdings,omitempty"`
-	BondBreakdown *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown     `json:"bond_breakdown,omitempty"`
+	TopHoldings     []GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner `json:"top_holdings,omitempty"`
+	AssetAllocation *GetMutualFundsWorld200ResponseMutualFundCompositionAssetAllocation   `json:"asset_allocation,omitempty"`
+	BondBreakdown   *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown     `json:"bond_breakdown,omitempty"`
 }
 
 // NewResponseMutualFundWorldComposition instantiates a new ResponseMutualFundWorldComposition object
@@ -71,38 +71,6 @@ func (o *ResponseMutualFundWorldComposition) SetMajorMarketSectors(v []GetMutual
 	o.MajorMarketSectors = v
 }
 
-// GetAssetAllocation returns the AssetAllocation field value if set, zero value otherwise.
-func (o *ResponseMutualFundWorldComposition) GetAssetAllocation() GetMutualFundsWorld200ResponseMutualFundCompositionAssetAllocation {
-	if o == nil || IsNil(o.AssetAllocation) {
-		var ret GetMutualFundsWorld200ResponseMutualFundCompositionAssetAllocation
-		return ret
-	}
-	return *o.AssetAllocation
-}
-
-// GetAssetAllocationOk returns a tuple with the AssetAllocation field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *ResponseMutualFundWorldComposition) GetAssetAllocationOk() (*GetMutualFundsWorld200ResponseMutualFundCompositionAssetAllocation, bool) {
-	if o == nil || IsNil(o.AssetAllocation) {
-		return nil, false
-	}
-	return o.AssetAllocation, true
-}
-
-// HasAssetAllocation returns a boolean if a field has been set.
-func (o *ResponseMutualFundWorldComposition) HasAssetAllocation() bool {
-	if o != nil && !IsNil(o.AssetAllocation) {
-		return true
-	}
-
-	return false
-}
-
-// SetAssetAllocation gets a reference to the given GetMutualFundsWorld200ResponseMutualFundCompositionAssetAllocation and assigns it to the AssetAllocation field.
-func (o *ResponseMutualFundWorldComposition) SetAssetAllocation(v GetMutualFundsWorld200ResponseMutualFundCompositionAssetAllocation) {
-	o.AssetAllocation = &v
-}
-
 // GetTopHoldings returns the TopHoldings field value if set, zero value otherwise.
 func (o *ResponseMutualFundWorldComposition) GetTopHoldings() []GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner {
 	if o == nil || IsNil(o.TopHoldings) {
@@ -133,6 +101,38 @@ func (o *ResponseMutualFundWorldComposition) HasTopHoldings() bool {
 // SetTopHoldings gets a reference to the given []GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner and assigns it to the TopHoldings field.
 func (o *ResponseMutualFundWorldComposition) SetTopHoldings(v []GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner) {
 	o.TopHoldings = v
+}
+
+// GetAssetAllocation returns the AssetAllocation field value if set, zero value otherwise.
+func (o *ResponseMutualFundWorldComposition) GetAssetAllocation() GetMutualFundsWorld200ResponseMutualFundCompositionAssetAllocation {
+	if o == nil || IsNil(o.AssetAllocation) {
+		var ret GetMutualFundsWorld200ResponseMutualFundCompositionAssetAllocation
+		return ret
+	}
+	return *o.AssetAllocation
+}
+
+// GetAssetAllocationOk returns a tuple with the AssetAllocation field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ResponseMutualFundWorldComposition) GetAssetAllocationOk() (*GetMutualFundsWorld200ResponseMutualFundCompositionAssetAllocation, bool) {
+	if o == nil || IsNil(o.AssetAllocation) {
+		return nil, false
+	}
+	return o.AssetAllocation, true
+}
+
+// HasAssetAllocation returns a boolean if a field has been set.
+func (o *ResponseMutualFundWorldComposition) HasAssetAllocation() bool {
+	if o != nil && !IsNil(o.AssetAllocation) {
+		return true
+	}
+
+	return false
+}
+
+// SetAssetAllocation gets a reference to the given GetMutualFundsWorld200ResponseMutualFundCompositionAssetAllocation and assigns it to the AssetAllocation field.
+func (o *ResponseMutualFundWorldComposition) SetAssetAllocation(v GetMutualFundsWorld200ResponseMutualFundCompositionAssetAllocation) {
+	o.AssetAllocation = &v
 }
 
 // GetBondBreakdown returns the BondBreakdown field value if set, zero value otherwise.
@@ -180,11 +180,11 @@ func (o ResponseMutualFundWorldComposition) ToMap() (map[string]interface{}, err
 	if !IsNil(o.MajorMarketSectors) {
 		toSerialize["major_market_sectors"] = o.MajorMarketSectors
 	}
-	if !IsNil(o.AssetAllocation) {
-		toSerialize["asset_allocation"] = o.AssetAllocation
-	}
 	if !IsNil(o.TopHoldings) {
 		toSerialize["top_holdings"] = o.TopHoldings
+	}
+	if !IsNil(o.AssetAllocation) {
+		toSerialize["asset_allocation"] = o.AssetAllocation
 	}
 	if !IsNil(o.BondBreakdown) {
 		toSerialize["bond_breakdown"] = o.BondBreakdown

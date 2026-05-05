@@ -1,1 +1,23 @@
-vendor/
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test / coverage
+*.test
+*.out
+coverage.out
+coverage.html
+
+# Build / vendor
+/vendor/
+/bin/
+/dist/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+*.swp

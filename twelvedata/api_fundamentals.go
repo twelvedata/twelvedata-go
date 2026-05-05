@@ -1306,7 +1306,7 @@ func (r FundamentalsAPIGetDividendsRequest) Execute() (*GetDividends200Response,
 /*
 GetDividends Dividends
 
-The dividends endpoint provides historical dividend data for a specified stock, in many cases covering over a decade. It returns information on dividend payouts, including the amount and frequency. This endpoint is ideal for users tracking dividend histories or evaluating the income potential of stocks.
+The dividends endpoint provides historical dividend data for a specified stock, in many cases covering over a decade. It returns information on dividend payouts, including the ex-date, amount, and frequency. This endpoint is ideal for users tracking dividend histories or evaluating the income potential of stocks.
 
 	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 	@return FundamentalsAPIGetDividendsRequest
