@@ -15,10 +15,10 @@ var _ MappedNullable = &GetMutualFundsWorld200ResponseMutualFundComposition{}
 type GetMutualFundsWorld200ResponseMutualFundComposition struct {
 	// Breakdown of the fund’s portfolio by major industry sectors and their respective weights
 	MajorMarketSectors []GetMutualFundsWorld200ResponseMutualFundCompositionMajorMarketSectorsInner `json:"major_market_sectors,omitempty"`
+	AssetAllocation    *GetMutualFundsWorld200ResponseMutualFundCompositionAssetAllocation          `json:"asset_allocation,omitempty"`
 	// Top holdings of the fund with their respective weights in the overall portfolio composition
-	TopHoldings     []GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner `json:"top_holdings,omitempty"`
-	AssetAllocation *GetMutualFundsWorld200ResponseMutualFundCompositionAssetAllocation   `json:"asset_allocation,omitempty"`
-	BondBreakdown   *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown     `json:"bond_breakdown,omitempty"`
+	TopHoldings   []GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner `json:"top_holdings,omitempty"`
+	BondBreakdown *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown     `json:"bond_breakdown,omitempty"`
 }
 
 // NewGetMutualFundsWorld200ResponseMutualFundComposition instantiates a new GetMutualFundsWorld200ResponseMutualFundComposition object
@@ -70,38 +70,6 @@ func (o *GetMutualFundsWorld200ResponseMutualFundComposition) SetMajorMarketSect
 	o.MajorMarketSectors = v
 }
 
-// GetTopHoldings returns the TopHoldings field value if set, zero value otherwise.
-func (o *GetMutualFundsWorld200ResponseMutualFundComposition) GetTopHoldings() []GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner {
-	if o == nil || IsNil(o.TopHoldings) {
-		var ret []GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner
-		return ret
-	}
-	return o.TopHoldings
-}
-
-// GetTopHoldingsOk returns a tuple with the TopHoldings field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *GetMutualFundsWorld200ResponseMutualFundComposition) GetTopHoldingsOk() ([]GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner, bool) {
-	if o == nil || IsNil(o.TopHoldings) {
-		return nil, false
-	}
-	return o.TopHoldings, true
-}
-
-// HasTopHoldings returns a boolean if a field has been set.
-func (o *GetMutualFundsWorld200ResponseMutualFundComposition) HasTopHoldings() bool {
-	if o != nil && !IsNil(o.TopHoldings) {
-		return true
-	}
-
-	return false
-}
-
-// SetTopHoldings gets a reference to the given []GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner and assigns it to the TopHoldings field.
-func (o *GetMutualFundsWorld200ResponseMutualFundComposition) SetTopHoldings(v []GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner) {
-	o.TopHoldings = v
-}
-
 // GetAssetAllocation returns the AssetAllocation field value if set, zero value otherwise.
 func (o *GetMutualFundsWorld200ResponseMutualFundComposition) GetAssetAllocation() GetMutualFundsWorld200ResponseMutualFundCompositionAssetAllocation {
 	if o == nil || IsNil(o.AssetAllocation) {
@@ -132,6 +100,38 @@ func (o *GetMutualFundsWorld200ResponseMutualFundComposition) HasAssetAllocation
 // SetAssetAllocation gets a reference to the given GetMutualFundsWorld200ResponseMutualFundCompositionAssetAllocation and assigns it to the AssetAllocation field.
 func (o *GetMutualFundsWorld200ResponseMutualFundComposition) SetAssetAllocation(v GetMutualFundsWorld200ResponseMutualFundCompositionAssetAllocation) {
 	o.AssetAllocation = &v
+}
+
+// GetTopHoldings returns the TopHoldings field value if set, zero value otherwise.
+func (o *GetMutualFundsWorld200ResponseMutualFundComposition) GetTopHoldings() []GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner {
+	if o == nil || IsNil(o.TopHoldings) {
+		var ret []GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner
+		return ret
+	}
+	return o.TopHoldings
+}
+
+// GetTopHoldingsOk returns a tuple with the TopHoldings field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetMutualFundsWorld200ResponseMutualFundComposition) GetTopHoldingsOk() ([]GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner, bool) {
+	if o == nil || IsNil(o.TopHoldings) {
+		return nil, false
+	}
+	return o.TopHoldings, true
+}
+
+// HasTopHoldings returns a boolean if a field has been set.
+func (o *GetMutualFundsWorld200ResponseMutualFundComposition) HasTopHoldings() bool {
+	if o != nil && !IsNil(o.TopHoldings) {
+		return true
+	}
+
+	return false
+}
+
+// SetTopHoldings gets a reference to the given []GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner and assigns it to the TopHoldings field.
+func (o *GetMutualFundsWorld200ResponseMutualFundComposition) SetTopHoldings(v []GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner) {
+	o.TopHoldings = v
 }
 
 // GetBondBreakdown returns the BondBreakdown field value if set, zero value otherwise.
@@ -179,11 +179,11 @@ func (o GetMutualFundsWorld200ResponseMutualFundComposition) ToMap() (map[string
 	if !IsNil(o.MajorMarketSectors) {
 		toSerialize["major_market_sectors"] = o.MajorMarketSectors
 	}
-	if !IsNil(o.TopHoldings) {
-		toSerialize["top_holdings"] = o.TopHoldings
-	}
 	if !IsNil(o.AssetAllocation) {
 		toSerialize["asset_allocation"] = o.AssetAllocation
+	}
+	if !IsNil(o.TopHoldings) {
+		toSerialize["top_holdings"] = o.TopHoldings
 	}
 	if !IsNil(o.BondBreakdown) {
 		toSerialize["bond_breakdown"] = o.BondBreakdown

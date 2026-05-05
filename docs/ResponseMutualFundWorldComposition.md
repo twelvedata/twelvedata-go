@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **MajorMarketSectors** | Pointer to [**[]GetMutualFundsWorld200ResponseMutualFundCompositionMajorMarketSectorsInner**](GetMutualFundsWorld200ResponseMutualFundCompositionMajorMarketSectorsInner.md) | Breakdown of the fund’s portfolio by major industry sectors and their respective weights | [optional] 
-**TopHoldings** | Pointer to [**[]GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner**](GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner.md) | Top holdings of the fund with their respective weights in the overall portfolio composition | [optional] 
 **AssetAllocation** | Pointer to [**GetMutualFundsWorld200ResponseMutualFundCompositionAssetAllocation**](GetMutualFundsWorld200ResponseMutualFundCompositionAssetAllocation.md) |  | [optional] 
-**BondBreakdown** | Pointer to [**GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown**](GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown.md) |  | [optional] 
+**TopHoldings** | Pointer to [**[]GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner**](GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner.md) | Top holdings of the fund with their respective weights in the overall portfolio composition | [optional] 
+**BondBreakdown** | Pointer to [**ResponseMutualFundWorldCompositionBondBreakdown**](ResponseMutualFundWorldCompositionBondBreakdown.md) |  | [optional] 
 
 ## Methods
 
@@ -53,31 +53,6 @@ SetMajorMarketSectors sets MajorMarketSectors field to given value.
 
 HasMajorMarketSectors returns a boolean if a field has been set.
 
-### GetTopHoldings
-
-`func (o *ResponseMutualFundWorldComposition) GetTopHoldings() []GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner`
-
-GetTopHoldings returns the TopHoldings field if non-nil, zero value otherwise.
-
-### GetTopHoldingsOk
-
-`func (o *ResponseMutualFundWorldComposition) GetTopHoldingsOk() (*[]GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner, bool)`
-
-GetTopHoldingsOk returns a tuple with the TopHoldings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTopHoldings
-
-`func (o *ResponseMutualFundWorldComposition) SetTopHoldings(v []GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner)`
-
-SetTopHoldings sets TopHoldings field to given value.
-
-### HasTopHoldings
-
-`func (o *ResponseMutualFundWorldComposition) HasTopHoldings() bool`
-
-HasTopHoldings returns a boolean if a field has been set.
-
 ### GetAssetAllocation
 
 `func (o *ResponseMutualFundWorldComposition) GetAssetAllocation() GetMutualFundsWorld200ResponseMutualFundCompositionAssetAllocation`
@@ -103,22 +78,47 @@ SetAssetAllocation sets AssetAllocation field to given value.
 
 HasAssetAllocation returns a boolean if a field has been set.
 
+### GetTopHoldings
+
+`func (o *ResponseMutualFundWorldComposition) GetTopHoldings() []GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner`
+
+GetTopHoldings returns the TopHoldings field if non-nil, zero value otherwise.
+
+### GetTopHoldingsOk
+
+`func (o *ResponseMutualFundWorldComposition) GetTopHoldingsOk() (*[]GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner, bool)`
+
+GetTopHoldingsOk returns a tuple with the TopHoldings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTopHoldings
+
+`func (o *ResponseMutualFundWorldComposition) SetTopHoldings(v []GetMutualFundsWorld200ResponseMutualFundCompositionTopHoldingsInner)`
+
+SetTopHoldings sets TopHoldings field to given value.
+
+### HasTopHoldings
+
+`func (o *ResponseMutualFundWorldComposition) HasTopHoldings() bool`
+
+HasTopHoldings returns a boolean if a field has been set.
+
 ### GetBondBreakdown
 
-`func (o *ResponseMutualFundWorldComposition) GetBondBreakdown() GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown`
+`func (o *ResponseMutualFundWorldComposition) GetBondBreakdown() ResponseMutualFundWorldCompositionBondBreakdown`
 
 GetBondBreakdown returns the BondBreakdown field if non-nil, zero value otherwise.
 
 ### GetBondBreakdownOk
 
-`func (o *ResponseMutualFundWorldComposition) GetBondBreakdownOk() (*GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown, bool)`
+`func (o *ResponseMutualFundWorldComposition) GetBondBreakdownOk() (*ResponseMutualFundWorldCompositionBondBreakdown, bool)`
 
 GetBondBreakdownOk returns a tuple with the BondBreakdown field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBondBreakdown
 
-`func (o *ResponseMutualFundWorldComposition) SetBondBreakdown(v GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown)`
+`func (o *ResponseMutualFundWorldComposition) SetBondBreakdown(v ResponseMutualFundWorldCompositionBondBreakdown)`
 
 SetBondBreakdown sets BondBreakdown field to given value.
 

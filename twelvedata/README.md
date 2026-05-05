@@ -81,6 +81,14 @@ Twelve Data also exposes a WebSocket API for real-time price streaming. This pac
 
 For the full list of WebSocket error types and recommended handling, see [WebSocket errors](../error_handling.md#websocket-errors).
 
+### Installation
+
+The WebSocket client lives in the `/ws` sub-package and pulls in `github.com/gorilla/websocket` as an extra dependency. Install it alongside the main package:
+
+```bash
+go get github.com/twelvedata/twelvedata-go/twelvedata/ws
+```
+
 ### Usage
 
 ```go

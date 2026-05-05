@@ -957,6 +957,7 @@ Class | Method | HTTP request | Description
  - [RangeSplitsEnum](docs/RangeSplitsEnum.md)
  - [RatingChangeEnum](docs/RatingChangeEnum.md)
  - [ResponseMutualFundWorldComposition](docs/ResponseMutualFundWorldComposition.md)
+ - [ResponseMutualFundWorldCompositionBondBreakdown](docs/ResponseMutualFundWorldCompositionBondBreakdown.md)
  - [ResponseMutualFundWorldPerformance](docs/ResponseMutualFundWorldPerformance.md)
  - [ResponseMutualFundWorldPurchaseInfo](docs/ResponseMutualFundWorldPurchaseInfo.md)
  - [ResponseMutualFundWorldRatings](docs/ResponseMutualFundWorldRatings.md)
