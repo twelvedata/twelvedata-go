@@ -1,4 +1,4 @@
-# GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown
+# ResponseMutualFundWorldCompositionBondBreakdown
 
 ## Properties
 
@@ -10,95 +10,95 @@ Name | Type | Description | Notes
 
 ## Methods
 
-### NewGetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown
+### NewResponseMutualFundWorldCompositionBondBreakdown
 
-`func NewGetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown() *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown`
+`func NewResponseMutualFundWorldCompositionBondBreakdown() *ResponseMutualFundWorldCompositionBondBreakdown`
 
-NewGetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown instantiates a new GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown object
+NewResponseMutualFundWorldCompositionBondBreakdown instantiates a new ResponseMutualFundWorldCompositionBondBreakdown object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewGetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownWithDefaults
+### NewResponseMutualFundWorldCompositionBondBreakdownWithDefaults
 
-`func NewGetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownWithDefaults() *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown`
+`func NewResponseMutualFundWorldCompositionBondBreakdownWithDefaults() *ResponseMutualFundWorldCompositionBondBreakdown`
 
-NewGetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownWithDefaults instantiates a new GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown object
+NewResponseMutualFundWorldCompositionBondBreakdownWithDefaults instantiates a new ResponseMutualFundWorldCompositionBondBreakdown object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
 ### GetAverageMaturity
 
-`func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetAverageMaturity() GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageMaturity`
+`func (o *ResponseMutualFundWorldCompositionBondBreakdown) GetAverageMaturity() GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageMaturity`
 
 GetAverageMaturity returns the AverageMaturity field if non-nil, zero value otherwise.
 
 ### GetAverageMaturityOk
 
-`func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetAverageMaturityOk() (*GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageMaturity, bool)`
+`func (o *ResponseMutualFundWorldCompositionBondBreakdown) GetAverageMaturityOk() (*GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageMaturity, bool)`
 
 GetAverageMaturityOk returns a tuple with the AverageMaturity field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAverageMaturity
 
-`func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) SetAverageMaturity(v GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageMaturity)`
+`func (o *ResponseMutualFundWorldCompositionBondBreakdown) SetAverageMaturity(v GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageMaturity)`
 
 SetAverageMaturity sets AverageMaturity field to given value.
 
 ### HasAverageMaturity
 
-`func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) HasAverageMaturity() bool`
+`func (o *ResponseMutualFundWorldCompositionBondBreakdown) HasAverageMaturity() bool`
 
 HasAverageMaturity returns a boolean if a field has been set.
 
 ### GetCreditQuality
 
-`func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetCreditQuality() []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner`
+`func (o *ResponseMutualFundWorldCompositionBondBreakdown) GetCreditQuality() []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner`
 
 GetCreditQuality returns the CreditQuality field if non-nil, zero value otherwise.
 
 ### GetCreditQualityOk
 
-`func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetCreditQualityOk() (*[]GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner, bool)`
+`func (o *ResponseMutualFundWorldCompositionBondBreakdown) GetCreditQualityOk() (*[]GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner, bool)`
 
 GetCreditQualityOk returns a tuple with the CreditQuality field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreditQuality
 
-`func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) SetCreditQuality(v []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner)`
+`func (o *ResponseMutualFundWorldCompositionBondBreakdown) SetCreditQuality(v []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner)`
 
 SetCreditQuality sets CreditQuality field to given value.
 
 ### HasCreditQuality
 
-`func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) HasCreditQuality() bool`
+`func (o *ResponseMutualFundWorldCompositionBondBreakdown) HasCreditQuality() bool`
 
 HasCreditQuality returns a boolean if a field has been set.
 
 ### GetAverageDuration
 
-`func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetAverageDuration() GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration`
+`func (o *ResponseMutualFundWorldCompositionBondBreakdown) GetAverageDuration() GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration`
 
 GetAverageDuration returns the AverageDuration field if non-nil, zero value otherwise.
 
 ### GetAverageDurationOk
 
-`func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetAverageDurationOk() (*GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration, bool)`
+`func (o *ResponseMutualFundWorldCompositionBondBreakdown) GetAverageDurationOk() (*GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration, bool)`
 
 GetAverageDurationOk returns a tuple with the AverageDuration field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAverageDuration
 
-`func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) SetAverageDuration(v GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration)`
+`func (o *ResponseMutualFundWorldCompositionBondBreakdown) SetAverageDuration(v GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration)`
 
 SetAverageDuration sets AverageDuration field to given value.
 
 ### HasAverageDuration
 
-`func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) HasAverageDuration() bool`
+`func (o *ResponseMutualFundWorldCompositionBondBreakdown) HasAverageDuration() bool`
 
 HasAverageDuration returns a boolean if a field has been set.
 

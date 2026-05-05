@@ -16,10 +16,10 @@ var _ MappedNullable = &GetEarliestTimestamp200Response{}
 
 // GetEarliestTimestamp200Response struct for GetEarliestTimestamp200Response
 type GetEarliestTimestamp200Response struct {
-	// Earliest datetime, the format depends on interval
-	Datetime string `json:"datetime"`
 	// Datetime converted to UNIX timestamp
 	UnixTime int64 `json:"unix_time"`
+	// Earliest datetime, the format depends on interval
+	Datetime string `json:"datetime"`
 }
 
 type _GetEarliestTimestamp200Response GetEarliestTimestamp200Response
@@ -28,10 +28,10 @@ type _GetEarliestTimestamp200Response GetEarliestTimestamp200Response
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewGetEarliestTimestamp200Response(datetime string, unixTime int64) *GetEarliestTimestamp200Response {
+func NewGetEarliestTimestamp200Response(unixTime int64, datetime string) *GetEarliestTimestamp200Response {
 	this := GetEarliestTimestamp200Response{}
-	this.Datetime = datetime
 	this.UnixTime = unixTime
+	this.Datetime = datetime
 	return &this
 }
 
@@ -41,30 +41,6 @@ func NewGetEarliestTimestamp200Response(datetime string, unixTime int64) *GetEar
 func NewGetEarliestTimestamp200ResponseWithDefaults() *GetEarliestTimestamp200Response {
 	this := GetEarliestTimestamp200Response{}
 	return &this
-}
-
-// GetDatetime returns the Datetime field value
-func (o *GetEarliestTimestamp200Response) GetDatetime() string {
-	if o == nil {
-		var ret string
-		return ret
-	}
-
-	return o.Datetime
-}
-
-// GetDatetimeOk returns a tuple with the Datetime field value
-// and a boolean to check if the value has been set.
-func (o *GetEarliestTimestamp200Response) GetDatetimeOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return &o.Datetime, true
-}
-
-// SetDatetime sets field value
-func (o *GetEarliestTimestamp200Response) SetDatetime(v string) {
-	o.Datetime = v
 }
 
 // GetUnixTime returns the UnixTime field value
@@ -91,6 +67,30 @@ func (o *GetEarliestTimestamp200Response) SetUnixTime(v int64) {
 	o.UnixTime = v
 }
 
+// GetDatetime returns the Datetime field value
+func (o *GetEarliestTimestamp200Response) GetDatetime() string {
+	if o == nil {
+		var ret string
+		return ret
+	}
+
+	return o.Datetime
+}
+
+// GetDatetimeOk returns a tuple with the Datetime field value
+// and a boolean to check if the value has been set.
+func (o *GetEarliestTimestamp200Response) GetDatetimeOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return &o.Datetime, true
+}
+
+// SetDatetime sets field value
+func (o *GetEarliestTimestamp200Response) SetDatetime(v string) {
+	o.Datetime = v
+}
+
 func (o GetEarliestTimestamp200Response) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -101,8 +101,8 @@ func (o GetEarliestTimestamp200Response) MarshalJSON() ([]byte, error) {
 
 func (o GetEarliestTimestamp200Response) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["datetime"] = o.Datetime
 	toSerialize["unix_time"] = o.UnixTime
+	toSerialize["datetime"] = o.Datetime
 	return toSerialize, nil
 }
 
@@ -111,8 +111,8 @@ func (o *GetEarliestTimestamp200Response) UnmarshalJSON(data []byte) (err error)
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
-		"datetime",
 		"unix_time",
+		"datetime",
 	}
 
 	allProperties := make(map[string]interface{})

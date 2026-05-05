@@ -27,7 +27,14 @@ go get github.com/twelvedata/twelvedata-go/twelvedata
 
 ## Quick start
 
-### 1. Create `main.go`
+### 1. Set up a new project
+```bash
+mkdir my-go-app && cd my-go-app
+go mod init my-go-app
+go get github.com/twelvedata/twelvedata-go/twelvedata
+```
+
+### 2. Create `main.go`
 
 ```go
 package main
@@ -61,7 +68,7 @@ func main() {
 }
 ```
 
-### 2. Run
+### 3. Run
 
 ```bash
 go run main.go
