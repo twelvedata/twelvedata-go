@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AverageMaturity** | Pointer to [**GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageMaturity**](GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageMaturity.md) |  | [optional] 
-**CreditQuality** | Pointer to [**[]GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner**](GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner.md) | Breakdown of the fund’s bond holdings by credit rating and their respective portfolio weights | [optional] 
 **AverageDuration** | Pointer to [**GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration**](GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration.md) |  | [optional] 
+**CreditQuality** | Pointer to [**[]GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner**](GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner.md) | Breakdown of the fund’s bond holdings by credit rating and their respective portfolio weights | [optional] 
 
 ## Methods
 
@@ -52,31 +52,6 @@ SetAverageMaturity sets AverageMaturity field to given value.
 
 HasAverageMaturity returns a boolean if a field has been set.
 
-### GetCreditQuality
-
-`func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetCreditQuality() []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner`
-
-GetCreditQuality returns the CreditQuality field if non-nil, zero value otherwise.
-
-### GetCreditQualityOk
-
-`func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetCreditQualityOk() (*[]GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner, bool)`
-
-GetCreditQualityOk returns a tuple with the CreditQuality field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreditQuality
-
-`func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) SetCreditQuality(v []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner)`
-
-SetCreditQuality sets CreditQuality field to given value.
-
-### HasCreditQuality
-
-`func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) HasCreditQuality() bool`
-
-HasCreditQuality returns a boolean if a field has been set.
-
 ### GetAverageDuration
 
 `func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetAverageDuration() GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration`
@@ -101,6 +76,31 @@ SetAverageDuration sets AverageDuration field to given value.
 `func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) HasAverageDuration() bool`
 
 HasAverageDuration returns a boolean if a field has been set.
+
+### GetCreditQuality
+
+`func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetCreditQuality() []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner`
+
+GetCreditQuality returns the CreditQuality field if non-nil, zero value otherwise.
+
+### GetCreditQualityOk
+
+`func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetCreditQualityOk() (*[]GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner, bool)`
+
+GetCreditQualityOk returns a tuple with the CreditQuality field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreditQuality
+
+`func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) SetCreditQuality(v []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner)`
+
+SetCreditQuality sets CreditQuality field to given value.
+
+### HasCreditQuality
+
+`func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) HasCreditQuality() bool`
+
+HasCreditQuality returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

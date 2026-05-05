@@ -15,9 +15,9 @@ var _ MappedNullable = &GetMutualFundsWorld200ResponseMutualFundCompositionBondB
 // GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown Breakdown of the fund’s bond holdings by maturity, duration, and credit quality
 type GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown struct {
 	AverageMaturity *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageMaturity `json:"average_maturity,omitempty"`
+	AverageDuration *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration `json:"average_duration,omitempty"`
 	// Breakdown of the fund’s bond holdings by credit rating and their respective portfolio weights
-	CreditQuality   []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner `json:"credit_quality,omitempty"`
-	AverageDuration *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration     `json:"average_duration,omitempty"`
+	CreditQuality []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner `json:"credit_quality,omitempty"`
 }
 
 // NewGetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown instantiates a new GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown object
@@ -69,38 +69,6 @@ func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) SetAv
 	o.AverageMaturity = &v
 }
 
-// GetCreditQuality returns the CreditQuality field value if set, zero value otherwise.
-func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetCreditQuality() []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner {
-	if o == nil || IsNil(o.CreditQuality) {
-		var ret []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner
-		return ret
-	}
-	return o.CreditQuality
-}
-
-// GetCreditQualityOk returns a tuple with the CreditQuality field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetCreditQualityOk() ([]GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner, bool) {
-	if o == nil || IsNil(o.CreditQuality) {
-		return nil, false
-	}
-	return o.CreditQuality, true
-}
-
-// HasCreditQuality returns a boolean if a field has been set.
-func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) HasCreditQuality() bool {
-	if o != nil && !IsNil(o.CreditQuality) {
-		return true
-	}
-
-	return false
-}
-
-// SetCreditQuality gets a reference to the given []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner and assigns it to the CreditQuality field.
-func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) SetCreditQuality(v []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner) {
-	o.CreditQuality = v
-}
-
 // GetAverageDuration returns the AverageDuration field value if set, zero value otherwise.
 func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetAverageDuration() GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownAverageDuration {
 	if o == nil || IsNil(o.AverageDuration) {
@@ -133,6 +101,38 @@ func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) SetAv
 	o.AverageDuration = &v
 }
 
+// GetCreditQuality returns the CreditQuality field value if set, zero value otherwise.
+func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetCreditQuality() []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner {
+	if o == nil || IsNil(o.CreditQuality) {
+		var ret []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner
+		return ret
+	}
+	return o.CreditQuality
+}
+
+// GetCreditQualityOk returns a tuple with the CreditQuality field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) GetCreditQualityOk() ([]GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner, bool) {
+	if o == nil || IsNil(o.CreditQuality) {
+		return nil, false
+	}
+	return o.CreditQuality, true
+}
+
+// HasCreditQuality returns a boolean if a field has been set.
+func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) HasCreditQuality() bool {
+	if o != nil && !IsNil(o.CreditQuality) {
+		return true
+	}
+
+	return false
+}
+
+// SetCreditQuality gets a reference to the given []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner and assigns it to the CreditQuality field.
+func (o *GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) SetCreditQuality(v []GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdownCreditQualityInner) {
+	o.CreditQuality = v
+}
+
 func (o GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -146,11 +146,11 @@ func (o GetMutualFundsWorld200ResponseMutualFundCompositionBondBreakdown) ToMap(
 	if !IsNil(o.AverageMaturity) {
 		toSerialize["average_maturity"] = o.AverageMaturity
 	}
-	if !IsNil(o.CreditQuality) {
-		toSerialize["credit_quality"] = o.CreditQuality
-	}
 	if !IsNil(o.AverageDuration) {
 		toSerialize["average_duration"] = o.AverageDuration
+	}
+	if !IsNil(o.CreditQuality) {
+		toSerialize["credit_quality"] = o.CreditQuality
 	}
 	return toSerialize, nil
 }
