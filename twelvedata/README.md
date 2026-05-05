@@ -79,7 +79,7 @@ go run main.go
 
 Twelve Data also exposes a WebSocket API for real-time price streaming. This package ships a wrapper client around it that handles authentication, application-level heartbeat, WebSocket-protocol ping/pong, exponential-backoff auto-reconnect with subscription replay, and typed errors. See the [Twelve Data WebSocket documentation](https://twelvedata.com/docs/#websocket) for protocol details.
 
-For the full list of WebSocket error types and recommended handling, see [WebSocket errors](error_handling.md#websocket-errors).
+For the full list of WebSocket error types and recommended handling, see [WebSocket errors](../error_handling.md#websocket-errors).
 
 ### Usage
 
@@ -169,17 +169,17 @@ client, err := ws.NewClient(ws.Options{
 
 ## Error Handling
 
-See [error_handling.md](error_handling.md) for error types, fields, and usage examples.
+See [error_handling.md](../error_handling.md) for error types, fields, and usage examples.
 
 For the complete list of API error codes and their meanings, see the [Twelve Data Errors documentation](https://twelvedata.com/docs/introduction/errors).
 
 ## API Reference
 
-See [api_reference.md](api_reference.md) for the complete list of API endpoints and models.
+See [api_reference.md](../api_reference.md) for the complete list of API endpoints and models.
 
 ## Integration tests
 
-This repo ships a live-API integration suite at [`twelvedata/endpoints_test.go`](twelvedata/endpoints_test.go). It hits every supported endpoint once against the real Twelve Data API and is used to catch regressions before publishing a new client version. **Running the suite spends API quota.**
+This repo ships a live-API integration suite at [`endpoints_test.go`](endpoints_test.go). It hits every supported endpoint once against the real Twelve Data API and is used to catch regressions before publishing a new client version. **Running the suite spends API quota.**
 
 ### Setup
 
