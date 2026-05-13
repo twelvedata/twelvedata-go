@@ -2,7 +2,7 @@
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/twelvedata/twelvedata-go/twelvedata.svg)](https://pkg.go.dev/github.com/twelvedata/twelvedata-go/twelvedata)
 [![Go Report Card](https://goreportcard.com/badge/github.com/twelvedata/twelvedata-go)](https://goreportcard.com/report/github.com/twelvedata/twelvedata-go)
-[![License](https://img.shields.io/github/license/twelvedata/twelvedata-go](https://github.com/twelvedata/twelvedata-go/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/twelvedata/twelvedata-go)](https://github.com/twelvedata/twelvedata-go/blob/master/LICENSE)
 [![Issues](https://img.shields.io/github/issues/twelvedata/twelvedata-go)](https://github.com/twelvedata/twelvedata-go/issues)
 
 Twelve Data official library. This package supports all main features of the service:
