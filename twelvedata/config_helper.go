@@ -11,7 +11,11 @@ const (
 	baseURLEnvVar = "TWELVEDATA_API_BASE_URL"
 	apiKeyPrefix  = "apikey"
 	sourceParam   = "source"
-	sourceValue   = "client-go"
+	// DefaultSourceValue is the `source` query value used by NewConfig and
+	// WrapTransport. Tools built on top of this SDK (e.g. the Twelve Data
+	// CLI) should call NewConfigWithSource/WrapTransportWithSource to
+	// attribute their traffic instead.
+	DefaultSourceValue = "client-go"
 )
 
 // NewConfig returns a *Configuration pre-loaded with the Twelve Data API key
@@ -23,6 +27,14 @@ const (
 //
 // Returns an error if no API key is available.
 func NewConfig(overrides ...string) (*Configuration, error) {
+	return NewConfigWithSource(DefaultSourceValue, overrides...)
+}
+
+// NewConfigWithSource is like NewConfig but tags outbound requests with the
+// caller-supplied `source` query value (e.g. "cli" for the Twelve Data CLI),
+// so the API can attribute traffic to the wrapping tool rather than the raw
+// Go SDK.
+func NewConfigWithSource(source string, overrides ...string) (*Configuration, error) {
 	apiKey := firstNonEmpty(pick(overrides, 0), os.Getenv(apiKeyEnvVar))
 	if apiKey == "" {
 		return nil, fmt.Errorf("%s environment variable is not set", apiKeyEnvVar)
@@ -31,7 +43,7 @@ func NewConfig(overrides ...string) (*Configuration, error) {
 	cfg := NewConfiguration()
 	cfg.DefaultHeader["Authorization"] = apiKeyPrefix + " " + apiKey
 	cfg.DefaultHeader["X-API-Version"] = "last"
-	cfg.HTTPClient = &http.Client{Transport: WrapTransport(http.DefaultTransport)}
+	cfg.HTTPClient = &http.Client{Transport: WrapTransportWithSource(http.DefaultTransport, source)}
 
 	if baseURL := firstNonEmpty(pick(overrides, 1), os.Getenv(baseURLEnvVar)); baseURL != "" {
 		cfg.Servers = ServerConfigurations{ServerConfiguration{URL: baseURL}}
@@ -39,11 +51,12 @@ func NewConfig(overrides ...string) (*Configuration, error) {
 	return cfg, nil
 }
 
-// sourceParamRoundTripper attaches the `source=client-go` query parameter to
-// every outbound request, so the API can attribute traffic to the Go client.
-// User-supplied values for the same parameter take precedence.
+// sourceParamRoundTripper attaches the configured `source` query parameter to
+// every outbound request, so the API can attribute traffic to the calling
+// client. User-supplied values for the same parameter take precedence.
 type sourceParamRoundTripper struct {
-	base http.RoundTripper
+	base   http.RoundTripper
+	source string
 }
 
 func (t *sourceParamRoundTripper) RoundTrip(req *http.Request) (*http.Response, error) {
@@ -55,7 +68,7 @@ func (t *sourceParamRoundTripper) RoundTrip(req *http.Request) (*http.Response, 
 		return t.base.RoundTrip(req)
 	}
 	newReq := req.Clone(req.Context())
-	q.Set(sourceParam, sourceValue)
+	q.Set(sourceParam, t.source)
 	newReq.URL.RawQuery = q.Encode()
 	return t.base.RoundTrip(newReq)
 }

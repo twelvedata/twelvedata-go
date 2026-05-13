@@ -116,8 +116,15 @@ func (t *errorRoundTripper) RoundTrip(req *http.Request) (*http.Response, error)
 // Pass nil to wrap http.DefaultTransport. Users with a custom *http.Client
 // should wrap their own transport so both layers stay installed.
 func WrapTransport(base http.RoundTripper) http.RoundTripper {
+	return WrapTransportWithSource(base, DefaultSourceValue)
+}
+
+// WrapTransportWithSource is like WrapTransport but tags requests with the
+// caller-supplied `source` query value. Used by tools built on top of this
+// SDK (e.g. the Twelve Data CLI) to attribute traffic to themselves.
+func WrapTransportWithSource(base http.RoundTripper, source string) http.RoundTripper {
 	if base == nil {
 		base = http.DefaultTransport
 	}
-	return &sourceParamRoundTripper{base: &errorRoundTripper{base: base}}
+	return &sourceParamRoundTripper{base: &errorRoundTripper{base: base}, source: source}
 }
