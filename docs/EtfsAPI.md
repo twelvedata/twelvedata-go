@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## GetETFsList
 
-> GetETFsList200Response GetETFsList(ctx).Symbol(symbol).Figi(figi).Isin(isin).Cusip(cusip).Cik(cik).Country(country).FundFamily(fundFamily).FundType(fundType).Page(page).Outputsize(outputsize).Execute()
+> GetETFsList200Response GetETFsList(ctx).Symbol(symbol).Figi(figi).Isin(isin).Cusip(cusip).Cik(cik).Country(country).FundFamily(fundFamily).FundType(fundType).Format(format).Delimiter(delimiter).Dp(dp).Page(page).Outputsize(outputsize).Execute()
 
 ETFs directory
 
@@ -112,12 +112,15 @@ func main() {
 	country := "United States" // string | Filter by country name or alpha code, e.g., `United States` or `US` (optional)
 	fundFamily := "iShares" // string | Filter by investment company that manages the fund (optional)
 	fundType := "Large Blend" // string | Filter by the type of fund (optional)
+	format := openapiclient.FormatEnum("JSON") // FormatEnum | The format of the response data (optional) (default to "JSON")
+	delimiter := "delimiter_example" // string | The separator used in the CSV response data (optional) (default to ";")
+	dp := int64(789) // int64 | Number of decimal places for floating values (optional) (default to 5)
 	page := int64(789) // int64 | Page number (optional) (default to 1)
 	outputsize := int64(789) // int64 | Number of records in response (optional) (default to 50)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.EtfsAPI.GetETFsList(context.Background()).Symbol(symbol).Figi(figi).Isin(isin).Cusip(cusip).Cik(cik).Country(country).FundFamily(fundFamily).FundType(fundType).Page(page).Outputsize(outputsize).Execute()
+	resp, r, err := apiClient.EtfsAPI.GetETFsList(context.Background()).Symbol(symbol).Figi(figi).Isin(isin).Cusip(cusip).Cik(cik).Country(country).FundFamily(fundFamily).FundType(fundType).Format(format).Delimiter(delimiter).Dp(dp).Page(page).Outputsize(outputsize).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `EtfsAPI.GetETFsList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -146,6 +149,9 @@ Name | Type | Description  | Notes
  **country** | **string** | Filter by country name or alpha code, e.g., &#x60;United States&#x60; or &#x60;US&#x60; | 
  **fundFamily** | **string** | Filter by investment company that manages the fund | 
  **fundType** | **string** | Filter by the type of fund | 
+ **format** | [**FormatEnum**](FormatEnum.md) | The format of the response data | [default to &quot;JSON&quot;]
+ **delimiter** | **string** | The separator used in the CSV response data | [default to &quot;;&quot;]
+ **dp** | **int64** | Number of decimal places for floating values | [default to 5]
  **page** | **int64** | Page number | [default to 1]
  **outputsize** | **int64** | Number of records in response | [default to 50]
 

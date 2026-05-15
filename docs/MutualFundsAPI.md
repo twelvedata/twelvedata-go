@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## GetMutualFundsList
 
-> GetMutualFundsList200Response GetMutualFundsList(ctx).Symbol(symbol).Figi(figi).Isin(isin).Cusip(cusip).Cik(cik).Country(country).FundFamily(fundFamily).FundType(fundType).PerformanceRating(performanceRating).RiskRating(riskRating).Page(page).Outputsize(outputsize).Execute()
+> GetMutualFundsList200Response GetMutualFundsList(ctx).Symbol(symbol).Figi(figi).Isin(isin).Cusip(cusip).Cik(cik).Country(country).FundFamily(fundFamily).FundType(fundType).PerformanceRating(performanceRating).RiskRating(riskRating).Format(format).Delimiter(delimiter).Dp(dp).Page(page).Outputsize(outputsize).Execute()
 
 MFs directory
 
@@ -117,12 +117,15 @@ func main() {
 	fundType := "Small Blend" // string | Filter by the type of fund (optional)
 	performanceRating := int64(4) // int64 | Filter by performance rating from `0` to `5` (optional)
 	riskRating := int64(4) // int64 | Filter by risk rating from `0` to `5` (optional)
+	format := openapiclient.FormatEnum("JSON") // FormatEnum | The format of the response data (optional) (default to "JSON")
+	delimiter := "delimiter_example" // string | The separator used in the CSV response data (optional) (default to ";")
+	dp := int64(789) // int64 | Number of decimal places for floating values (optional) (default to 5)
 	page := int64(789) // int64 | Page number (optional) (default to 1)
 	outputsize := int64(789) // int64 | Number of records in response (optional) (default to 100)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.MutualFundsAPI.GetMutualFundsList(context.Background()).Symbol(symbol).Figi(figi).Isin(isin).Cusip(cusip).Cik(cik).Country(country).FundFamily(fundFamily).FundType(fundType).PerformanceRating(performanceRating).RiskRating(riskRating).Page(page).Outputsize(outputsize).Execute()
+	resp, r, err := apiClient.MutualFundsAPI.GetMutualFundsList(context.Background()).Symbol(symbol).Figi(figi).Isin(isin).Cusip(cusip).Cik(cik).Country(country).FundFamily(fundFamily).FundType(fundType).PerformanceRating(performanceRating).RiskRating(riskRating).Format(format).Delimiter(delimiter).Dp(dp).Page(page).Outputsize(outputsize).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MutualFundsAPI.GetMutualFundsList``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -153,6 +156,9 @@ Name | Type | Description  | Notes
  **fundType** | **string** | Filter by the type of fund | 
  **performanceRating** | **int64** | Filter by performance rating from &#x60;0&#x60; to &#x60;5&#x60; | 
  **riskRating** | **int64** | Filter by risk rating from &#x60;0&#x60; to &#x60;5&#x60; | 
+ **format** | [**FormatEnum**](FormatEnum.md) | The format of the response data | [default to &quot;JSON&quot;]
+ **delimiter** | **string** | The separator used in the CSV response data | [default to &quot;;&quot;]
+ **dp** | **int64** | Number of decimal places for floating values | [default to 5]
  **page** | **int64** | Page number | [default to 1]
  **outputsize** | **int64** | Number of records in response | [default to 100]
 

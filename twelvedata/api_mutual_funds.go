@@ -238,6 +238,9 @@ type MutualFundsAPIGetMutualFundsListRequest struct {
 	fundType          *string
 	performanceRating *int64
 	riskRating        *int64
+	format            *FormatEnum
+	delimiter         *string
+	dp                *int64
 	page              *int64
 	outputsize        *int64
 }
@@ -299,6 +302,24 @@ func (r MutualFundsAPIGetMutualFundsListRequest) PerformanceRating(performanceRa
 // Filter by risk rating from &#x60;0&#x60; to &#x60;5&#x60;
 func (r MutualFundsAPIGetMutualFundsListRequest) RiskRating(riskRating int64) MutualFundsAPIGetMutualFundsListRequest {
 	r.riskRating = &riskRating
+	return r
+}
+
+// The format of the response data
+func (r MutualFundsAPIGetMutualFundsListRequest) Format(format FormatEnum) MutualFundsAPIGetMutualFundsListRequest {
+	r.format = &format
+	return r
+}
+
+// The separator used in the CSV response data
+func (r MutualFundsAPIGetMutualFundsListRequest) Delimiter(delimiter string) MutualFundsAPIGetMutualFundsListRequest {
+	r.delimiter = &delimiter
+	return r
+}
+
+// Number of decimal places for floating values
+func (r MutualFundsAPIGetMutualFundsListRequest) Dp(dp int64) MutualFundsAPIGetMutualFundsListRequest {
+	r.dp = &dp
 	return r
 }
 
@@ -384,6 +405,15 @@ func (a *MutualFundsAPIService) GetMutualFundsListExecute(r MutualFundsAPIGetMut
 	}
 	if r.riskRating != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "risk_rating", r.riskRating, "form", "")
+	}
+	if r.format != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
+	}
+	if r.delimiter != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
+	}
+	if r.dp != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
 	}
 	if r.page != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")

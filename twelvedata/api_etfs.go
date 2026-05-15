@@ -236,6 +236,9 @@ type EtfsAPIGetETFsListRequest struct {
 	country    *string
 	fundFamily *string
 	fundType   *string
+	format     *FormatEnum
+	delimiter  *string
+	dp         *int64
 	page       *int64
 	outputsize *int64
 }
@@ -285,6 +288,24 @@ func (r EtfsAPIGetETFsListRequest) FundFamily(fundFamily string) EtfsAPIGetETFsL
 // Filter by the type of fund
 func (r EtfsAPIGetETFsListRequest) FundType(fundType string) EtfsAPIGetETFsListRequest {
 	r.fundType = &fundType
+	return r
+}
+
+// The format of the response data
+func (r EtfsAPIGetETFsListRequest) Format(format FormatEnum) EtfsAPIGetETFsListRequest {
+	r.format = &format
+	return r
+}
+
+// The separator used in the CSV response data
+func (r EtfsAPIGetETFsListRequest) Delimiter(delimiter string) EtfsAPIGetETFsListRequest {
+	r.delimiter = &delimiter
+	return r
+}
+
+// Number of decimal places for floating values
+func (r EtfsAPIGetETFsListRequest) Dp(dp int64) EtfsAPIGetETFsListRequest {
+	r.dp = &dp
 	return r
 }
 
@@ -364,6 +385,15 @@ func (a *EtfsAPIService) GetETFsListExecute(r EtfsAPIGetETFsListRequest) (*GetET
 	}
 	if r.fundType != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "fund_type", r.fundType, "form", "")
+	}
+	if r.format != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "format", r.format, "form", "")
+	}
+	if r.delimiter != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
+	}
+	if r.dp != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "dp", r.dp, "form", "")
 	}
 	if r.page != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")

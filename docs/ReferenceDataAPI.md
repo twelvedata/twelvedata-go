@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ## GetCommodities
 
-> GetCommodities200Response GetCommodities(ctx).Symbol(symbol).Category(category).Format(format).Delimiter(delimiter).Execute()
+> GetCommodities200Response GetCommodities(ctx).Symbol(symbol).Category(category).Format(format).Delimiter(delimiter).Page(page).Outputsize(outputsize).Execute()
 
 Commodities
 
@@ -130,10 +130,12 @@ func main() {
 	category := "Precious Metal" // string | Filter by category of commodity (optional)
 	format := openapiclient.FormatEnum("JSON") // FormatEnum | The format of the response data (optional) (default to "JSON")
 	delimiter := "delimiter_example" // string | The separator used in the CSV response data (optional) (default to ";")
+	page := int64(789) // int64 | Page number of the results to fetch (optional) (default to 1)
+	outputsize := int64(789) // int64 | Determines the number of data points returned in the output (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ReferenceDataAPI.GetCommodities(context.Background()).Symbol(symbol).Category(category).Format(format).Delimiter(delimiter).Execute()
+	resp, r, err := apiClient.ReferenceDataAPI.GetCommodities(context.Background()).Symbol(symbol).Category(category).Format(format).Delimiter(delimiter).Page(page).Outputsize(outputsize).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ReferenceDataAPI.GetCommodities``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -158,6 +160,8 @@ Name | Type | Description  | Notes
  **category** | **string** | Filter by category of commodity | 
  **format** | [**FormatEnum**](FormatEnum.md) | The format of the response data | [default to &quot;JSON&quot;]
  **delimiter** | **string** | The separator used in the CSV response data | [default to &quot;;&quot;]
+ **page** | **int64** | Page number of the results to fetch | [default to 1]
+ **outputsize** | **int64** | Determines the number of data points returned in the output | 
 
 ### Return type
 
@@ -312,7 +316,7 @@ Name | Type | Description  | Notes
 
 ## GetCryptocurrencies
 
-> GetCryptocurrencies200Response GetCryptocurrencies(ctx).Symbol(symbol).Exchange(exchange).CurrencyBase(currencyBase).CurrencyQuote(currencyQuote).Format(format).Delimiter(delimiter).Execute()
+> GetCryptocurrencies200Response GetCryptocurrencies(ctx).Symbol(symbol).Exchange(exchange).CurrencyBase(currencyBase).CurrencyQuote(currencyQuote).Format(format).Delimiter(delimiter).Page(page).Outputsize(outputsize).Execute()
 
 Cryptocurrency pairs
 
@@ -337,10 +341,12 @@ func main() {
 	currencyQuote := "USD" // string | Filter by currency quote (optional)
 	format := openapiclient.FormatEnum("JSON") // FormatEnum | The format of the response data (optional) (default to "JSON")
 	delimiter := "delimiter_example" // string | The separator used in the CSV response data (optional) (default to ";")
+	page := int64(789) // int64 | Page number of the results to fetch (optional) (default to 1)
+	outputsize := int64(789) // int64 | Determines the number of data points returned in the output (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ReferenceDataAPI.GetCryptocurrencies(context.Background()).Symbol(symbol).Exchange(exchange).CurrencyBase(currencyBase).CurrencyQuote(currencyQuote).Format(format).Delimiter(delimiter).Execute()
+	resp, r, err := apiClient.ReferenceDataAPI.GetCryptocurrencies(context.Background()).Symbol(symbol).Exchange(exchange).CurrencyBase(currencyBase).CurrencyQuote(currencyQuote).Format(format).Delimiter(delimiter).Page(page).Outputsize(outputsize).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ReferenceDataAPI.GetCryptocurrencies``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -367,6 +373,8 @@ Name | Type | Description  | Notes
  **currencyQuote** | **string** | Filter by currency quote | 
  **format** | [**FormatEnum**](FormatEnum.md) | The format of the response data | [default to &quot;JSON&quot;]
  **delimiter** | **string** | The separator used in the CSV response data | [default to &quot;;&quot;]
+ **page** | **int64** | Page number of the results to fetch | [default to 1]
+ **outputsize** | **int64** | Determines the number of data points returned in the output | 
 
 ### Return type
 
@@ -536,7 +544,7 @@ Name | Type | Description  | Notes
 
 ## GetEtf
 
-> GetEtf200Response GetEtf(ctx).Symbol(symbol).Figi(figi).Isin(isin).Cusip(cusip).Cik(cik).Exchange(exchange).MicCode(micCode).Country(country).Format(format).Delimiter(delimiter).ShowPlan(showPlan).IncludeDelisted(includeDelisted).Execute()
+> GetEtf200Response GetEtf(ctx).Symbol(symbol).Figi(figi).Isin(isin).Cusip(cusip).Cik(cik).Exchange(exchange).MicCode(micCode).Country(country).Format(format).Delimiter(delimiter).ShowPlan(showPlan).IncludeDelisted(includeDelisted).Page(page).Outputsize(outputsize).Execute()
 
 ETFs
 
@@ -567,10 +575,12 @@ func main() {
 	delimiter := "delimiter_example" // string | The separator used in the CSV response data (optional) (default to ";")
 	showPlan := true // bool | Adds info on which plan symbol is available (optional) (default to false)
 	includeDelisted := true // bool | Include delisted identifiers (optional) (default to false)
+	page := int64(789) // int64 | Page number of the results to fetch (optional) (default to 1)
+	outputsize := int64(789) // int64 | Determines the number of data points returned in the output (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ReferenceDataAPI.GetEtf(context.Background()).Symbol(symbol).Figi(figi).Isin(isin).Cusip(cusip).Cik(cik).Exchange(exchange).MicCode(micCode).Country(country).Format(format).Delimiter(delimiter).ShowPlan(showPlan).IncludeDelisted(includeDelisted).Execute()
+	resp, r, err := apiClient.ReferenceDataAPI.GetEtf(context.Background()).Symbol(symbol).Figi(figi).Isin(isin).Cusip(cusip).Cik(cik).Exchange(exchange).MicCode(micCode).Country(country).Format(format).Delimiter(delimiter).ShowPlan(showPlan).IncludeDelisted(includeDelisted).Page(page).Outputsize(outputsize).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ReferenceDataAPI.GetEtf``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -603,6 +613,8 @@ Name | Type | Description  | Notes
  **delimiter** | **string** | The separator used in the CSV response data | [default to &quot;;&quot;]
  **showPlan** | **bool** | Adds info on which plan symbol is available | [default to false]
  **includeDelisted** | **bool** | Include delisted identifiers | [default to false]
+ **page** | **int64** | Page number of the results to fetch | [default to 1]
+ **outputsize** | **int64** | Determines the number of data points returned in the output | 
 
 ### Return type
 
@@ -774,7 +786,7 @@ Name | Type | Description  | Notes
 
 ## GetForexPairs
 
-> GetForexPairs200Response GetForexPairs(ctx).Symbol(symbol).CurrencyBase(currencyBase).CurrencyQuote(currencyQuote).Format(format).Delimiter(delimiter).Execute()
+> GetForexPairs200Response GetForexPairs(ctx).Symbol(symbol).CurrencyBase(currencyBase).CurrencyQuote(currencyQuote).Format(format).Delimiter(delimiter).Page(page).Outputsize(outputsize).Execute()
 
 Forex pairs
 
@@ -798,10 +810,12 @@ func main() {
 	currencyQuote := "USD" // string | Filter by currency quote (optional)
 	format := openapiclient.FormatEnum("JSON") // FormatEnum | The format of the response data (optional) (default to "JSON")
 	delimiter := "delimiter_example" // string | The separator used in the CSV response data (optional) (default to ";")
+	page := int64(789) // int64 | Page number of the results to fetch (optional) (default to 1)
+	outputsize := int64(789) // int64 | Determines the number of data points returned in the output (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ReferenceDataAPI.GetForexPairs(context.Background()).Symbol(symbol).CurrencyBase(currencyBase).CurrencyQuote(currencyQuote).Format(format).Delimiter(delimiter).Execute()
+	resp, r, err := apiClient.ReferenceDataAPI.GetForexPairs(context.Background()).Symbol(symbol).CurrencyBase(currencyBase).CurrencyQuote(currencyQuote).Format(format).Delimiter(delimiter).Page(page).Outputsize(outputsize).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ReferenceDataAPI.GetForexPairs``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -827,6 +841,8 @@ Name | Type | Description  | Notes
  **currencyQuote** | **string** | Filter by currency quote | 
  **format** | [**FormatEnum**](FormatEnum.md) | The format of the response data | [default to &quot;JSON&quot;]
  **delimiter** | **string** | The separator used in the CSV response data | [default to &quot;;&quot;]
+ **page** | **int64** | Page number of the results to fetch | [default to 1]
+ **outputsize** | **int64** | Determines the number of data points returned in the output | 
 
 ### Return type
 
@@ -1128,7 +1144,7 @@ Name | Type | Description  | Notes
 
 ## GetStocks
 
-> GetStocks200Response GetStocks(ctx).Symbol(symbol).Figi(figi).Isin(isin).Cusip(cusip).Cik(cik).Exchange(exchange).MicCode(micCode).Country(country).Type_(type_).Format(format).Delimiter(delimiter).ShowPlan(showPlan).IncludeDelisted(includeDelisted).Execute()
+> GetStocks200Response GetStocks(ctx).Symbol(symbol).Figi(figi).Isin(isin).Cusip(cusip).Cik(cik).Exchange(exchange).MicCode(micCode).Country(country).Type_(type_).Format(format).Delimiter(delimiter).ShowPlan(showPlan).IncludeDelisted(includeDelisted).Page(page).Outputsize(outputsize).Execute()
 
 Stocks
 
@@ -1160,10 +1176,12 @@ func main() {
 	delimiter := "delimiter_example" // string | The separator used in the CSV response data (optional) (default to ";")
 	showPlan := true // bool | Adds info on which plan symbol is available (optional) (default to false)
 	includeDelisted := true // bool | Include delisted identifiers (optional) (default to false)
+	page := int64(789) // int64 | Page number of the results to fetch (optional) (default to 1)
+	outputsize := int64(789) // int64 | Determines the number of data points returned in the output (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ReferenceDataAPI.GetStocks(context.Background()).Symbol(symbol).Figi(figi).Isin(isin).Cusip(cusip).Cik(cik).Exchange(exchange).MicCode(micCode).Country(country).Type_(type_).Format(format).Delimiter(delimiter).ShowPlan(showPlan).IncludeDelisted(includeDelisted).Execute()
+	resp, r, err := apiClient.ReferenceDataAPI.GetStocks(context.Background()).Symbol(symbol).Figi(figi).Isin(isin).Cusip(cusip).Cik(cik).Exchange(exchange).MicCode(micCode).Country(country).Type_(type_).Format(format).Delimiter(delimiter).ShowPlan(showPlan).IncludeDelisted(includeDelisted).Page(page).Outputsize(outputsize).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ReferenceDataAPI.GetStocks``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1197,6 +1215,8 @@ Name | Type | Description  | Notes
  **delimiter** | **string** | The separator used in the CSV response data | [default to &quot;;&quot;]
  **showPlan** | **bool** | Adds info on which plan symbol is available | [default to false]
  **includeDelisted** | **bool** | Include delisted identifiers | [default to false]
+ **page** | **int64** | Page number of the results to fetch | [default to 1]
+ **outputsize** | **int64** | Determines the number of data points returned in the output | 
 
 ### Return type
 

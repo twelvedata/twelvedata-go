@@ -292,6 +292,8 @@ type ReferenceDataAPIGetCommoditiesRequest struct {
 	category   *string
 	format     *FormatEnum
 	delimiter  *string
+	page       *int64
+	outputsize *int64
 }
 
 // The ticker symbol of an instrument for which data is requested
@@ -315,6 +317,18 @@ func (r ReferenceDataAPIGetCommoditiesRequest) Format(format FormatEnum) Referen
 // The separator used in the CSV response data
 func (r ReferenceDataAPIGetCommoditiesRequest) Delimiter(delimiter string) ReferenceDataAPIGetCommoditiesRequest {
 	r.delimiter = &delimiter
+	return r
+}
+
+// Page number of the results to fetch
+func (r ReferenceDataAPIGetCommoditiesRequest) Page(page int64) ReferenceDataAPIGetCommoditiesRequest {
+	r.page = &page
+	return r
+}
+
+// Determines the number of data points returned in the output
+func (r ReferenceDataAPIGetCommoditiesRequest) Outputsize(outputsize int64) ReferenceDataAPIGetCommoditiesRequest {
+	r.outputsize = &outputsize
 	return r
 }
 
@@ -370,6 +384,12 @@ func (a *ReferenceDataAPIService) GetCommoditiesExecute(r ReferenceDataAPIGetCom
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
+	}
+	if r.page != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
+	}
+	if r.outputsize != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -945,6 +965,8 @@ type ReferenceDataAPIGetCryptocurrenciesRequest struct {
 	currencyQuote *string
 	format        *FormatEnum
 	delimiter     *string
+	page          *int64
+	outputsize    *int64
 }
 
 // The ticker symbol of an instrument for which data is requested
@@ -980,6 +1002,18 @@ func (r ReferenceDataAPIGetCryptocurrenciesRequest) Format(format FormatEnum) Re
 // The separator used in the CSV response data
 func (r ReferenceDataAPIGetCryptocurrenciesRequest) Delimiter(delimiter string) ReferenceDataAPIGetCryptocurrenciesRequest {
 	r.delimiter = &delimiter
+	return r
+}
+
+// Page number of the results to fetch
+func (r ReferenceDataAPIGetCryptocurrenciesRequest) Page(page int64) ReferenceDataAPIGetCryptocurrenciesRequest {
+	r.page = &page
+	return r
+}
+
+// Determines the number of data points returned in the output
+func (r ReferenceDataAPIGetCryptocurrenciesRequest) Outputsize(outputsize int64) ReferenceDataAPIGetCryptocurrenciesRequest {
+	r.outputsize = &outputsize
 	return r
 }
 
@@ -1041,6 +1075,12 @@ func (a *ReferenceDataAPIService) GetCryptocurrenciesExecute(r ReferenceDataAPIG
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
+	}
+	if r.page != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
+	}
+	if r.outputsize != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1682,6 +1722,8 @@ type ReferenceDataAPIGetEtfRequest struct {
 	delimiter       *string
 	showPlan        *bool
 	includeDelisted *bool
+	page            *int64
+	outputsize      *int64
 }
 
 // The ticker symbol of an instrument for which data is requested
@@ -1753,6 +1795,18 @@ func (r ReferenceDataAPIGetEtfRequest) ShowPlan(showPlan bool) ReferenceDataAPIG
 // Include delisted identifiers
 func (r ReferenceDataAPIGetEtfRequest) IncludeDelisted(includeDelisted bool) ReferenceDataAPIGetEtfRequest {
 	r.includeDelisted = &includeDelisted
+	return r
+}
+
+// Page number of the results to fetch
+func (r ReferenceDataAPIGetEtfRequest) Page(page int64) ReferenceDataAPIGetEtfRequest {
+	r.page = &page
+	return r
+}
+
+// Determines the number of data points returned in the output
+func (r ReferenceDataAPIGetEtfRequest) Outputsize(outputsize int64) ReferenceDataAPIGetEtfRequest {
+	r.outputsize = &outputsize
 	return r
 }
 
@@ -1832,6 +1886,12 @@ func (a *ReferenceDataAPIService) GetEtfExecute(r ReferenceDataAPIGetEtfRequest)
 	}
 	if r.includeDelisted != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_delisted", r.includeDelisted, "form", "")
+	}
+	if r.page != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
+	}
+	if r.outputsize != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2475,6 +2535,8 @@ type ReferenceDataAPIGetForexPairsRequest struct {
 	currencyQuote *string
 	format        *FormatEnum
 	delimiter     *string
+	page          *int64
+	outputsize    *int64
 }
 
 // The ticker symbol of an instrument for which data is requested
@@ -2504,6 +2566,18 @@ func (r ReferenceDataAPIGetForexPairsRequest) Format(format FormatEnum) Referenc
 // The separator used in the CSV response data
 func (r ReferenceDataAPIGetForexPairsRequest) Delimiter(delimiter string) ReferenceDataAPIGetForexPairsRequest {
 	r.delimiter = &delimiter
+	return r
+}
+
+// Page number of the results to fetch
+func (r ReferenceDataAPIGetForexPairsRequest) Page(page int64) ReferenceDataAPIGetForexPairsRequest {
+	r.page = &page
+	return r
+}
+
+// Determines the number of data points returned in the output
+func (r ReferenceDataAPIGetForexPairsRequest) Outputsize(outputsize int64) ReferenceDataAPIGetForexPairsRequest {
+	r.outputsize = &outputsize
 	return r
 }
 
@@ -2562,6 +2636,12 @@ func (a *ReferenceDataAPIService) GetForexPairsExecute(r ReferenceDataAPIGetFore
 	}
 	if r.delimiter != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "delimiter", r.delimiter, "form", "")
+	}
+	if r.page != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
+	}
+	if r.outputsize != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3633,6 +3713,8 @@ type ReferenceDataAPIGetStocksRequest struct {
 	delimiter       *string
 	showPlan        *bool
 	includeDelisted *bool
+	page            *int64
+	outputsize      *int64
 }
 
 // The ticker symbol of an instrument for which data is requested
@@ -3710,6 +3792,18 @@ func (r ReferenceDataAPIGetStocksRequest) ShowPlan(showPlan bool) ReferenceDataA
 // Include delisted identifiers
 func (r ReferenceDataAPIGetStocksRequest) IncludeDelisted(includeDelisted bool) ReferenceDataAPIGetStocksRequest {
 	r.includeDelisted = &includeDelisted
+	return r
+}
+
+// Page number of the results to fetch
+func (r ReferenceDataAPIGetStocksRequest) Page(page int64) ReferenceDataAPIGetStocksRequest {
+	r.page = &page
+	return r
+}
+
+// Determines the number of data points returned in the output
+func (r ReferenceDataAPIGetStocksRequest) Outputsize(outputsize int64) ReferenceDataAPIGetStocksRequest {
+	r.outputsize = &outputsize
 	return r
 }
 
@@ -3792,6 +3886,12 @@ func (a *ReferenceDataAPIService) GetStocksExecute(r ReferenceDataAPIGetStocksRe
 	}
 	if r.includeDelisted != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "include_delisted", r.includeDelisted, "form", "")
+	}
+	if r.page != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "page", r.page, "form", "")
+	}
+	if r.outputsize != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "outputsize", r.outputsize, "form", "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
